@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <title>TU MEJOR COMPRA!</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  <script type="text/javascript">
+	getProduct = function(){
+		var prodId = $("#product").val();
+		console.log(prodId);
+	};
+  </script>
+  <body">
+		<h1>WEBIR - PROTOTIPO</h1>
+		
+		<div class="main-table">
+			<table class="table table-striped">
+				<tr>
+					<th class="th-main">Producto</td>
+					<th class="th-main">Marca</td> 
+					<th	class="th-main">Unidad</td>
+					<th class="th-main">Cantidad</td>
+				</tr>
+				<tr>
+					<td><input type="text" class="product" name="product" placeholder="Ingrese un producto" onKeyUp ="getProduct()"></input></td>
+					<td>
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Marca
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="#">Marca 1</a></li>
+						<li><a href="#">Marca 2</a></li>
+						<li><a href="#">Marca 3</a></li>
+						<li><a href="#">Marca 4</a></li>
+					  </ul>
+					</div>
+					</td> 
+					<td>Litros</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td><input type="text" class="product" id="product" placeholder="Ingrese un producto" onKeyUp="getProduct()"></input></td>
+					<td>Prodhin</td> 
+					<td>1</td>
+					<td>Docena</td>
+				</tr>
+			</table>
+		</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
