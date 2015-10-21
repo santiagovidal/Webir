@@ -2,6 +2,7 @@ import scrapy
 from scrapy.http import FormRequest
 import json
 from scrapy.selector import Selector
+from crawlers.items import Producto
 
 class tInglesaSpider(scrapy.Spider):
     name = "tInglesa"
@@ -47,12 +48,9 @@ class tInglesaSpider(scrapy.Spider):
         if (sel.xpath ("//div[@class='tabla_subdept']")):
             productos = sel.xpath("//td[@class='descrip_subdept']/a/text()").extract()
             precios = sel.xpath("//td[@align='right']/text()").extract()
-            unidades = sel.xpath("//span[@class='unidad_articulo']/text()").extract()
-            with open("abdc.html", 'a') as f:
-                for i in range(0,len(productos)):
-                    f.write(productos[i].encode('utf-8') + ' ------ ')
-                    f.write(unidades[i].encode('utf-8').strip() + ' ------ ')
-                    f.write(precios[i].encode('utf-8') + '\n')
+            # unidades = sel.xpath("//span[@class='unidad_articulo']/text()").extract()
+            for i in range(0,len(productos)):
+                yield Producto(titulo=productos[i].encode('utf-8'), precio=precios[i].encode('utf-8'))
 
         if not es_ultima_pagina:
             yield FormRequest("http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php",
