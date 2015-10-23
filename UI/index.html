@@ -7,23 +7,18 @@
 	<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
     <title>TU MEJOR COMPRA!</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
-  
-  <script type="text/javascript">
-	getProduct = function(){
-		var prodId = $("#product").val();
-		console.log(prodId);
-	};
-  </script>
   <body">
-		<h1>WEBIR - PROTOTIPO</h1>
+	<h1>WEBIR - PROTOTIPO</h1>
 		
-		<div class="main-table">
-			<table class="table table-striped">
+	<div class="main-table">
+		<table id="formProductos" class="table table-striped">
+			<tbody>
 				<tr>
 					<th class="th-main">Producto</td>
 					<th class="th-main">Marca</td> 
@@ -31,32 +26,56 @@
 					<th class="th-main">Cantidad</td>
 				</tr>
 				<tr>
-					<td><input type="text" class="product" name="product" placeholder="Ingrese un producto" onKeyUp ="getProduct()"></input></td>
-					<td>
-					<div class="dropdown">
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Marca
-						<span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Marca 1</a></li>
-						<li><a href="#">Marca 2</a></li>
-						<li><a href="#">Marca 3</a></li>
-						<li><a href="#">Marca 4</a></li>
-					  </ul>
-					</div>
+					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct()"></input></td>
+					<td class="td-center">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuMarca1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Marca
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Marca 1</a></li>
+								<li><a href="#">Marca 2</a></li>
+								<li><a href="#">Marca 3</a></li>
+								<li><a href="#">Marca 4</a></li>
+							</ul>
+						</div>
 					</td> 
-					<td>Litros</td>
-					<td>2</td>
+					<td class="td-center">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuCantidad1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Cantidad
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+							</ul>
+						</div>
+					</td>
+					<td class="td-center">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuUnidad1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Unidad
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Litros</a></li>
+								<li><a href="#">Mililitros</a></li>
+								<li><a href="#">Kilos</a></li>
+								<li><a href="#">Gramos</a></li>
+							</ul>
+						</div>
+					</td>
 				</tr>
-				<tr>
-					<td><input type="text" class="product" id="product" placeholder="Ingrese un producto" onKeyUp="getProduct()"></input></td>
-					<td>Prodhin</td> 
-					<td>1</td>
-					<td>Docena</td>
-				</tr>
-			</table>
-		</div>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-default btn-lg" onClick="addFields()">
+		  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Agregar producto
+		</button>
+		<button type="button" class="btn btn-default btn-lg" onClick="getMarket()">
+		  <span class="glyphicon glyphicon-shopping-cart"></span> Realizá tu compra
+		</button>
+	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
