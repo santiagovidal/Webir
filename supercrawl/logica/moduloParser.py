@@ -103,79 +103,79 @@ class parser (object):
 
 
 
-p = parser()
+# p = parser()
 
-producto = "Galleta La Sin Rival Granetti Snacks x199000 200gr"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Galleta La Sin Rival Granetti Snacks x199000 200gr"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Vino Tinto Santa Teresa Tannat Tetra 1lt"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Vino Tinto Santa Teresa Tannat Tetra 1lt"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Vino Tinto Concha Y Toro Cabernet Sauvignon Reservado 3/4lt"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Vino Tinto Concha Y Toro Cabernet Sauvignon Reservado 3/4lt"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Cerveza Stella Artois 0.975lt Pack X3u"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Cerveza Stella Artois 0.975lt Pack X3u"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Chupetin Con Chicle Arcor Big Big Frutilla 600gr"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Chupetin Con Chicle Arcor Big Big Frutilla 600gr"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Chicle Top Line De Menta Sin Azucar X4u"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Chicle Top Line De Menta Sin Azucar X4u"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))
 
-print("**********************************")
+# print("**********************************")
 
-producto = "Aderezo Knorr Sabor En Cubos Albahaca Y Ajo 38gr"
-nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
-print("Producto: " + producto)
-print("Nombre: " + nombre)
-print("Marca: " + marca)
-print("Magnitud: " + str(magnitud))
-print("Metrica: " + metrica)
-print("Pack: " + str(pack))
+# producto = "Aderezo Knorr Sabor En Cubos Albahaca Y Ajo 38gr"
+# nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
+# print("Producto: " + producto)
+# print("Nombre: " + nombre)
+# print("Marca: " + marca)
+# print("Magnitud: " + str(magnitud))
+# print("Metrica: " + metrica)
+# print("Pack: " + str(pack))

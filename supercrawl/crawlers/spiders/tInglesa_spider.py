@@ -3,8 +3,12 @@ from scrapy.http import FormRequest
 import json
 from scrapy.selector import Selector
 from crawlers.items import Producto
+import sys
+sys.path.append("..\logica")
+import moduloParser
 
 class tInglesaSpider(scrapy.Spider):
+    parser = moduloParser.parser()
     name = "tInglesa"
     allowed_domains = ["tinglesa.com.uy"]
     start_urls = [
@@ -50,7 +54,9 @@ class tInglesaSpider(scrapy.Spider):
             precios = sel.xpath("//td[@align='right']/text()").extract()
             # unidades = sel.xpath("//span[@class='unidad_articulo']/text()").extract()
             for i in range(0,len(productos)):
-                yield Producto(titulo=productos[i].encode('utf-8'), precio=precios[i].encode('utf-8'))
+                nombre, marca, magnitud, metrica, pack = self.parser.extraerCampos(productos[i].encode('utf-8'))
+                precio = int(precios[i].encode('utf-8'))
+                yield Producto(nombre=nombre, marca=marca, magnitud=magnitud, metrica=metrica, packpor=pack, precio=precio)
 
         if not es_ultima_pagina:
             yield FormRequest("http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php",
