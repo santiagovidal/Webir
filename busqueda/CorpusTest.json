@@ -1,0 +1,155 @@
+[
+	{
+		"id"		: 1,
+		"nombre"	: "Leche Ultra Descremada Sachet", 
+		"marca"		: "Conaprole", 
+		"unidad"	: "ml",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 29
+	},
+	{
+		"id"		: 2,
+		"nombre"	: "Disqueti", 
+		"marca"		: "Dori",
+		"unidad"	: "gr",
+		"magnitud"	: 18,
+		"packpor"	: 1,
+		"precio"	: 7
+	},
+	{
+		"id"		: 3,
+		"nombre"	: "Leche Descremada Larga Vida", 
+		"marca" 	: "Conaprole",
+		"unidad"	: "ml",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 42
+	},
+	{
+		"id"		: 4,
+		"nombre"	: "Leche Ultra Semi/descremada Calcio", 
+		"marca" 	: "Conaprole",
+		"unidad"	: "ml",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 29
+	},
+	{
+		"id"		: 5,
+		"nombre"	: "Leche Descremada Larga Vida", 
+		"marca"		: "Tienda Inglesa",
+		"unidad"	: "ml",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 40
+	},
+	{
+		"id"		: 6,
+		"nombre"	: "Leche Entera Larga Vida", 
+		"marca"		: "Calcar",
+		"unidad"	: "ml",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 30
+	},
+	{
+		"id"		: 7,
+		"nombre"	: "Azucar",
+		"marca"		: "Azucarlito",
+		"unidad"	: "gr",
+		"magnitud"	: 1000,		
+		"packpor"	: 1,
+		"precio"	: 36
+	},
+	{
+		"id"		: 8,
+		"nombre"	: "Azucar", 
+		"marca"		: "Bella Union",
+		"unidad"	: "gr",
+		"magnitud"	: 1000,	
+		"packpor"	: 1,
+		"precio"	: 36		
+	},
+	{
+		"id"		: 9,
+		"nombre"	: "Agua Sin Gas", 
+		"marca"		: "Salus",
+		"unidad"	: "ml",
+		"magnitud"	: 1500,
+		"packpor"	: 1,
+		"precio"	: 35
+	},
+	{
+		"id"		: 10,
+		"nombre"	: "Agua Con Gas", 
+		"marca"		: "Salus",
+		"unidad"	: "ml",
+		"magnitud"	: 1500,
+		"packpor"	: 1,
+		"precio"	: 35
+	},
+	{
+		"id"		: 11,
+		"nombre"	: "Agua Sin Gas", 
+		"marca"		: "Salus",
+		"unidad"	: "ml",
+		"magnitud"	: 6000,
+		"packpor"	: 1,
+		"precio"	: 65
+	},
+	{
+		"id"		: 12,
+		"nombre"	: "Agua Sin Gas", 
+		"marca"		: "Salus",
+		"unidad"	: "ml",
+		"magnitud"	: 600,
+		"packpor"	: 1,
+		"precio"	: 28
+	},
+	{
+		"id"		: 13,
+		"nombre"	: "Agua Sin Gas", 
+		"marca"		: "Salus",
+		"unidad"	: "ml",
+		"magnitud"	: 2250,
+		"packpor"	: 1,
+		"precio"	: 37
+	},
+	{
+		"id"		: 14,
+		"nombre"	: "Yerba", 
+		"marca"		: "Canarias",
+		"unidad"	: "gr",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 140
+	},
+	{
+		"id"		: 15,
+		"nombre"	: "Yerba", 
+		"marca"		: "La Selva",
+		"unidad"	: "gr",
+		"magnitud"	: 1000,
+		"packpor"	: 1,
+		"precio"	: 163
+	},
+	{
+		"id"		: 16,
+		"nombre"	: "Yerba Canarias", 
+		"marca"		: "Canarias",
+		"unidad"	: "gr",
+		"magnitud"	: 500,
+		"packpor"	: 1,
+		"precio"	: 85
+	},
+	{
+		"id"		: 17,
+		"nombre"	: "Yerba", 
+		"marca"		: "Del Cebador",
+		"unidad"	: "gr",
+		"magnitud"	: 500,
+		"packpor"	: 1,
+		"precio"	: 75
+	}
+]

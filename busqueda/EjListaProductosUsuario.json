@@ -1,0 +1,37 @@
+ [
+	{
+		"nombre"    : "Leche", 
+		"marca"     : "Conaprole", 
+		"unidad"    : "ml",
+		"magnitud"  : 1000,
+		"packpor"	: 1
+	},
+	{
+		"nombre"    : "Azucar", 
+		"marca"     : "",     
+		"unidad"    : "gr", 
+		"magnitud"  : 2000,
+		"packpor"	: 1
+	},
+	{
+		"nombre"    : "Agua con gas", 
+		"marca"     : "Salus",     
+		"unidad"    : "ml", 
+		"magnitud"  : 1500,
+		"packpor"	: 1
+	},
+	{
+		"nombre"    : "Yerba", 
+		"marca"     : "",     
+		"unidad"    : "gr", 
+		"magnitud"  : 1000,
+		"packpor"   : 1
+	},
+	{
+		"nombre"    : "Algo que no existe", 
+		"marca"     : "Marca que no existe",     
+		"unidad"    : "gr", 
+		"magnitud"  : 1000,
+		"packpor"   : 1
+	}
+]
