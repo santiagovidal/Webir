@@ -19,8 +19,9 @@ class Busqueda:
                 "nombre"   : string, 
                 "marca"    : string,     /* "" implica any */
                 "magnitud" : int,
-                "unidad"   : ml|gr,      /* "" implica que magnitud es una cantidad */
-                "packpor"  : int         /* Asumo que viene 1 por defecto */
+                "metrica"  : ml|gr,      /* "" implica que magnitud es una cantidad */
+                "packpor"  : int,        /* Asumo que viene 1 por defecto */
+                "unidades" : int         /* Asumo si el cliente no indica esto viene un 1 */
             },
         ...
         ]
@@ -40,9 +41,10 @@ class Busqueda:
             # Obtener los datos del json
             nombre   = dato["nombre"].lower()
             marca    = dato["marca"] if len(dato["marca"])>0 else None
-            unidad   = dato["unidad"].lower()    
+            metrica  = dato["metrica"].lower()    
             magnitud = dato["magnitud"] 
             packpor  = dato["packpor"] 
+            unidades = dato["unidades"]
                       
             # Guardarse una tupla con 
             # < precio=0, packpor_quiero, marca_quiero, id_prod_super, cant_necesito >
@@ -57,14 +59,27 @@ class Busqueda:
             #                      Default = -1 - Aun no analice ningun producto
             #   * cant_necesito  : La cantidad de productos que yo necesito para satisfacer 
             #                      la magnitud que quiero. 
-            #                      Default = 1 - Al menos necesito una unidad de producto
-            lista_quiero[nombre,unidad,magnitud] = [-1,packpor,marca,-1,1]
+            #                      Default = unidades
+            lista_quiero[nombre,metrica,magnitud] = [-1,packpor,marca,-1,unidades]
         
         # TO-DO: Borrar esta línea a continuación - Solo para test
         print("\n********* Yo quiero estos productos... **********\n",lista_quiero)    
         
         # Conectrse a la BD
         # Obtener el resultado en formato *.json
+        '''-------------------------------------------------------- 
+            El *.json qu eme devuele la BD es del estilo
+            [
+            	{
+            		"nombre"    : string, 
+            		"marca"     : string, 
+            		"metrica"   : gr|ml,
+            		"magnitud"  : int,
+            		"packpor"	: int
+            	},
+                 ...
+             ]
+        -------------------------------------------------------- '''
         
         # COMO PRUEBA ME CARGO EL JSON DE PRUEBA EN BASE AL DE TINGLESA
         # - Después hay que traducir según como se devuelvan los datos de BD
@@ -82,7 +97,7 @@ class Busqueda:
             id_prod  = dato_super["id"] 
             nombre   = dato_super["nombre"].lower()
             marca    = dato_super["marca"]    # Siempre tiene marca
-            unidad   = dato_super["unidad"].lower()
+            metrica  = dato_super["metrica"].lower()
             magnitud = dato_super["magnitud"]   
             packpor  = dato_super["packpor"] 
             precio   = dato_super["precio"]
@@ -110,26 +125,27 @@ class Busqueda:
             # 2 - el packpor que me ofrecen es menor al que yo quiero 
             # 3 - la marca es es la que me ofrecen o es None si quiero todas
             # 4 - el precio*pack que me ofrecen es menor al que tengo hasta el momento
-            magnitud_necesito = magnitud*cant_necesito            
+            magnitud_necesito = magnitud*cant_necesito   
+            unidades = lista_quiero[nombre_producto,metrica,magnitud_necesito][4] # TO-DO: Esto es un parche
             
-            if (packpor <= lista_quiero[nombre_producto,unidad,magnitud_necesito][1]
+            if (packpor <= lista_quiero[nombre_producto,metrica,magnitud_necesito][1]
               and (
-                  marca == lista_quiero[nombre_producto,unidad,magnitud_necesito][2] 
+                  marca == lista_quiero[nombre_producto,metrica,magnitud_necesito][2] 
                   or 
-                  not lista_quiero[nombre_producto,unidad,magnitud_necesito][2]
+                  not lista_quiero[nombre_producto,metrica,magnitud_necesito][2]
               )
               and (
-                  precio*packpor*cant_necesito < lista_quiero[nombre_producto,unidad,magnitud_necesito][0]
+                  precio*packpor*cant_necesito < lista_quiero[nombre_producto,metrica,magnitud_necesito][0]
                   or
                   # Esto es medio chancho, pero Python no tiene un maxint
-                  lista_quiero[nombre_producto,unidad,magnitud_necesito][0] == -1 
+                  lista_quiero[nombre_producto,metrica,magnitud_necesito][0] == -1 
               )):                    
-                lista_quiero[nombre_producto,unidad,magnitud_necesito][0] = precio*packpor*cant_necesito
-                lista_quiero[nombre_producto,unidad,magnitud_necesito][3] = id_prod
-                lista_quiero[nombre_producto,unidad,magnitud_necesito][4] = cant_necesito
+                lista_quiero[nombre_producto,metrica,magnitud_necesito][0] = precio*packpor*cant_necesito
+                lista_quiero[nombre_producto,metrica,magnitud_necesito][3] = id_prod
+                lista_quiero[nombre_producto,metrica,magnitud_necesito][4] = cant_necesito*unidades
         
         # TO-DO: Borrar estas líneas a continuación - Solo para test - Quizas sirva para armar el *.json de retorno 
-        print("\n******* El algoritmo me dice que... *******")
+        print("\n******* El algoritmo me dice que... *******\n",lista_quiero)
         for k,v in lista_quiero.items():
             necesito = v[4]
             id_prod = v[3]
@@ -140,13 +156,13 @@ class Busqueda:
                 continue
             
             (prod,magnitud) = lst_aux_nom_mag_super[0]
-            unidad = k[1]
+            metrica = k[1]
             marca = v[2]
             magnitud_quiero = k[2]
             if not marca:
-                print("Necesito ",str(necesito)," de ",prod," (marca cualquiera) a un precio de ",precio, " por unidad/pack de ",str(magnitud),unidad," para completar ",str(magnitud_quiero),unidad)
+                print("Necesito ",str(necesito)," de ",prod," (marca cualquiera) a un precio de $",precio, " por unidad/pack (tota: $",str(precio*necesito),") de ",str(magnitud),metrica," para completar ",str(int(necesito/(magnitud_quiero/magnitud)))," de ",str(magnitud_quiero),metrica)
             else:
-                print("Necesito ",str(necesito)," de ",prod," marca ",marca," a un precio de ",precio, " por unidad/pack de ",str(magnitud),unidad," para completar ",str(magnitud_quiero),unidad)
+                print("Necesito ",str(necesito)," de ",prod," marca ",marca," a un precio de $",precio, " por unidad/pack (tota: $",str(precio*necesito),") de ",str(magnitud),metrica," para completar ",str(int(necesito/(magnitud_quiero/magnitud)))," de ",str(magnitud_quiero),metrica)
             print("--")
         
         '''-------------------------------------------------------- 
@@ -155,13 +171,13 @@ class Busqueda:
                 "total" : int,
                 "productos":[
                     {
-                        "nombre"   :string, 
-                        "marca"    :string,     /* "" implica any */
-                        "magnitud" :int,
-                        "unidad"   :ml|gr,
+                        "nombre"   : string, 
+                        "marca"    : string,     /* "" implica any */
+                        "magnitud" : int,
+                        "metrica"  : ml|gr,
                         "packpor"  : int         /* Asumo que viene 1 por defecto */
-                        "precio"   :int,
-                        "necesito" :int         /* cantidad de <magnitud,unidades,packpor> que necesito */
+                        "precio"   : int,
+                        "necesito" : int         /* cantidad de <magnitud,unidades,packpor> que necesito */
                     },
                     ...
                 ]
