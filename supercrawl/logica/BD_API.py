@@ -23,7 +23,7 @@ def setSuper(filename):
 			'nombre': dato['nombre']
 		})
 
-def getProduct(super,string):
+def getMarcasPorProducto(super,string):
 	
 	datos = {}
 	datos['query'] = {}
@@ -47,7 +47,7 @@ def getProduct(super,string):
 	print(marcas_resultado)
 		
 	
-getProduct('tinglesa', 'cereales tostadas')
+getMarcasPorProducto('tinglesa', 'cereales tostadas')
 
 
 
