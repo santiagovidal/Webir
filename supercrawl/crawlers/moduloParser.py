@@ -2,8 +2,11 @@ import re
 
 class parser (object):
 	def __init__(self):
-		f = open("listaMarcas.txt","r")
-		self.marcas = f.read().lower().split('\n')
+		f1 = open("listaMarcas.txt","r")
+		self.marcas = f1.read().lower().split('\n')
+
+		f2 = open("listaMarcasConErrores.txt","r")
+		self.marcasConErrores = f2.read().lower().split('\n')
 
 	def extraerCampos(self,string):
 		temp1, marca = self.extraerMarca(string)
@@ -96,6 +99,15 @@ class parser (object):
 				resultadoString = re.sub("\s"+marca,"",string) 
 				resultadoMarca = marca
 				break
+
+		if resultadoMarca == "":
+			for marcaConError in self.marcasConErrores:
+				marcaMal = marcaConError.split("/")[0].strip().lower()
+				marcaBien = marcaConError.split("/")[1].strip().lower()
+				if re.compile('\s'+marcaMal+'(\s|$)').search(string) is not None:
+					resultadoString = re.sub("\s"+marcaMal,"",string)
+					resultadoMarca = marcaBien
+					break
 				
 		if resultadoMarca == "":
 			log.write("Marca no encontrada: " + resultadoString + '\n')

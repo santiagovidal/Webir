@@ -7,8 +7,7 @@ from crawlers.items import Producto
 from scrapy.http import Request
 from scrapy.linkextractors.sgml import SgmlLinkExtractor
 import sys
-sys.path.append("..\logica")
-import moduloParser
+from .. import moduloParser
 
 class devotoSpider(CrawlSpider):
 	parser = moduloParser.parser()

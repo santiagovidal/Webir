@@ -4,8 +4,7 @@ import json
 from scrapy.selector import Selector
 from crawlers.items import Producto
 import sys
-sys.path.append("..\logica")
-import moduloParser
+from .. import moduloParser
 
 class tInglesaSpider(scrapy.Spider):
     parser = moduloParser.parser()
