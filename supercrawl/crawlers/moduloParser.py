@@ -1,4 +1,5 @@
 import re
+import json
 
 class parser (object):
 	def __init__(self):
@@ -114,8 +115,35 @@ class parser (object):
 		return resultadoString, resultadoMarca
 
 
+filename = "productosTInglesaSinParsear.json"
+archivoNoParseados = open(filename,"r")
+productos = json.loads(archivoNoParseados.read())
+archivoNoParseados.close()
 
-# p = parser()
+filename = "productosTInglesaParseados.json"
+archivoParseados = open(filename,"w")
+
+productosParseados = []
+
+p = parser()
+
+i = 0
+
+for producto in productos:
+	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"])
+	prodparseado = {}
+	prodparseado["nombre"] = nombre
+	prodparseado["marca"] = marca
+	prodparseado["metrica"] = metrica
+	prodparseado["magnitud"] = magnitud
+	prodparseado["packpor"] = pack
+	prodparseado["precio"] = producto["precio"]
+	productosParseados.append(prodparseado)
+	i+=1
+	if i == 10:
+		break
+
+json.dump(productosParseados,archivoParseados)
 
 # producto = "Galleta La Sin Rival Granetti Snacks x199000 200gr"
 # nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)

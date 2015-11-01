@@ -6,11 +6,8 @@ from scrapy.spiders import Rule, CrawlSpider
 from crawlers.items import Producto
 from scrapy.http import Request
 from scrapy.linkextractors.sgml import SgmlLinkExtractor
-import sys
-from .. import moduloParser
 
 class devotoSpider(CrawlSpider):
-	parser = moduloParser.parser()
 	name = "devoto"
 	allowed_domains = ["devoto.com.uy"]
 	start_urls = [
@@ -24,7 +21,7 @@ class devotoSpider(CrawlSpider):
 	rules = (Rule(SgmlLinkExtractor(restrict_xpaths="//ul[@class='subcategorias-lista']/li/a"),
 					follow= True,
 					callback="parseCategory"),)
-    
+	
 	def parseCategory(self,response):
 	
 		# print response.url
@@ -41,9 +38,10 @@ class devotoSpider(CrawlSpider):
 				productos = response.xpath("//a[@class='js-fancybox-product fancybox fancybox.iframe']/h2/text()").extract()
 				precios = response.xpath("//a[@class='js-fancybox-product fancybox fancybox.iframe']/h3/text()").extract()
 				for i in range(0,len(productos)):
-					producto, marca = self.parser.extraerMarca(productos[i])
-					yield Producto(titulo=producto.lower().encode('utf-8'), marca= marca.lower().encode('utf-8'), precio=precios[i].lower().encode('utf-8'))
+					titulo = productos[i].encode('utf-8')
+					precio = precios[i].encode('utf-8')
+					yield Producto(titulo=titulo, precio=precio)
 				yield Request(url, callback=self.parseCategory, dont_filter=True)
 
 			
-        
+		

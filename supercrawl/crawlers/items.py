@@ -9,10 +9,6 @@ import scrapy
 
 
 class Producto(scrapy.Item):
-	nombre = scrapy.Field()
-	marca = scrapy.Field()
-	magnitud = scrapy.Field()
-	metrica = scrapy.Field()
-	packpor = scrapy.Field()
+	titulo = scrapy.Field()
 	precio = scrapy.Field()
 	pass
