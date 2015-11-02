@@ -7,6 +7,7 @@ mc.cormick / mc cormick culinary
 delgaucho / del gaucho
 kruger / KRÜGER
 palacio del oriente / palacio de oriente
+pcio / palacio de oriente
 campoclaro / campo claro
 top line / topline
 las acacia / las acacias
@@ -38,3 +39,32 @@ pastamania / PASTAMANÍA
 mama cocina / MAMÁ COCINA
 st. dalfour / ST.DALFOUR
 snyders / SNYDER`S OF HANOVER
+coca cola life / COCA - COLA LIFE
+coca cola light / COCA - COLA LIGHT
+coca cola zero / COCA - COLA ZERO
+coca cola / COCA - COLA
+mrs. crimbles / MRS CRIMBLE'S
+clovis / CLOVIS-FRANCE
+eladio / ELADIO'S
+sharwoods / SHARWOOD'S
+voll damm / VOLL - DAMM
+e. damm / ESTRELLA DAMM
+hacker-pschorr / HACKER- PSCHORR
+becks / BECK´S
+sir edwards / SIR EDWARD'S
+blenders / BLENDERS PRIDE
+cristalino / JAUME SERRA CRISTALINO
+william lawsons / WILLIAM LAWSON´S
+peroni / PERONI NASTRO AZZURRO
+famous grouse / THE FAMOUS GROUSE
+bruzzone / BRUZZONE Y SCIUTTO
+cabesas / CABESAS BIER
+viejo pancho / EL VIEJO PANCHO
+passport / PASSPORT SCOTCH
+comte valmont / COMTE DE VALMONT
+jameson / JAMESON IRISH WHISKEY
+teachers / TEACHER'S
+viñagala / RURTIA VIÑAGALA
+gregsons / GREGSON'S
+FULLER / FULLER´S
+CATTOS / CATTO'S

@@ -114,6 +114,10 @@ class parser (object):
 			log.write("Marca no encontrada: " + resultadoString + '\n')
 		return resultadoString, resultadoMarca
 
+	def parsearPrecio(self,precio):
+		# Obtiene los numeros y ignora cualquier otro caracter
+		return int(re.sub("[^0-9]", "", precio))
+
 
 filename = "productosTInglesaSinParsear.json"
 archivoNoParseados = open(filename,"r")
@@ -122,28 +126,25 @@ archivoNoParseados.close()
 
 filename = "productosTInglesaParseados.json"
 archivoParseados = open(filename,"w")
-
-productosParseados = []
-
+archivoParseados.write("[")
 p = parser()
 
-i = 0
-
 for producto in productos:
-	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"])
+	print("Parseando: " + producto["titulo"] + "\n")
+	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"].encode('utf-8'))
+	precio = p.parsearPrecio(producto["precio"].encode('utf-8'))
 	prodparseado = {}
 	prodparseado["nombre"] = nombre
 	prodparseado["marca"] = marca
 	prodparseado["metrica"] = metrica
 	prodparseado["magnitud"] = magnitud
 	prodparseado["packpor"] = pack
-	prodparseado["precio"] = producto["precio"]
-	productosParseados.append(prodparseado)
-	i+=1
-	if i == 10:
-		break
+	prodparseado["precio"] = precio
+	json.dump(prodparseado,archivoParseados)
+	archivoParseados.write(",\n")
 
-json.dump(productosParseados,archivoParseados)
+archivoParseados.write("]")
+
 
 # producto = "Galleta La Sin Rival Granetti Snacks x199000 200gr"
 # nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto)
