@@ -7,10 +7,11 @@ getProduct = function(){
 	
 	var idProduct = $("#input"+(id-1)).val();
 	console.log(idProduct);
+	$("#addButton").attr("disabled",false);
 };
 
 getMarket = function(){
-	alert("aca calcularia el super :D");
+	window.location.href = "resultado.html";
 };
 
 addFields = function(){
@@ -64,6 +65,17 @@ addFields = function(){
 	$('#formProductos td:last div li').append('<a href="#">Marca 2</a>');
 	$('#formProductos td:last div li').append('<a href="#">Marca 3</a>');
 	$('#formProductos td:last div li').append('<a href="#">Marca 4</a>');
+	
+	//agrega el input magnitud
+	var inputMagnitud = document.createElement("input");
+	inputMagnitud.type = "text";
+	inputMagnitud.id = "magnitud"+id;
+	inputMagnitud.size = "20";
+	inputMagnitud.placeholder = "Ingrese magnitud";
+	
+	$('#formProductos tr:last').append('<td class="td-center"></td>');
+	$('#formProductos td:last').append(inputMagnitud);
+	$('#formProductos td:last input').attr('class','magnitud');
 	
 	//agrega el combo cantidad
 	var buttonCantidad = document.createElement("button");
@@ -132,4 +144,5 @@ addFields = function(){
 	$('#formProductos td:last div li').append('<a href="#">Gramos</a>');
 	
 	id = id + 1;
+	$("#addButton").attr("disabled",true);
 };

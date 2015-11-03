@@ -20,10 +20,11 @@
 		<table id="formProductos" class="table table-striped">
 			<tbody>
 				<tr>
-					<th class="th-main">Producto</td>
-					<th class="th-main">Marca</td> 
-					<th	class="th-main">Cantidad</td>
-					<th class="th-main">Unidad</td>
+					<th class="th-main">Producto</th>
+					<th class="th-main">Marca</th>
+					<th	class="th-main">Magnitud<//th>
+					<th class="th-main">Cantidad</th>
+					<th class="th-main">Unidad</th>
 				</tr>
 				<tr>
 					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct()"></input></td>
@@ -39,7 +40,8 @@
 								<li><a href="#">Marca 4</a></li>
 							</ul>
 						</div>
-					</td> 
+					</td>
+					<td class="td-center"><input id="magnitud1" type="text" size="20" class="magnitud" placeholder="Ingrese magnitud"></input></td>
 					<td class="td-center">
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuCantidad1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Cantidad
@@ -69,7 +71,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<button type="button" class="btn btn-default btn-lg" onClick="addFields()">
+		<button id="addButton" type="button" class="btn btn-default btn-lg" disabled="true" onClick="addFields()">
 		  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar producto
 		</button>
 		<button type="button" class="btn btn-default btn-lg" onClick="getMarket()">
