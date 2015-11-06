@@ -23,8 +23,7 @@ def setSuper(filename):
 			'nombre': dato['nombre']
 		})
 
-def getDatosPorProducto(super,string):
-	
+def getDatosPorProducto(super,string):	
     datos = {}
     datos['query'] = {}
     datos['query']['match'] = {}
@@ -32,15 +31,13 @@ def getDatosPorProducto(super,string):
     datos['query']['match']['nombre']['query'] = string
     datos['query']['match']['nombre']['operator'] = 'and'
 	
-	
     respuesta = requests.get('http://localhost:9200/' + super + '/productos/_search', data=json.dumps(datos))
+    
 	
     datos_respuesta = json.loads(respuesta.content)
     resultados = datos_respuesta['hits']['hits']
 	
     datos_resultado = []
-    
-    # print resultados
     
 	
     for resultado in resultados:
