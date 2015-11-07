@@ -4,7 +4,7 @@ import json
 class parser (object):
 	def __init__(self):
 		f1 = open("listaMarcas.txt","r")
-		self.marcas = f1.read().lower().split('\n')
+		self.marcas = f1.read().split('\n')
 
 		f2 = open("listaMarcasConErrores.txt","r")
 		self.marcasConErrores = f2.read().lower().split('\n')
@@ -53,7 +53,7 @@ class parser (object):
 				resultadoCantidad = resultadoCantidad.replace(" ","")
 
 		if resultadoCantidad == "":
-			log.write("Cantidad no encontrada: " + resultadoString + '\n')
+			log.write("Cantidad no encontrada: " + resultadoString.encode('utf-8') + '\n')
 
 		resultadoMagnitud, resultadoMetrica = self.normalizarCantidad(resultadoCantidad)
 
@@ -96,6 +96,7 @@ class parser (object):
 		resultadoMarca = ""
 
 		for marca in self.marcas:
+			marca = unicode(marca, encoding='utf-8').lower()
 			if re.compile('\s'+marca+'(\s|$)').search(string) is not None:
 				resultadoString = re.sub("\s"+marca,"",string) 
 				resultadoMarca = marca
@@ -111,7 +112,7 @@ class parser (object):
 					break
 				
 		if resultadoMarca == "":
-			log.write("Marca no encontrada: " + resultadoString + '\n')
+			log.write("Marca no encontrada: " + resultadoString.encode('utf-8') + '\n')
 		return resultadoString, resultadoMarca
 
 	def parsearPrecio(self,precio):
@@ -131,8 +132,8 @@ p = parser()
 
 for producto in productos:
 	print("Parseando: " + producto["titulo"] + "\n")
-	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"].encode('utf-8'))
-	precio = p.parsearPrecio(producto["precio"].encode('utf-8'))
+	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"])
+	precio = p.parsearPrecio(producto["precio"])
 	prodparseado = {}
 	prodparseado["nombre"] = nombre
 	prodparseado["marca"] = marca
