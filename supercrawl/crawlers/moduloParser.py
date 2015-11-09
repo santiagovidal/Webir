@@ -11,9 +11,9 @@ class parser (object):
 
 	def extraerCampos(self,string):
 		temp1, marca = self.extraerMarca(string)
-		temp2, magnitud, metrica = self.extraerCantidad(temp1)
+		temp2, magnitud, metrica, metricaWeb = self.extraerCantidad(temp1)
 		nombre, pack = self.extraerPack(temp2)
-		return nombre, marca, magnitud, metrica, pack
+		return nombre, marca, magnitud, metrica, metricaWeb, pack
 
 	def extraerPack(self,string):
 		string = string.lower()
@@ -57,18 +57,19 @@ class parser (object):
 		if resultadoCantidad == "":
 			log.write("Cantidad no encontrada: " + resultadoString.encode('utf-8') + '\n')
 
-		resultadoMagnitud, resultadoMetrica = self.normalizarCantidad(resultadoCantidad)
+		resultadoMagnitud, resultadoMetrica, metricaWeb = self.normalizarCantidad(resultadoCantidad)
 
 		# Le saco algun punto suelto que puede haber quedado
 		resultadoString = re.sub("(^|\s)\.($|\s)", "", resultadoString)
 		resultadoString = resultadoString.replace("  "," ").strip()
 
-		return resultadoString, resultadoMagnitud, resultadoMetrica
+		return resultadoString, resultadoMagnitud, resultadoMetrica, metricaWeb
 
 	def normalizarCantidad(self,cantidad):
 		# cantidad tiene un string con el siguiente formato: {magnitud}{metrica} o el string vacio
 		magnitud = 1
 		metrica = ""
+		metricaWeb = ""
 
 		if cantidad is not "":
 			res = re.findall(r"\d*(?:\.|,|\/)?\d+", cantidad)
@@ -82,6 +83,8 @@ class parser (object):
 					metrica = "kg"
 				if metrica == "g":
 					metrica = "gr"
+
+				metricaWeb = metrica
 
 				if "/" in numero:
 					numerador = float(numero.split("/")[0])
@@ -101,7 +104,7 @@ class parser (object):
 			if isinstance(magnitud, float) and magnitud.is_integer():
 				magnitud = int(magnitud)
 
-		return magnitud, metrica
+		return magnitud, metrica, metricaWeb
 	
 	def extraerMarca(self,string):
 		log = open("log_de_marcas_no_registradas.txt", "a")
@@ -147,24 +150,25 @@ class parser (object):
 		return int(re.sub("[^0-9]", "", precio))
 
 
-filename = "productosDevotoSinParsear.json"
+filename = "productosTInglesaSinParsear.json"
 archivoNoParseados = open(filename,"r")
 productos = json.loads(archivoNoParseados.read())
 archivoNoParseados.close()
 
-filename = "productosDevotoParseados.json"
+filename = "productosTInglesaParseados.json"
 archivoParseados = open(filename,"w")
 archivoParseados.write("[")
 p = parser()
 
 for producto in productos:
 	print("Parseando: " + producto["titulo"] + "\n")
-	nombre, marca, magnitud, metrica, pack = p.extraerCampos(producto["titulo"])
+	nombre, marca, magnitud, metrica, metricaWeb, pack = p.extraerCampos(producto["titulo"])
 	precio = p.parsearPrecio(producto["precio"])
 	prodparseado = {}
 	prodparseado["nombre"] = nombre
 	prodparseado["marca"] = marca
 	prodparseado["metrica"] = metrica
+	prodparseado["metricaWeb"] = metricaWeb
 	prodparseado["magnitud"] = magnitud
 	prodparseado["packpor"] = pack
 	prodparseado["precio"] = precio
