@@ -22,7 +22,7 @@
 		
 	<div class="main-table">
 		<table id="formProductos" class="table table-striped">
-			<tbody>
+			<tbody id="tbodyProducts">
 				<tr>
 					<th class="th-main">Producto</th>
 					<th class="th-main">Marca</th>
@@ -33,7 +33,7 @@
 				<tr>
 					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct()"></input></td>
 					<td class="td-center">
-						<select class="form-control" id="selectMarca1" disabled="true" onChange="setMarca()">
+						<select class="form-control" id="selectMarca1" disabled="true" onClick="setMarca()">
 							<option>Marca 1</option>
 							<option>Marca 2</option>
 							<option>Marca 3</option>
@@ -43,7 +43,7 @@
 					<table>
 						<tr>
 							<td>
-								<select class="form-control" id="selectUnidad1" disabled="true" onChange="setUnidad()">
+								<select class="form-control" id="selectUnidad1" disabled="true" onClick="setUnidad()">
 									<option>Unidad 1</option>
 									<option>Unidad 2</option>
 									<option>Unidad 3</option>
@@ -60,7 +60,7 @@
 						<table>
 							<tr>
 								<td>
-									<select class="form-control" id="selectPack1" disabled="true" onChange="setPack()">
+									<select class="form-control" id="selectPack1" disabled="true" onClick="setPack()">
 										<option>x6</option>
 										<option>x12</option>
 									</select>
@@ -69,11 +69,11 @@
 									<input type="checkbox" id="desarmable1" disabled="true">
 								</td>
 							</tr>
-					</table>
+						</table>
 					</td>
 					
 					<td class="td-center">
-						<input id="inputCantidad1" type="text" size="5" class="cantidad" name="cantidad"  disabled="true" placeholder="Cantidad" onChange="setCantidad()"></input></td>
+						<input id="inputCantidad1" type="text" size="5" class="cantidad" name="cantidad"  disabled="true" placeholder="Cantidad" onClick="setCantidad()"></input></td>
 					</td>
 				</tr>
 			</tbody>

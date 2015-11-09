@@ -17,7 +17,6 @@ getMarket = function(){
 
 // $("#selectMarca1").click(function(){
 setMarca = function(){
-	console.log("MARCAAA");
 	$("#selectUnidad"+(id-1)).attr("disabled",false);
 	$("#flexible"+(id-1)).attr("disabled",false);
 };
@@ -31,7 +30,7 @@ setPack = function(){
 	$("#inputCantidad"+(id-1)).attr("disabled",false);
 };
 
-setPack = function(){
+setCantidad = function(){
 	$("#addButton").attr("disabled",false);
 };
 
@@ -45,14 +44,6 @@ addFields = function(){
 	input.name = "product";
 	input.placeholder = "Ingrese un producto";
 	
-	//creo los tags html necesarios para el combo marca
-	var buttonMarca = document.createElement("button");
-	buttonMarca.type="button";
-	buttonMarca.id = "dropdownMenuMarca"+id;
-	var spanMarca = document.createElement("span");
-	var comboMarca = document.createElement("div");
-	var ulMarca = document.createElement("ul");
-	
 	//crea la nueva fila
 	lastRow.append('<tr><td></td></tr>');
 	
@@ -60,109 +51,80 @@ addFields = function(){
 	$('#formProductos td:last').append(input);
 	$('#input'+id).attr("size","100");
 	$('#input'+id).attr("onchange","getProduct()");
+	$('#input'+id).attr("class","product");
 	
-	//agrega el combo marca
+	//creo los tags html necesarios para el select marca
+	var selectMarca = document.createElement("select");
+	selectMarca.id = "selectMarca"+id;
+	
+	//agrega el select marca
 	$('#formProductos tr:last').append('<td class="td-center"></td>');
-	$('#formProductos td:last').append(comboMarca);
-	$('#formProductos td:last div').attr('class','dropdown');
-	$('#formProductos td:last div').append(buttonMarca);
-	//agrega atributos al button Marca
-	$('#dropdownMenuMarca'+id).html("Marca ");
-	$('#dropdownMenuMarca'+id).attr("class","btn btn-default dropdown-toggle");
-	$('#dropdownMenuMarca'+id).attr("data-toggle", "dropdown");
-	$('#dropdownMenuMarca'+id).attr("aria-haspopup", "true");
-	$('#dropdownMenuMarca'+id).attr("aria-expanded", "true");
-	$('#dropdownMenuMarca'+id).append(spanMarca);
-	$('#dropdownMenuMarca'+id+' span').attr("class","caret");
-	$('#formProductos td:last div').append(buttonMarca);
-	//agrega el dropdown que va a mostrar
-	$('#formProductos td:last div').append(ulMarca);
-	$('#formProductos td:last div ul').attr("class","dropdown-menu");
-	$('#formProductos td:last div ul').attr("aria-labelledby","dropdownMenu"+id);
+	$('#formProductos td:last').append(selectMarca);
+	$('#formProductos td:last select').attr('class','form-control');
+	$('#formProductos td:last select').attr('disabled',true);
+	$('#formProductos td:last select').attr('onClick','setMarca()');
+
+	//agrega los campos a mostrar en el select Marca
+	//esto capaz se puede ir si van a cargarse a demanda segun el producto
+	$('#formProductos td:last select').append('<option>Marca 1</option>');
+	$('#formProductos td:last select').append('<option>Marca 2</option>');
+	$('#formProductos td:last select').append('<option>Marca 3</option>');
+	
+	//agrega el select unidad
+	$('#formProductos tr:last').append('<td class="td-center"></td>');
+	$('#formProductos td:last').append('<table><tr></tr></table>');
+	
+	var selectUnidad = document.createElement("select");
+	selectUnidad.id = "selectUnidad"+id;
+	
+	$('#formProductos tr:last').append('<td></td>');
+	$('#formProductos tr:last td').append(selectUnidad);
+	$('#selectUnidad'+id).attr('class','form-control');
+	$('#selectUnidad'+id).attr('disabled',true);
+	$('#selectUnidad'+id).attr('onClick','setUnidad()');
+	
 	//agrega los campos a mostrar en el button Marca
 	//esto capaz se puede ir si van a cargarse a demanda segun el producto
-	$('#formProductos td:last div ul').append('<li></li>');
-	$('#formProductos td:last div li').append('<a href="#">Marca 1</a>');
-	$('#formProductos td:last div li').append('<a href="#">Marca 2</a>');
-	$('#formProductos td:last div li').append('<a href="#">Marca 3</a>');
-	$('#formProductos td:last div li').append('<a href="#">Marca 4</a>');
+	$('#selectUnidad'+id).append('<option>Unidad 1</option>');
+	$('#selectUnidad'+id).append('<option>Unidad 2</option>');
+	$('#selectUnidad'+id).append('<option>Unidad 3</option>');
 	
-	//agrega el input magnitud
-	var inputMagnitud = document.createElement("input");
-	inputMagnitud.type = "text";
-	inputMagnitud.id = "magnitud"+id;
-	inputMagnitud.size = "20";
-	inputMagnitud.placeholder = "Ingrese magnitud";
+	var inputFlexible = document.createElement('input');
+	inputFlexible.id = 'flexible'+id;
+	inputFlexible.type = 'checkbox';
 	
-	$('#formProductos tr:last').append('<td class="td-center"></td>');
-	$('#formProductos td:last').append(inputMagnitud);
-	$('#formProductos td:last input').attr('class','magnitud');
+	$('#formProductos tr:last').append('<td></td>');
+	$('#formProductos td:last').append(inputFlexible);
+	$('#desarmable'+id).attr('disabled',true);
 	
-	//agrega el combo cantidad
-	var buttonCantidad = document.createElement("button");
-	buttonCantidad.type="button";
-	buttonCantidad.id = "dropdownMenuCantidad"+id;
-	var spanCantidad = document.createElement("span");
-	var comboCantidad = document.createElement("div");
-	var ulCantidad = document.createElement("ul");
+	//agrega el select pack
+	var selectPack = document.createElement("select");
+	selectPack.id = "selectPack"+id;
 	
-	$('#formProductos tr:last').append('<td class="td-center"></td>');
-	$('#formProductos td:last').append(comboCantidad);
-	$('#formProductos td:last div').attr('class','dropdown');
-	$('#formProductos td:last div').append(buttonCantidad);
-	//agrega atributos al button Cantidad
-	$('#dropdownMenuCantidad'+id).html("Cantidad ");
-	$('#dropdownMenuCantidad'+id).attr("class","btn btn-default dropdown-toggle");
-	$('#dropdownMenuCantidad'+id).attr("data-toggle", "dropdown");
-	$('#dropdownMenuCantidad'+id).attr("aria-haspopup", "true");
-	$('#dropdownMenuCantidad'+id).attr("aria-expanded", "true");
-	$('#dropdownMenuCantidad'+id).append(spanCantidad);
-	$('#dropdownMenuCantidad'+id+' span').attr("class","caret");
-	$('#formProductos td:last div').append(buttonCantidad);
-	//agrega el dropdown que va a mostrar
-	$('#formProductos td:last div').append(ulCantidad);
-	$('#formProductos td:last div ul').attr("class","dropdown-menu");
-	$('#formProductos td:last div ul').attr("aria-labelledby","dropdownMenu"+id);
-	//agrega los campos a mostrar en el button Cantidad
+	$('#tbodyProducts').children('tr:last').append('<td class="td-center"></td>');
+	$('#formProductos tr:last-child td:last').append(selectPack);
+	$('selectPack'+id).attr('class','form-control');
+	$('selectPack'+id).attr('disabled',true);
+	$('selectPack'+id).attr('onClick','setPack()');
+	
+	//agrega los campos a mostrar en el select pack
 	//esto capaz se puede ir si van a cargarse a demanda segun el producto
-	$('#formProductos td:last div ul').append('<li></li>');
-	$('#formProductos td:last div li').append('<a href="#">1</a>');
-	$('#formProductos td:last div li').append('<a href="#">2</a>');
-	$('#formProductos td:last div li').append('<a href="#">3</a>');
-	$('#formProductos td:last div li').append('<a href="#">4</a>');
+	$('selectPack'+id).append('<option>x6</option>');
+	$('selectPack'+id).append('<option>x12</option>');	
 	
-	//agrega el combo unidad
-	var buttonUnidad = document.createElement("button");
-	buttonUnidad.type="button";
-	buttonUnidad.id = "dropdownMenuUnidad"+id;
-	var spanUnidad = document.createElement("span");
-	var comboUnidad = document.createElement("div");
-	var ulUnidad = document.createElement("ul");
+	//agrega el input cantidad
+	var inputCantidad = document.createElement("input");
+	inputCantidad.type = "text";
+	inputCantidad.id = "inputCantidad"+id;
+	inputCantidad.name = "cantidad";
+	inputCantidad.placeholder = "Cantidad";
 	
 	$('#formProductos tr:last').append('<td class="td-center"></td>');
-	$('#formProductos td:last').append(comboUnidad);
-	$('#formProductos td:last div').attr('class','dropdown');
-	$('#formProductos td:last div').append(buttonUnidad);
-	//agrega atributos al button Unidad
-	$('#dropdownMenuUnidad'+id).html("Unidad ");
-	$('#dropdownMenuUnidad'+id).attr("class","btn btn-default dropdown-toggle");
-	$('#dropdownMenuUnidad'+id).attr("data-toggle", "dropdown");
-	$('#dropdownMenuUnidad'+id).attr("aria-haspopup", "true");
-	$('#dropdownMenuUnidad'+id).attr("aria-expanded", "true");
-	$('#dropdownMenuUnidad'+id).append(spanUnidad);
-	$('#dropdownMenuUnidad'+id+' span').attr("class","caret");
-	$('#formProductos td:last div').append(buttonUnidad);
-	//agrega el dropdown que va a mostrar
-	$('#formProductos td:last div').append(ulUnidad);
-	$('#formProductos td:last div ul').attr("class","dropdown-menu");
-	$('#formProductos td:last div ul').attr("aria-labelledby","dropdownMenu"+id);
-	//agrega los campos a mostrar en el button Unidad
-	//esto capaz se puede ir si van a cargarse a demanda segun el producto
-	$('#formProductos td:last div ul').append('<li></li>');
-	$('#formProductos td:last div li').append('<a href="#">Litros</a>');
-	$('#formProductos td:last div li').append('<a href="#">Mililitros</a>');
-	$('#formProductos td:last div li').append('<a href="#">Kilos</a>');
-	$('#formProductos td:last div li').append('<a href="#">Gramos</a>');
+	$('#formProductos td:last').append(inputCantidad);
+	$('#inputCantidad'+id).attr("size","5");
+	$('#input'+id).attr("onchange","getProduct()");
+	$('#input'+id).attr("class","cantidad");
+	$('#input'+id).attr("disabled",true);
 	
 	id = id + 1;
 	$("#addButton").attr("disabled",true);
