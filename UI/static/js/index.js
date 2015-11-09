@@ -1,4 +1,5 @@
 var id = 2;
+var dataProd;
 
 getProduct = function(){
 	// POR AHORA ESTA AGARRANDO SOLO LA INFO QUE SE ESCRIBE
@@ -167,22 +168,19 @@ addFields = function(){
 	$("#addButton").attr("disabled",true);
 };
 
-$(document).ready(function () {
-    $("#prueba").click(function() {
-            $.ajax({
-            url: 'localhost:5000/datosPorProduct',
-            // url: 'localhost:5000/datosPorProducto',
-            type: 'GET',
-            data: $('#input' + (id -1)).val(),
-            dataType: "json",
-            
-            success: function(result, status, xhr) {
-                alert(result+status+xhr);
-            },
-            error: function(xhr,status,error) {
-                alert (status);
-                console.log(xhr);
-            }
-        });
-    });
-});
+
+$(function() {
+    var getDatos = function(e) {
+      $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
+        a: $('input' + (id-1)).val(),
+      }, function(data) {
+          dataProd = data;
+          alert (dataProd);
+      });
+      return false;
+    };
+
+    $('#prueba').bind('click', getDatos);
+
+    
+  });
