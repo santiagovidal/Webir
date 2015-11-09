@@ -7,11 +7,31 @@ getProduct = function(){
 	
 	var idProduct = $("#input"+(id-1)).val();
 	console.log(idProduct);
-	$("#addButton").attr("disabled",false);
+	$("#selectMarca"+(id-1)).attr("disabled",false);
 };
 
 getMarket = function(){
 	window.location.href = "resultado.html";
+};
+
+// $("#selectMarca1").click(function(){
+setMarca = function(){
+	console.log("MARCAAA");
+	$("#selectUnidad"+(id-1)).attr("disabled",false);
+	$("#flexible"+(id-1)).attr("disabled",false);
+};
+
+setUnidad = function(){
+	$("#selectPack"+(id-1)).attr("disabled",false);
+	$("#desarmable"+(id-1)).attr("disabled",false);
+};
+
+setPack = function(){
+	$("#inputCantidad"+(id-1)).attr("disabled",false);
+};
+
+setPack = function(){
+	$("#addButton").attr("disabled",false);
 };
 
 addFields = function(){
@@ -166,6 +186,3 @@ $(document).ready(function () {
         });
     });
 });
-
-
-

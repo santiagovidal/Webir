@@ -13,6 +13,7 @@
     <!-- Bootstrap -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
   </head>
+  
   <body">
 	<h1>WEBIR - PROTOTIPO</h1>
 		
@@ -22,51 +23,54 @@
 				<tr>
 					<th class="th-main">Producto</th>
 					<th class="th-main">Marca</th>
-					<th	class="th-main">Magnitud<//th>
+					<th	class="th-main">Unidad</th>
+					<th class="th-main">Pack</th>
 					<th class="th-main">Cantidad</th>
-					<th class="th-main">Unidad</th>
 				</tr>
 				<tr>
 					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct()"></input></td>
 					<td class="td-center">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuMarca1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Marca
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="#">Marca 1</a></li>
-								<li><a href="#">Marca 2</a></li>
-								<li><a href="#">Marca 3</a></li>
-								<li><a href="#">Marca 4</a></li>
-							</ul>
-						</div>
-					</td>
-					<td class="td-center"><input id="magnitud1" type="text" size="20" class="magnitud" placeholder="Ingrese magnitud"></input></td>
-					<td class="td-center">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuCantidad1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Cantidad
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-							</ul>
-						</div>
+						<select class="form-control" id="selectMarca1" disabled="true" onChange="setMarca()">
+							<option>Marca 1</option>
+							<option>Marca 2</option>
+							<option>Marca 3</option>
+						</select>
 					</td>
 					<td class="td-center">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuUnidad1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Unidad
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="#">Litros</a></li>
-								<li><a href="#">Mililitros</a></li>
-								<li><a href="#">Kilos</a></li>
-								<li><a href="#">Gramos</a></li>
-							</ul>
-						</div>
+					<table>
+						<tr>
+							<td>
+								<select class="form-control" id="selectUnidad1" disabled="true" onChange="setUnidad()">
+									<option>Unidad 1</option>
+									<option>Unidad 2</option>
+									<option>Unidad 3</option>
+								</select>
+							</td>
+							<td>
+								<input type="checkbox" id="flexible1" disabled="true">
+							</td>
+						</tr>
+					</table>
+					</td>
+					
+					<td class="td-center">
+						<table>
+							<tr>
+								<td>
+									<select class="form-control" id="selectPack1" disabled="true" onChange="setPack()">
+										<option>x6</option>
+										<option>x12</option>
+									</select>
+								</td>
+								<td>
+									<input type="checkbox" id="desarmable1" disabled="true">
+								</td>
+							</tr>
+					</table>
+					</td>
+					
+					<td class="td-center">
+						<input id="inputCantidad1" type="text" size="5" class="cantidad" name="cantidad"  disabled="true" placeholder="Cantidad" onChange="setCantidad()"></input></td>
 					</td>
 				</tr>
 			</tbody>
