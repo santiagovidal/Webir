@@ -30,7 +30,7 @@ class parser (object):
 
 	def extraerCantidad(self,string):
 		log = open("log_de_cantidades_no_registradas.txt", "a")
-		cantidadesSinNumero = [" (kg)"," (gr)"," (lt)"," (ml)"," (cc)"]
+		cantidadesSinNumero = [" (kg)"," (gr)"," (lt)"," (ml)"," (cc)", "el kg", "x kg"]
 		cantidadesConNumeroAntes = ["kg","gr","lt","ml","cc", "k", "g", "l"]
 		cantidadesEspeciales = ["docena"]
 
@@ -41,7 +41,8 @@ class parser (object):
 		# Primero cantidades sin numero
 		for c in cantidadesSinNumero:
 			if c in string:
-				resultadoString = string.replace(c,"").replace("  "," ").strip()
+				resultadoString = string.replace(c,"")
+				c = c.replace("el","").replace("x","")
 				resultadoCantidad = "1" + c.replace("(","").replace(")","").strip()
 
 		# Cantidades con numero
@@ -49,7 +50,7 @@ class parser (object):
 			res = re.findall(r"\d*?(?:\.|,|\/)?\d+\s?" + re.escape(c), string)
 			if res:
 				resultadoCantidad = max(res, key=len)
-				resultadoString = string.replace(resultadoCantidad,"").replace("  "," ").strip()
+				resultadoString = string.replace(resultadoCantidad,"")
 				resultadoCantidad = resultadoCantidad.replace(" ","")
 				break
 
@@ -57,6 +58,10 @@ class parser (object):
 			log.write("Cantidad no encontrada: " + resultadoString.encode('utf-8') + '\n')
 
 		resultadoMagnitud, resultadoMetrica = self.normalizarCantidad(resultadoCantidad)
+
+		# Le saco algun punto suelto que puede haber quedado
+		resultadoString = re.sub("(^|\s)\.($|\s)", "", resultadoString)
+		resultadoString = resultadoString.replace("  "," ").strip()
 
 		return resultadoString, resultadoMagnitud, resultadoMetrica
 
@@ -125,16 +130,29 @@ class parser (object):
 		return resultadoString, resultadoMarca
 
 	def parsearPrecio(self,precio):
+		# Le saco los simbolos de pesos y los espacios
+		precio = precio.replace("$U","").replace(" ","")
+
+		# Saco los centesimos
+		# Si son mas que 0 le sumo 1 peso al precio
+		res = re.findall(r"\.\d\d$", precio)
+		if res:
+			centesimos = max(res, key=len)
+			precio = int(precio.replace(centesimos,""))
+			if int(centesimos[1:]) > 0:
+				precio += 1
+			return precio
+
 		# Obtiene los numeros y ignora cualquier otro caracter
 		return int(re.sub("[^0-9]", "", precio))
 
 
-filename = "productosTInglesaSinParsear.json"
+filename = "productosDevotoSinParsear.json"
 archivoNoParseados = open(filename,"r")
 productos = json.loads(archivoNoParseados.read())
 archivoNoParseados.close()
 
-filename = "productosTInglesaParseados.json"
+filename = "productosDevotoParseados.json"
 archivoParseados = open(filename,"w")
 archivoParseados.write("[")
 p = parser()

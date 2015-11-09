@@ -14,7 +14,8 @@ class devotoSpider(CrawlSpider):
 		"http://www.devoto.com.uy/acategory.aspx?1725",
 		"http://www.devoto.com.uy/acategory.aspx?1154",
 		"http://www.devoto.com.uy/acategory.aspx?1155",
-		"http://www.devoto.com.uy/acategory.aspx?1162"
+		"http://www.devoto.com.uy/acategory.aspx?1162",
+		"http://www.devoto.com.uy/acategory.aspx?1180"
 	]
 
 	
