@@ -102,15 +102,25 @@ addFields = function(){
 	selectPack.id = "selectPack"+id;
 	
 	$('#tbodyProducts').children('tr:last').append('<td class="td-center"></td>');
-	$('#formProductos tr:last-child td:last').append(selectPack);
-	$('selectPack'+id).attr('class','form-control');
-	$('selectPack'+id).attr('disabled',true);
-	$('selectPack'+id).attr('onClick','setPack()');
+	$('#formProductos td:last').append('<table><tr></tr></table>');
+	$('#formProductos tr:last').append('<td></td>');
+	$('#formProductos tr:last td').append(selectPack);
+	$('#selectPack'+id).attr('class','form-control');
+	$('#selectPack'+id).attr('disabled',true);
+	$('#selectPack'+id).attr('onClick','setPack()');
 	
 	//agrega los campos a mostrar en el select pack
 	//esto capaz se puede ir si van a cargarse a demanda segun el producto
-	$('selectPack'+id).append('<option>x6</option>');
-	$('selectPack'+id).append('<option>x12</option>');	
+	$('#selectPack'+id).append('<option>x6</option>');
+	$('#selectPack'+id).append('<option>x12</option>');	
+	
+	var inputDesarmable = document.createElement('input');
+	inputDesarmable.id = 'desarmable'+id;
+	inputDesarmable.type = 'checkbox';
+	
+	$('#formProductos tr:last').append('<td></td>');
+	$('#formProductos td:last').append(inputDesarmable);
+	$('#desarmable'+id).attr('disabled',true);	
 	
 	//agrega el input cantidad
 	var inputCantidad = document.createElement("input");
@@ -119,12 +129,12 @@ addFields = function(){
 	inputCantidad.name = "cantidad";
 	inputCantidad.placeholder = "Cantidad";
 	
-	$('#formProductos tr:last').append('<td class="td-center"></td>');
+	$('#tbodyProducts').children('tr:last').append('<td class="td-center"></td>');
 	$('#formProductos td:last').append(inputCantidad);
 	$('#inputCantidad'+id).attr("size","5");
-	$('#input'+id).attr("onchange","getProduct()");
-	$('#input'+id).attr("class","cantidad");
-	$('#input'+id).attr("disabled",true);
+	$('#inputCantidad'+id).attr("onClick","setCantidad()");
+	$('#inputCantidad'+id).attr("class","cantidad");
+	$('#inputCantidad'+id).attr("disabled",true);
 	
 	id = id + 1;
 	$("#addButton").attr("disabled",true);
