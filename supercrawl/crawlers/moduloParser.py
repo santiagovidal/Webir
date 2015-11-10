@@ -11,9 +11,9 @@ class parser (object):
 
 	def extraerCampos(self,string):
 		temp1, marca = self.extraerMarca(string)
-		temp2, magnitud, metrica, metricaWeb = self.extraerCantidad(temp1)
+		temp2, magnitud, metrica, unidadWeb = self.extraerCantidad(temp1)
 		nombre, pack = self.extraerPack(temp2)
-		return nombre, marca, magnitud, metrica, metricaWeb, pack
+		return nombre, marca, magnitud, metrica, unidadWeb, pack
 
 	def extraerPack(self,string):
 		string = string.lower()
@@ -57,19 +57,19 @@ class parser (object):
 		if resultadoCantidad == "":
 			log.write("Cantidad no encontrada: " + resultadoString.encode('utf-8') + '\n')
 
-		resultadoMagnitud, resultadoMetrica, metricaWeb = self.normalizarCantidad(resultadoCantidad)
+		resultadoMagnitud, resultadoMetrica, unidadWeb = self.normalizarCantidad(resultadoCantidad)
 
 		# Le saco algun punto suelto que puede haber quedado
 		resultadoString = re.sub("(^|\s)\.($|\s)", "", resultadoString)
 		resultadoString = resultadoString.replace("  "," ").strip()
 
-		return resultadoString, resultadoMagnitud, resultadoMetrica, metricaWeb
+		return resultadoString, resultadoMagnitud, resultadoMetrica, unidadWeb
 
 	def normalizarCantidad(self,cantidad):
 		# cantidad tiene un string con el siguiente formato: {magnitud}{metrica} o el string vacio
 		magnitud = 1
 		metrica = ""
-		metricaWeb = ""
+		unidadWeb = cantidad
 
 		if cantidad is not "":
 			res = re.findall(r"\d*(?:\.|,|\/)?\d+", cantidad)
@@ -84,7 +84,7 @@ class parser (object):
 				if metrica == "g":
 					metrica = "gr"
 
-				metricaWeb = metrica
+				unidadWeb = numero + metrica
 
 				if "/" in numero:
 					numerador = float(numero.split("/")[0])
@@ -104,7 +104,7 @@ class parser (object):
 			if isinstance(magnitud, float) and magnitud.is_integer():
 				magnitud = int(magnitud)
 
-		return magnitud, metrica, metricaWeb
+		return magnitud, metrica, unidadWeb
 	
 	def extraerMarca(self,string):
 		log = open("log_de_marcas_no_registradas.txt", "a")
@@ -162,13 +162,13 @@ p = parser()
 
 for producto in productos:
 	print("Parseando: " + producto["titulo"] + "\n")
-	nombre, marca, magnitud, metrica, metricaWeb, pack = p.extraerCampos(producto["titulo"])
+	nombre, marca, magnitud, metrica, unidadWeb, pack = p.extraerCampos(producto["titulo"])
 	precio = p.parsearPrecio(producto["precio"])
 	prodparseado = {}
 	prodparseado["nombre"] = nombre
 	prodparseado["marca"] = marca
 	prodparseado["metrica"] = metrica
-	prodparseado["metricaWeb"] = metricaWeb
+	prodparseado["unidadWeb"] = unidadWeb
 	prodparseado["magnitud"] = magnitud
 	prodparseado["packpor"] = pack
 	prodparseado["precio"] = precio

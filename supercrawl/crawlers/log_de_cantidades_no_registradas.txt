@@ -25,11 +25,9 @@ Cantidad no encontrada: pechito parrillero cerdo al vacio
 Cantidad no encontrada: picaña cerdo al vacio
 Cantidad no encontrada: pulpa de bondiola al vacio
 Cantidad no encontrada: arroz negro c/ mariscos
-Cantidad no encontrada: langostinoenterocrudogigantexkg
 Cantidad no encontrada: mejillon entero env.al vacio x un
-Cantidad no encontrada: paellaenbandeja
+Cantidad no encontrada: paella en  bandeja
 Cantidad no encontrada: palitos mar x un.
-Cantidad no encontrada: pulpacamaron(ecuador)130/15xkg
 Cantidad no encontrada: rabas calamar a la romana x kilo
 Cantidad no encontrada: yogur vital + lowcol frutilla descremada
 Cantidad no encontrada: yogur vital + lowcol frutilla descremada
@@ -43,7 +41,7 @@ Cantidad no encontrada: panbata jamon crudo/queso brie/rucula
 Cantidad no encontrada: sandw.jamon y choclo triple
 Cantidad no encontrada: sandw.triples olimpicos
 Cantidad no encontrada: sandwich 12 jamon + 12 queso
-Cantidad no encontrada: sandwichatunxunidad
+Cantidad no encontrada: sandwich atun  x unidad
 Cantidad no encontrada: sandwich de atun
 Cantidad no encontrada: sandwich de pollo
 Cantidad no encontrada: sandwich doble jamon x4 unidades
@@ -61,7 +59,7 @@ Cantidad no encontrada: albahaca organica
 Cantidad no encontrada: albahaca y tomate cherry bandeja
 Cantidad no encontrada: alcaucil - unidad
 Cantidad no encontrada: apio gusto
-Cantidad no encontrada: apiogustoorg.-bl1un
+Cantidad no encontrada: apio gusto org.  - bl 1 un
 Cantidad no encontrada: apio planta
 Cantidad no encontrada: queso gruyere-
 Cantidad no encontrada: whisky petaca petaca
@@ -89,7 +87,7 @@ Cantidad no encontrada: arvejas organicas -
 Cantidad no encontrada: berenjena especial
 Cantidad no encontrada: berenjena jaspeada
 Cantidad no encontrada: berro picante envasado
-Cantidad no encontrada: boniatoorganico
+Cantidad no encontrada: boniato  organico
 Cantidad no encontrada: boniato zanahoria
 Cantidad no encontrada: boniato zanahoria organico
 Cantidad no encontrada: calabacin
@@ -131,7 +129,7 @@ Cantidad no encontrada: ciboulette maceta
 Cantidad no encontrada: torta dulce de leche tuvi
 Cantidad no encontrada: torta
 Cantidad no encontrada: torta durazno blister - un 1 un
-Cantidad no encontrada: tortaespumadulcedeleche
+Cantidad no encontrada: torta espuma  dulce de leche
 Cantidad no encontrada: torta de chocolate premiun - un
 Cantidad no encontrada: torta de chocolate x un.
 Cantidad no encontrada: torta frutilla
@@ -149,14 +147,13 @@ Cantidad no encontrada: whisky escoces rojo petaca
 Cantidad no encontrada: whisky escoces 21 años
 Cantidad no encontrada: whisky escoces petaca
 Cantidad no encontrada: queso bleu d´auvergne kg
-Cantidad no encontrada: quesofundidosaborcheddarschreiber-kg
+Cantidad no encontrada: queso fundido sabor  cheddar schreiber- kg
 Cantidad no encontrada: queso magro fetas
 Cantidad no encontrada: canastita para rellenar 30 unidades
 Cantidad no encontrada: cup cakes x unidad
 Cantidad no encontrada: merengues rellenos 6 unidades
-Cantidad no encontrada: pastafroladulcedelechexkg
 Cantidad no encontrada: queso azul la brida-kg
-Cantidad no encontrada: quesocabrapimrojochev.c.negro
+Cantidad no encontrada: queso cabra  pim rojo chev.c.negro
 Cantidad no encontrada: queso cabra ajo y dill
 Cantidad no encontrada: queso cabra finas hierbas
 Cantidad no encontrada: queso cabra pimiento
@@ -226,7 +223,9 @@ Cantidad no encontrada: queso magro s/sal horma gde maia-kg
 Cantidad no encontrada: cascaras de limon (glaseada)
 Cantidad no encontrada: cascaras de naranja (glaseada)
 Cantidad no encontrada: queso madrigal kg-
+Cantidad no encontrada: queso mini baby chedar x 5  .100  kg
 Cantidad no encontrada: queso mini emmental bel .120  kg
+Cantidad no encontrada: queso mini bonbel .110  kg
 Cantidad no encontrada: queso oveja manchego vega- kg
 Cantidad no encontrada: queso parmiggiano entero horma-kg
 Cantidad no encontrada: queso magro sin sal fraccion farming- kg.
@@ -247,7 +246,7 @@ Cantidad no encontrada: queso muzzarella
 Cantidad no encontrada: queso muzzarella fetas
 Cantidad no encontrada: queso parrillero natural fraccion
 Cantidad no encontrada: queso parrillero fraccion milky
-Cantidad no encontrada: quesopetitgruyerefracc.alvaciog.naturalia-kg
+Cantidad no encontrada: queso petit gruyere  fracc.al vacio g.naturalia-kg
 Cantidad no encontrada: galleta super magra sin sal
 Cantidad no encontrada: fruta glaseada (batatas)
 Cantidad no encontrada: fruta glaseada (higos)
@@ -277,8 +276,7 @@ Cantidad no encontrada: jamon coc.del medio extra
 Cantidad no encontrada: jamon cocido
 Cantidad no encontrada: jamon cocido
 Cantidad no encontrada: lomito canadiense
-Cantidad no encontrada: matambrecarneg.lafamiliaalvaciokg
-Cantidad no encontrada: flanxkg
+Cantidad no encontrada: matambre  carne g. la familia al vacio kg
 Cantidad no encontrada: gelatina frutilla en
 Cantidad no encontrada: gelatina frutilla s/azucar - un
 Cantidad no encontrada: gelatina manzana sin azucar en
@@ -314,7 +312,7 @@ Cantidad no encontrada: medallones de carne x unidad
 Cantidad no encontrada: milanesa al pan
 Cantidad no encontrada: milanesa de pollo al pan
 Cantidad no encontrada: milanesa de soja y perejil x unidad
-Cantidad no encontrada: arrolladitochinocerdoprimavera-un.
+Cantidad no encontrada: arrolladito chino cerdo  primavera- un.
 Cantidad no encontrada: bayas de goji bañadas en chocolate
 Cantidad no encontrada: chocolate amargo belga,caju,chip banana,coco x 55
 Cantidad no encontrada: super granola c/goji y jarabe de agave s/ azucar
@@ -364,7 +362,7 @@ Cantidad no encontrada: whisky petaca
 Cantidad no encontrada: lechuga crespa organica -
 Cantidad no encontrada: lechuga criolla/romania
 Cantidad no encontrada: lechuga de invernaculo
-Cantidad no encontrada: lechugamantecosalatu
+Cantidad no encontrada: lechuga mantecosa  latu
 Cantidad no encontrada: lechuga morada
 Cantidad no encontrada: lechuga organica
 Cantidad no encontrada: mandioca
@@ -744,7 +742,7 @@ Cantidad no encontrada: tequila tradicional especial
 Cantidad no encontrada: uvita fun fun amarga
 Cantidad no encontrada: uvita fun fun original
 Cantidad no encontrada: vino de solera marsala & sciutto
-Cantidad no encontrada: abrigoparaperroalgodon015
+Cantidad no encontrada: abrigo para perro algodon  015
 Cantidad no encontrada: abrigo para perro grande
 Cantidad no encontrada: grissines finitos al agua
 Cantidad no encontrada: fernet
@@ -871,9 +869,9 @@ Cantidad no encontrada: cadena de con brazalete 2.5mm
 Cantidad no encontrada: cama para mascota grande
 Cantidad no encontrada: casa para perro mediana petmate
 Cantidad no encontrada: cascabel p/gato
-Cantidad no encontrada: casillaparaperrofuracaopetn2roja
-Cantidad no encontrada: casillaparaperrofuracaopetn4azul
-Cantidad no encontrada: casillaparaperrofuracaopetn4roja
+Cantidad no encontrada: casilla para perro furacaopet n  2 roja
+Cantidad no encontrada: casilla para perro furacaopet n  4 azul
+Cantidad no encontrada: casilla para perro furacaopet n  4 roja
 Cantidad no encontrada: casilla para perro iglu chica nicoll
 Cantidad no encontrada: choripron
 Cantidad no encontrada: chorizo cantimpalo 
@@ -994,7 +992,7 @@ Cantidad no encontrada: carne picada especial
 Cantidad no encontrada: carne picada
 Cantidad no encontrada: carne picada
 Cantidad no encontrada: churrascos de bola de lomo
-Cantidad no encontrada: colitacuadrilternera
+Cantidad no encontrada: colita cuadril  ternera
 Cantidad no encontrada: colita de cuadril al vacio
 Cantidad no encontrada: colita de cuadril angus
 Cantidad no encontrada: colita de cuadril hereford
@@ -1016,7 +1014,7 @@ Cantidad no encontrada: comedero perro medio denucio
 Cantidad no encontrada: comedero plastico mediano 16x5cms.
 Cantidad no encontrada: correa fina 1m x 10mm
 Cantidad no encontrada: correa gruesa 60cm x 16mm
-Cantidad no encontrada: correaimportadan2
+Cantidad no encontrada: correa importada n  2
 Cantidad no encontrada: correa importada n 4 15mm x110cms.
 Cantidad no encontrada: correa importada n 5 20mm x110cms.
 Cantidad no encontrada: correa nylon con mosqueton 15mm x1.10mt
@@ -1176,7 +1174,7 @@ Cantidad no encontrada: vino tinto merlot cabernet tannat
 Cantidad no encontrada: vino tinto merlot cru d exception
 Cantidad no encontrada: mini catalana 2 unidades
 Cantidad no encontrada: pan molde sandwich cortado 50 fetas(panaderia)
-Cantidad no encontrada: panparasandwichnegrox10un
+Cantidad no encontrada: pan para sandwich negro  x 10 un
 Cantidad no encontrada: pan con queso x unidad
 Cantidad no encontrada: pan varios gustos x unidad
 Cantidad no encontrada: pan x unidad
@@ -1219,7 +1217,7 @@ Cantidad no encontrada: queso danbo light fetas-
 Cantidad no encontrada: queso muzzarella light
 Cantidad no encontrada: queso muzzarella light
 Cantidad no encontrada: queso muzzarella light fetas
-Cantidad no encontrada: pan4cerealessinsalelkg
+Cantidad no encontrada: pan 4 cereales sin sal el  kg
 Cantidad no encontrada: pan con calcio x unidad
 Cantidad no encontrada: pan con hierro x unidad
 Cantidad no encontrada: pan pita arabe de hierbas b/calorias x 6 unid.
@@ -1697,7 +1695,7 @@ Cantidad no encontrada: vino tinto malbec reserva
 Cantidad no encontrada: vino tinto malbec
 Cantidad no encontrada: pack 2 vinos tannat cabernet sauvignon
 Cantidad no encontrada: vino tinto tannat amat 
-Cantidad no encontrada: vinotintojanotannat
+Cantidad no encontrada: vino tinto jano tannat 
 Cantidad no encontrada: champagne brut
 Cantidad no encontrada: whisky 21 años
 Cantidad no encontrada: vino tinto tannat gran reserva
@@ -1996,7 +1994,7 @@ Cantidad no encontrada: vinagre de vino blanco con estragon
 Cantidad no encontrada: mix de pasas de uva/damasco/nuez pote 15ogr
 Cantidad no encontrada: sopa instantanea de esparragos reducida en sodio x4u
 Cantidad no encontrada: sopa instantanea de esparragos reducida en sodio x4u
-Cantidad no encontrada: basepollohierbasprov.firma
+Cantidad no encontrada: base pollo hierbas prov.firma  
 Cantidad no encontrada: te supremo de ceylan x20 sobres
 Cantidad no encontrada: te colestel x10 sobres
 Cantidad no encontrada: te kaba caa circulatorio 10 sobres
@@ -2093,14 +2091,14 @@ Cantidad no encontrada: aceite de oliva fior fiore extra sin filtrar
 Cantidad no encontrada: omega 3 100 capsulas
 Cantidad no encontrada: pizza con muzzarella x2u
 Cantidad no encontrada: sorrentinos de ricota y nuez x14u
-Cantidad no encontrada: packpizzax2+muzzarella
+Cantidad no encontrada: pack pizza x2 + muzzarella  
 Cantidad no encontrada: capsula de cafe delisse x10u
 Cantidad no encontrada: capsula de cafe extracream x10u
 Cantidad no encontrada: capsula de cafe stimola x10u
 Cantidad no encontrada: pack ravioles carne/verdura x2u
 Cantidad no encontrada: cacao polvo 4sob.  
-Cantidad no encontrada: raviolesricotamasaespinacax100
-Cantidad no encontrada: raviolesdemasaverdex100t.inglesa
+Cantidad no encontrada: ravioles ricota masa espinaca x 100 
+Cantidad no encontrada: ravioles de masa verde x 100 t.inglesa 
 Cantidad no encontrada: azafran hebras 375mg
 Cantidad no encontrada: te verde 100 sobres
 Cantidad no encontrada: calamares en salsa americana x3u
@@ -2124,20 +2122,14 @@ Cantidad no encontrada: sardinilla cabo de peña en aceite de oliva reducida en 
 Cantidad no encontrada: pizza porcion con muzzarella
 Cantidad no encontrada: te verde 20 sobres
 Cantidad no encontrada: pollo sin piel avicolas del oeste(kg)
-Cantidad no encontrada: bifedevaciodenovillo(kg)
-Cantidad no encontrada: costillaconlomo(kg)
-Cantidad no encontrada: muslocortosinpiel(kg)
-Cantidad no encontrada: chorizotiendainglesa(kg)
 Cantidad no encontrada: muslo 1/4 sin piel avicolas del oeste(kg)
-Cantidad no encontrada: corderoenteroomedio(kg)
 Cantidad no encontrada: patitas sin piel avicolas del oeste(kg)
 Cantidad no encontrada: chorizos, morcillas pack 
 Cantidad no encontrada: peceto de cerdo vacio
 Cantidad no encontrada: picanha de cerdo vacio
-Cantidad no encontrada: langostinopulpa(kg)
 Cantidad no encontrada: pollos sin menudos
-Cantidad no encontrada: tripagorda
-Cantidad no encontrada: pavitanorthern
+Cantidad no encontrada: tripa gorda  
+Cantidad no encontrada: pavita northern  
 Cantidad no encontrada: pizza a la piedra de muzzarella la x2u
 Cantidad no encontrada: hamburguesa x12u
 Cantidad no encontrada: hamburguesa light x8u
@@ -2233,7 +2225,7 @@ Cantidad no encontrada: apio planta
 Cantidad no encontrada: cebolla de verdeo atado
 Cantidad no encontrada: remolacha organica
 Cantidad no encontrada: alcaucil
-Cantidad no encontrada: ajodientes
+Cantidad no encontrada: ajo dientes  
 Cantidad no encontrada: lechuga roble blanca organica
 Cantidad no encontrada: nabo organico
 Cantidad no encontrada: cebolla de verdeo organica
@@ -2241,7 +2233,7 @@ Cantidad no encontrada: maceta de albahaca
 Cantidad no encontrada: lechuga crespa morada organica
 Cantidad no encontrada: laurel
 Cantidad no encontrada: cebollita de verdeo
-Cantidad no encontrada: cebollitadeverdeoorganico
+Cantidad no encontrada: cebollita de verdeo organico  
 Cantidad no encontrada: maceta ciboulette 
 Cantidad no encontrada: maceta tomillo 
 Cantidad no encontrada: col chino
@@ -2257,8 +2249,8 @@ Cantidad no encontrada: ensalada francesa
 Cantidad no encontrada: papa parrillero
 Cantidad no encontrada: mixto mini
 Cantidad no encontrada: lechuga salanova mantecosa morada
-Cantidad no encontrada: lechugasalanovaroblemorada
-Cantidad no encontrada: zanahoriapequeñaorganica
+Cantidad no encontrada: lechuga salanova roble morada 
+Cantidad no encontrada: zanahoria pequeña organica  
 Cantidad no encontrada: alfajor de chocolate pack x6u
 Cantidad no encontrada: alfajor arrolate valija x6u
 Cantidad no encontrada: alfajor de nieve pack x6u
@@ -2268,7 +2260,7 @@ Cantidad no encontrada: alfajor arrolate
 Cantidad no encontrada: alfajor mousse x6u
 Cantidad no encontrada: bombon serenata de amor individual
 Cantidad no encontrada: bombon sin azucar 
-Cantidad no encontrada: fantasiasdechocolateb.f.
+Cantidad no encontrada: fantasias de chocolate b.f. 
 Cantidad no encontrada: chicle de menta sin azucar x4u
 Cantidad no encontrada: alfajor nutrilate pack x9u
 Cantidad no encontrada: alfajor mousse de dulce de leche caja x6u
@@ -2288,7 +2280,7 @@ Cantidad no encontrada: alfajor bombon negro caja x12u
 Cantidad no encontrada: alfajor de chocolate blanco x6u
 Cantidad no encontrada: alfajor blanquito
 Cantidad no encontrada: chicle ultra defense sin azucar x4u
-Cantidad no encontrada: trufasmulticolorx8
+Cantidad no encontrada: trufas multicolor x8 
 Cantidad no encontrada: chocolate fino para taza b.f.
 Cantidad no encontrada: chicle bola x16u
 Cantidad no encontrada: alfajor surprise negro pack x6u
@@ -2395,7 +2387,7 @@ Cantidad no encontrada: pan felipe integral
 Cantidad no encontrada: medialuna de manteca dulce rellena de jamon y queso
 Cantidad no encontrada: pan tortuga x4u
 Cantidad no encontrada: pan tortuga x6u
-Cantidad no encontrada: catalandemaizconpasasx1
+Cantidad no encontrada: catalan de maiz con pasas x1 
 Cantidad no encontrada: doughnut bañada con chocolate
 Cantidad no encontrada: pan de viena x1u
 Cantidad no encontrada: sandwich de pollo/mostaza y almendras (solo cantidades pares)
@@ -2433,7 +2425,7 @@ Cantidad no encontrada: pan felipe sin sal x1u
 Cantidad no encontrada: sandwich de jamon y anana (solo cantidades pares)
 Cantidad no encontrada: sandwich olimpico triple negro c/u (solo cantidades pares)
 Cantidad no encontrada: crema catalana
-Cantidad no encontrada: hotcakes
+Cantidad no encontrada: hot cakes 
 Cantidad no encontrada: sandwich vegetariano (solo cantidades pares)
 Cantidad no encontrada: manjar del cielo
 Cantidad no encontrada: sandwich de pan blanco x36u
@@ -2445,12 +2437,12 @@ Cantidad no encontrada: alfajor de maizena x6u
 Cantidad no encontrada: postre tiramisu
 Cantidad no encontrada: doughnut bañadas con granas de colores
 Cantidad no encontrada: postre triangulo mixto
-Cantidad no encontrada: massinidecremayyematostada
+Cantidad no encontrada: massini de crema y yema tostada 
 Cantidad no encontrada: torta de chocolate (12 porciones)
 Cantidad no encontrada: pan tortuga rebanada x4u
-Cantidad no encontrada: granbatta
+Cantidad no encontrada: granbatta 
 Cantidad no encontrada: sandwich capresse (solo cantidades pares)
-Cantidad no encontrada: waffles10unidades
+Cantidad no encontrada: waffles 10 unidades 
 Cantidad no encontrada: budin extra granizado
 Cantidad no encontrada: pan de pebetes x20u
 Cantidad no encontrada: pan felipe x3u
@@ -2487,7 +2479,7 @@ Cantidad no encontrada: waffles bandeja x4u
 Cantidad no encontrada: sandwich de jamon crudo y salsa de hierbas (solo cantidades pares)
 Cantidad no encontrada: tortuga sin harina de trigo x2u
 Cantidad no encontrada: rosca de dulce de leche
-Cantidad no encontrada: alfajordemaicena
+Cantidad no encontrada: alfajor de maicena 
 Cantidad no encontrada: mini coquito
 Cantidad no encontrada: sandwich de felipe
 Cantidad no encontrada: pan brioche x20u
@@ -2500,12 +2492,12 @@ Cantidad no encontrada: postre de dulce de leche grande
 Cantidad no encontrada: postre de dulce de leche individual
 Cantidad no encontrada: alfajor grande sin azucar (calorias reducidas)
 Cantidad no encontrada: postre de chocolate
-Cantidad no encontrada: miniarrolladonevado
+Cantidad no encontrada: mini arrollado nevado 
 Cantidad no encontrada: postre de durazno individual
 Cantidad no encontrada: postre
 Cantidad no encontrada: ojitos (calorias reducidas)
 Cantidad no encontrada: super mix de sandwiches x12u
-Cantidad no encontrada: tortadecremadeavellanas
+Cantidad no encontrada: torta de crema de avellanas 
 Cantidad no encontrada: torta arena marmolada
 Cantidad no encontrada: pasta frola de membrillo (8 porciones)
 Cantidad no encontrada: alfajor mini de chocolate x4u (calorias reducidas)
@@ -2517,11 +2509,11 @@ Cantidad no encontrada: massini de frutilla
 Cantidad no encontrada: torta africana 8 porciones
 Cantidad no encontrada: sandwich deli surtidos bandeja x8u
 Cantidad no encontrada: pan breakfast 
-Cantidad no encontrada: pandevienasinharinadetrigox4
+Cantidad no encontrada: pan de viena sin harina de trigo x4 
 Cantidad no encontrada: mousse de chocolate blanco con
 Cantidad no encontrada: yo-yo x18u
 Cantidad no encontrada: sandwich surtido (sardina, atun, roast beef y jamon y queso) x8u
-Cantidad no encontrada: applepie
+Cantidad no encontrada: apple pie 
 Cantidad no encontrada: tarta de manzana 18cm
 Cantidad no encontrada: torta de sambayon (8 porciones)
 Cantidad no encontrada: pan de lino puravita  molde 
@@ -2541,7 +2533,7 @@ Cantidad no encontrada: tarta de frutilla
 Cantidad no encontrada: alfajor x2u
 Cantidad no encontrada: postre cheesecake de frutos del bosque
 Cantidad no encontrada: postre cheesecake de maracuya
-Cantidad no encontrada: minibaguettemulticereal
+Cantidad no encontrada: minibaguette multicereal 
 Cantidad no encontrada: rosca de jamon y queso
 Cantidad no encontrada: postre individual lemon pie
 Cantidad no encontrada: tortuga rellena de jamon y queso
@@ -2554,15 +2546,15 @@ Cantidad no encontrada: tarta de frutos del bosque 18cm
 Cantidad no encontrada: mix de 10 sandwiches
 Cantidad no encontrada: torta (8 porciones)
 Cantidad no encontrada: torta ajedrez
-Cantidad no encontrada: chajagold
+Cantidad no encontrada: chaja gold 
 Cantidad no encontrada: torta mil capas con almendras 4 porciones
 Cantidad no encontrada: tarteleta de limon individual
 Cantidad no encontrada: tortuga rellena con salame y queso
-Cantidad no encontrada: brownie
-Cantidad no encontrada: muffin
+Cantidad no encontrada: brownie 
+Cantidad no encontrada: muffin 
 Cantidad no encontrada: sandwich de lechuga y apio (solo cantidades pares)
 Cantidad no encontrada: sandwich de roast beef con ciboulette x1u (solo cantidades pares)
-Cantidad no encontrada: tarteletadefrutossecos
+Cantidad no encontrada: tarteleta de frutos secos 
 Cantidad no encontrada: alfajor mini x4 (calorias reducidas)
 Cantidad no encontrada: coquitos (calorias reducidas)
 Cantidad no encontrada: cheesecake de frutilla 8 porciones
@@ -2570,9 +2562,8 @@ Cantidad no encontrada: torta gateau de chocolate 8 porciones
 Cantidad no encontrada: torta rogel 8 porciones
 Cantidad no encontrada: postre naranja y chocolate 4 porciones
 Cantidad no encontrada: bandeja
-Cantidad no encontrada: facturadeanisbandeja(kg)
 Cantidad no encontrada: pan felipe integral relleno x1u
-Cantidad no encontrada: tarteletadeganache
+Cantidad no encontrada: tarteleta de ganache 
 Cantidad no encontrada: tarteleta de avellanas
 Cantidad no encontrada: pinitos de dulce de leche x4u
 Cantidad no encontrada: tarteleta multifrutal
@@ -2586,8 +2577,8 @@ Cantidad no encontrada: cheesecake de frutos del bosque 8 porciones
 Cantidad no encontrada: postre de chocolate
 Cantidad no encontrada: lemon pie 8 porciones
 Cantidad no encontrada: tarteleta ganache 
-Cantidad no encontrada: budindenaranja
-Cantidad no encontrada: tartadesantiago
+Cantidad no encontrada: budin de naranja 
+Cantidad no encontrada: tarta de santiago 
 Cantidad no encontrada: frankfurters cortos al vacio x8u
 Cantidad no encontrada: queso kraft light pote
 Cantidad no encontrada: queso kraft regular pote
@@ -2612,7 +2603,7 @@ Cantidad no encontrada: queso en fetas conamigos
 Cantidad no encontrada: queso danbo feteado con separador  
 Cantidad no encontrada: queso sandwich 
 Cantidad no encontrada: frankfurters x8u
-Cantidad no encontrada: dadosdeparmesano-recarga
+Cantidad no encontrada: dados de parmesano -recarga 
 Cantidad no encontrada: pavita ahumada
 Cantidad no encontrada: frankfurters x8u
 Cantidad no encontrada: queso obrien artesanal horma  
@@ -2632,8 +2623,8 @@ Cantidad no encontrada: grana padano soresina
 Cantidad no encontrada: grana padano
 Cantidad no encontrada: jamon crudo san daniele 
 Cantidad no encontrada: queso azul danes horma 
-Cantidad no encontrada: tocino
-Cantidad no encontrada: muzzarellabaston
+Cantidad no encontrada: tocino  
+Cantidad no encontrada: muzzarella baston  
 Cantidad no encontrada: tablita picada  
 Cantidad no encontrada: dados parmesano con bandeja +  2 recargas
 Cantidad no encontrada: salchichon extra 
@@ -2649,27 +2640,27 @@ Cantidad no encontrada: queso oveja manchego
 Cantidad no encontrada: queso manchego oveja  mancha(kg)
 Cantidad no encontrada: queso iberico español 
 Cantidad no encontrada: grana padano en cuña 
-Cantidad no encontrada: quesoibericocuradoenaceitedeoliva
+Cantidad no encontrada: queso iberico curado en aceite de oliva 
 Cantidad no encontrada: bongrain brie
 Cantidad no encontrada: tabla malaga de fiambres 
 Cantidad no encontrada: queso dambo light vacio t.i. 
 Cantidad no encontrada: queso cadabas tipo tetilla
 Cantidad no encontrada: queso magro sin sal vacio t.i. 
 Cantidad no encontrada: muzzarella light al vacio 
-Cantidad no encontrada: jamoncocidoentrozo
+Cantidad no encontrada: jamon cocido en trozo  
 Cantidad no encontrada: arrollado chico
 Cantidad no encontrada: pastel de carne x 1u
 Cantidad no encontrada: empanada de jamon y queso al horno x 1u
 Cantidad no encontrada: empanada de carne con pasas al horno x 1u
 Cantidad no encontrada: ensalada cheff
-Cantidad no encontrada: empanadadepolloychampignon
+Cantidad no encontrada: empanada de pollo y champignon 
 Cantidad no encontrada: tortilla de papas al horno x1u
 Cantidad no encontrada: panqueque de dulce de leche x1u
 Cantidad no encontrada: empanadas de copetin de jamon y queso al horno x 1u (pedido minimo: 30 unidades)
 Cantidad no encontrada: albondigas con arroz
 Cantidad no encontrada: canelones de carne x 1u
 Cantidad no encontrada: ravioles de verdura con tuco x 1u
-Cantidad no encontrada: empanadadecarnesinpasas
+Cantidad no encontrada: empanada de carne sin pasas 
 Cantidad no encontrada: tortilla de acelga (calorias reducidas)
 Cantidad no encontrada: hamburguesa empanada al pan
 Cantidad no encontrada: lasagna de jamon y queso x 1u
@@ -2678,20 +2669,18 @@ Cantidad no encontrada: tortilla de zapallitos al horno x 1u
 Cantidad no encontrada: empanada de choclo, jamon y aceitunas al horno x 1u
 Cantidad no encontrada: torta de jamon, queso y anana individual
 Cantidad no encontrada: crema de vainilla (elaborado con sucralosa) (calorias reducidas)
-Cantidad no encontrada: tallarinescontucodepollo
+Cantidad no encontrada: tallarines con tuco de pollo 
 Cantidad no encontrada: crepes de espinaca, ricotta y jamon con salsa x2u
-Cantidad no encontrada: tortadejamonyquesoindividual
+Cantidad no encontrada: torta de jamon y queso individual 
 Cantidad no encontrada: empanadas de copetin de carne con pasas al horno x 1u (pedido minimo: 30 unidades)
 Cantidad no encontrada: pastel de carne y boniato
-Cantidad no encontrada: carnealainglesaconpure
-Cantidad no encontrada: tortitadegarbanzo
+Cantidad no encontrada: carne a la inglesa con pure 
+Cantidad no encontrada: tortita de garbanzo 
 Cantidad no encontrada: empanada de lomito y queso al horno x 1u
-Cantidad no encontrada: ensaladarusa(kg)
 Cantidad no encontrada: tarta de manzana (elaborado con sucralosa) (calorias reducidas)
-Cantidad no encontrada: cazueladelentejas(kg)
-Cantidad no encontrada: burritomexicanodepollo
-Cantidad no encontrada: empanadaintegralvegetariana
-Cantidad no encontrada: tortitadelentejas
+Cantidad no encontrada: burrito mexicano de pollo 
+Cantidad no encontrada: empanada integral vegetariana 
+Cantidad no encontrada: tortita de lentejas 
 Cantidad no encontrada: tarta calabaza individual (calorias reducidas)
 Cantidad no encontrada: lasagna de masa verde rellena de carne x 1u
 Cantidad no encontrada: canelones de jamon y queso
@@ -2703,7 +2692,6 @@ Cantidad no encontrada: lasagna de pollo x 1u
 Cantidad no encontrada: gelatina dietetica de cereza (calorias reducidas)
 Cantidad no encontrada: trigona de queso al horno x 1u
 Cantidad no encontrada: tortilla de papas sin sal
-Cantidad no encontrada: tartadepuerros(kg)
 Cantidad no encontrada: polenta a la napolitana x1u
 Cantidad no encontrada: bavaroi de frutilla (calorias reducidas)
 Cantidad no encontrada: empanada imperial de carne
@@ -2717,7 +2705,7 @@ Cantidad no encontrada: trigona dulce de manzana
 Cantidad no encontrada: tortilla de broccoli al horno x 1u
 Cantidad no encontrada: tallarines con tuco
 Cantidad no encontrada: tallarines con salsa parisien x 1u
-Cantidad no encontrada: supremitasdepolloconbuñuelos
+Cantidad no encontrada: supremitas de pollo con buñuelos 
 Cantidad no encontrada: tortelines con carusso
 Cantidad no encontrada: crepes de pollo y champignon con salsa con salsa x2u
 Cantidad no encontrada: tortilla de broccoli sin sal
@@ -2726,14 +2714,14 @@ Cantidad no encontrada: spaghetti a la
 Cantidad no encontrada: bavaroi de durazno (calorias reducidas)
 Cantidad no encontrada: empanada de copetin de carne sin pasas (c1)
 Cantidad no encontrada: lomo de merluza con pure 
-Cantidad no encontrada: trigonadejamonyqueso
+Cantidad no encontrada: trigona de jamon y queso 
 Cantidad no encontrada: milanesa de carne al pan x 1u
 Cantidad no encontrada: tortita de mijo y quinoa
 Cantidad no encontrada: sopa crema de verduras x 1u
 Cantidad no encontrada: pollo a la crema con arroz
 Cantidad no encontrada: milanesa a la napolitana con fritas y ensalada
 Cantidad no encontrada: cj cerdo c/arroz al wok
-Cantidad no encontrada: tortagallegaconmariscos
+Cantidad no encontrada: torta gallega con mariscos 
 Cantidad no encontrada: empanada de atun (gallega)
 Cantidad no encontrada: gelatina dietetica de durazno (calorias reducidas)
 Cantidad no encontrada: milanesa de pollo con papas a la crema
@@ -2742,27 +2730,26 @@ Cantidad no encontrada: spaghetti a la bolognesa
 Cantidad no encontrada: ravioles de carne con salsa bolognesa
 Cantidad no encontrada: guisito de carne con arvejas y pure
 Cantidad no encontrada: tarta individual (calorias reducidas)
-Cantidad no encontrada: empanadadecopetindeatun
+Cantidad no encontrada: empanada de copetin de atun 
 Cantidad no encontrada: trigona de jandrayo (berenjena) al horno x 1u
 Cantidad no encontrada: ensalada griega
-Cantidad no encontrada: tortadecarneindiv
+Cantidad no encontrada: torta de carne indiv 
 Cantidad no encontrada: ensalada de pollo spring salad x 1u
 Cantidad no encontrada: trigona de puerro y panceta
-Cantidad no encontrada: arrolladodepollo(kg)
 Cantidad no encontrada: ñoquis con bolognesa
 Cantidad no encontrada: crema de chocolate (elaborado con sucralosa) (calorias reducidas)
 Cantidad no encontrada: tortilla de verduras al horno x 1u
 Cantidad no encontrada: ensalada di caprio
-Cantidad no encontrada: empanadaintegralsinsaldepollo
+Cantidad no encontrada: empanada integral sin sal de pollo 
 Cantidad no encontrada: empanadas de copetin de choclo, jamon y aceitunas al horno x 1u (pedido minimo: 30 unidades)
 Cantidad no encontrada: empanadas de copetin de verdura al horno x 1u (pedido minimo: 30 unidades)
-Cantidad no encontrada: empanadaintegraldecarnesinsal
+Cantidad no encontrada: empanada integral de carne sin sal 
 Cantidad no encontrada: sopa crema de puerros
 Cantidad no encontrada: pasta frola de membrillo (elaborado con sucralosa) (calorias reducidas)
 Cantidad no encontrada: tallarines con salsa bolognesa x 1u
 Cantidad no encontrada: ensalada de pollo cesar salad x 1u
-Cantidad no encontrada: ensaladaverdeconpollo
-Cantidad no encontrada: quesadilladepollox2
+Cantidad no encontrada: ensalada verde con pollo 
+Cantidad no encontrada: quesadilla de pollo x 2 
 Cantidad no encontrada: capelletis de carne con salsa carusso x 1u
 Cantidad no encontrada: pescado al curry (calorias reducidas)
 Cantidad no encontrada: gelatina con durazno (calorias reducidas)
@@ -2772,14 +2759,14 @@ Cantidad no encontrada: capeletti con queso y aceite
 Cantidad no encontrada: cheesecake de arandanos (calorias reducidas)
 Cantidad no encontrada: cj sushi mix 24 piezas
 Cantidad no encontrada: empanadas de verdura al horno x 1u
-Cantidad no encontrada: empanadacapresse
-Cantidad no encontrada: empanadaintegraldeverdurasinsal
-Cantidad no encontrada: tallarinesconquesoyaceite
+Cantidad no encontrada: empanada capresse 
+Cantidad no encontrada: empanada integral de verdura sin sal 
+Cantidad no encontrada: tallarines con queso y aceite 
 Cantidad no encontrada: tarta griega de verdura
 Cantidad no encontrada: pastel de atun
 Cantidad no encontrada: cj sushi vegetariano
 Cantidad no encontrada: strudel vegetariano (calorias reducidas)
-Cantidad no encontrada: raviolesconquesoyaceite
+Cantidad no encontrada: ravioles con queso y aceite 
 Cantidad no encontrada: strudel de champignon y espinaca (calorias reducidas)
 Cantidad no encontrada: pasta frola de dulce de leche (elaborado con sucralosa) (calorias reducidas)
 Cantidad no encontrada: cj niguiri de salmon x6
@@ -2790,12 +2777,11 @@ Cantidad no encontrada: empanada criolla vegetal
 Cantidad no encontrada: gelatina con frutilla (calorias reducidas)
 Cantidad no encontrada: milanesa de pollo al pan x 1u
 Cantidad no encontrada: milanesa de pollo a la napolitana
-Cantidad no encontrada: raviolonescapresseconsalsarosa
+Cantidad no encontrada: raviolones capresse con salsa rosa 
 Cantidad no encontrada: milanesa de carne con papas noisettes
 Cantidad no encontrada: ñoquis con salsa rosa x1u
-Cantidad no encontrada: quesadilladelomitoyquesox2
-Cantidad no encontrada: ensaladadezanahoriaycerezas(kg)
-Cantidad no encontrada: matambredecarnerellenoconrusa
+Cantidad no encontrada: quesadilla de lomito y queso x 2 
+Cantidad no encontrada: matambre de carne relleno con rusa 
 Cantidad no encontrada: ñoquis con salsa de cuatro quesos
 Cantidad no encontrada: ravioles de verdura con salsa 4 quesos x1u
 Cantidad no encontrada: trigona de queso y aceituna negra
@@ -2803,31 +2789,29 @@ Cantidad no encontrada: ñoquis con queso y aceite
 Cantidad no encontrada: pañuelito de manzana y nuez x2
 Cantidad no encontrada: tarta de ricotta y limon (elaborado con sucralosa) (calorias reducidas)
 Cantidad no encontrada: muslo de pollo natural al horno
-Cantidad no encontrada: milanesadecerdofritafrita(kg)
 Cantidad no encontrada: tallarines con salsa carusso x 1u
 Cantidad no encontrada: ravioles con tuco de pollo
 Cantidad no encontrada: estofado belga c/papas rosti
-Cantidad no encontrada: nuggetsconpuredepapas
+Cantidad no encontrada: nuggets con pure de papas 
 Cantidad no encontrada: tarta de zapallitos individual
 Cantidad no encontrada: empanada de pollo con aceitunas
 Cantidad no encontrada: ñoquis con salsa carusso x 1u
-Cantidad no encontrada: ñoquisrellenodejamonyquesoconsalsarosa
-Cantidad no encontrada: milanesadepolloconpure
-Cantidad no encontrada: tortelinesconsalsadechampignon
-Cantidad no encontrada: ensaladawaldorf(kg)
+Cantidad no encontrada: ñoquis relleno de jamon y queso con salsa rosa 
+Cantidad no encontrada: milanesa de pollo con pure 
+Cantidad no encontrada: tortelines con salsa de champignon 
 Cantidad no encontrada: alitas saborizadas
 Cantidad no encontrada: aros de cebolla fritos(kg)
 Cantidad no encontrada: cj nahomi
 Cantidad no encontrada: pechuga al spiedo con arroz blanco
 Cantidad no encontrada: cheesecake de durazno (calorias reducidas)
-Cantidad no encontrada: cjkunsei-cheesechicax6
+Cantidad no encontrada: cj kunsei - cheese chica x 6 
 Cantidad no encontrada: ñoquis rellenos de jamon y queso con salsa de champignon
-Cantidad no encontrada: raviolesconsalsadechampignon
-Cantidad no encontrada: raviolonesdecalabazayquesoconsalsarosa
+Cantidad no encontrada: ravioles con salsa de champignon 
+Cantidad no encontrada: raviolones de calabaza y queso con salsa rosa 
 Cantidad no encontrada: ravioles con salsa rosa
 Cantidad no encontrada: kassler con papas 
 Cantidad no encontrada: spaghetti a
-Cantidad no encontrada: cazueladelentejasconarroz
+Cantidad no encontrada: cazuela de lentejas con arroz 
 Cantidad no encontrada: pollo al spiedo con ensalada rusa
 Cantidad no encontrada: muslo entero al horno
 Cantidad no encontrada: cj sushi arcoiris
@@ -2835,67 +2819,64 @@ Cantidad no encontrada: sopa crema de verduras (calorias reducidas)
 Cantidad no encontrada: pañuelito de banana y nuez x2
 Cantidad no encontrada: tarta de puerros individual
 Cantidad no encontrada: tarta de panceta individual
-Cantidad no encontrada: tartadecebollaindividual
+Cantidad no encontrada: tarta de cebolla individual  
 Cantidad no encontrada: tarta de puerros porcion
 Cantidad no encontrada: tarta de champignon porcion
 Cantidad no encontrada: cj uramaki
 Cantidad no encontrada: patitas naturales al horno
-Cantidad no encontrada: pamplonadecerdo
-Cantidad no encontrada: milanesadepolloconensaladamixta
-Cantidad no encontrada: tallarinesconsalsadechampignon
+Cantidad no encontrada: pamplona de cerdo 
+Cantidad no encontrada: milanesa de pollo con ensalada mixta 
+Cantidad no encontrada: tallarines con salsa de champignon 
 Cantidad no encontrada: cj dupla temaki de pulpo
-Cantidad no encontrada: tortadealcaucilesylomito
+Cantidad no encontrada: torta de alcauciles y lomito 
 Cantidad no encontrada: acelga con pollo al gratin x 1u
-Cantidad no encontrada: ensaladamonterrey(kg)
 Cantidad no encontrada: spaghetti a la carbonara
-Cantidad no encontrada: ensaladaasturiana(atunygarbanzos)(kg)
 Cantidad no encontrada: cj agemono
 Cantidad no encontrada: cj satoshi
 Cantidad no encontrada: cj american rolls 12 piezas
 Cantidad no encontrada: cj kunsei - cheese x 1
-Cantidad no encontrada: cjverdurasalwok
+Cantidad no encontrada: cj verduras al wok 
 Cantidad no encontrada: berenjena rellena de pollo
 Cantidad no encontrada: tarta griega de verduras
 Cantidad no encontrada: berenjenas a  
-Cantidad no encontrada: berenjenarellenadecarne
-Cantidad no encontrada: ensaladafestival(kg)
+Cantidad no encontrada: berenjena rellena de carne 
 Cantidad no encontrada: estofado de pollo con arvejas y papas
-Cantidad no encontrada: muslodepolloalacremadepuerro
-Cantidad no encontrada: estofadobelga
+Cantidad no encontrada: muslo de pollo a la crema de puerro 
+Cantidad no encontrada: estofado belga 
 Cantidad no encontrada: bastones de calamar empanados
-Cantidad no encontrada: lomomarinadosinsalconpuredecalabaza
-Cantidad no encontrada: raviolonesdecalabazayquesoconsalsa4quesos
+Cantidad no encontrada: lomo marinado sin sal con pure de calabaza 
+Cantidad no encontrada: raviolones de calabaza y queso con salsa 4 quesos 
 Cantidad no encontrada: pescado al estragon
 Cantidad no encontrada: ñoquis al champignon
 Cantidad no encontrada: ñoquis comunes con salsa de puerros
-Cantidad no encontrada: milanesadecarnec/ensaladamixta
+Cantidad no encontrada: milanesa de carne c/ensalada mixta 
 Cantidad no encontrada: ñoquis con tuco de pollo
-Cantidad no encontrada: cjensaladafrescadesalmon
+Cantidad no encontrada: cj ensalada fresca de salmon 
 Cantidad no encontrada: ñoquis con tuco x 1u
-Cantidad no encontrada: raviolonescapresseconsalsadepuerros
+Cantidad no encontrada: raviolones capresse con salsa de puerros 
 Cantidad no encontrada: ñoquis rellenos de jamon y queso con queso y aceite
-Cantidad no encontrada: verdurasgrilladasalgratin
+Cantidad no encontrada: verduras grilladas al gratin 
 Cantidad no encontrada: cj niguiri salmon skin x6
 Cantidad no encontrada: cj satoshi chica
 Cantidad no encontrada: medallones de merluza con ensalada
-Cantidad no encontrada: lechonarrolladoc/rusa
+Cantidad no encontrada: lechon arrollado c/rusa 
 Cantidad no encontrada: pechuga de pollo rebozada con pure
 Cantidad no encontrada: spaghetti al champignon
 Cantidad no encontrada: milanesa de tofu con ensalada mixta
 Cantidad no encontrada: milanesa de tofu con ensalada
 Cantidad no encontrada: pechuga al spiedo con ensalada
-Cantidad no encontrada: mejillonesalaprovenzalconarroz
+Cantidad no encontrada: mejillones a la provenzal con arroz 
 Cantidad no encontrada: arroz risotto
 Cantidad no encontrada: estofado de pollo con arvejas con arroz
-Cantidad no encontrada: feijoadaconarroz
+Cantidad no encontrada: feijoada con arroz 
 Cantidad no encontrada: cj dupla de temaki de salmon
 Cantidad no encontrada: tarta de jamon porcion
 Cantidad no encontrada: tarta de panceta porcion
 Cantidad no encontrada: hamburguesa empanada
-Cantidad no encontrada: empanadaintegrals/saldeespinaca
+Cantidad no encontrada: empanada integral s/sal de espinaca 
 Cantidad no encontrada: tarta de champignon individual
-Cantidad no encontrada: tartadejamonindividual
+Cantidad no encontrada: tarta de jamon individual  
 Cantidad no encontrada: empanadon de mejillones
-Cantidad no encontrada: figazzeta
+Cantidad no encontrada: figazzeta 
 Cantidad no encontrada: tarta de zapallitos porcion
 Cantidad no encontrada: tarta de cebolla porcion
