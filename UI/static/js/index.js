@@ -15,6 +15,10 @@ getMarket = function(){
 	window.location.href = "resultado.html";
 };
 
+startOver = function(){
+	window.location.href = "index.html";
+};
+
 // $("#selectMarca1").click(function(){
 setMarca = function(){
 	$("#selectUnidad"+(id-1)).attr("disabled",false);

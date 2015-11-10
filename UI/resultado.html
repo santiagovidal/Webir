@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/estilos.css" type="text/css"/>
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="static/css/estilos.css" type="text/css"/>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="static/js/index.js"></script>
     <title>TU MEJOR COMPRA!</title>
 
     <!-- Bootstrap -->
@@ -14,10 +15,37 @@
   </head>
   <body">
 	<h1>WEBIR - PROTOTIPO</h1>
-	
-	<p class="result">El supermercado más económico es Tienda Inglesa</p>
-	</br>
-	<p class="result">Las siguientes listas están ordenadas por conveniencia</p>
+	<div class="main-table">
+		<table class="table">
+			<tbody>
+				<tr>
+					<th class="th-result">Opción 1 - Devoto</th>
+				</tr>
+				<tr>
+					<th class="th-main">Producto</th>
+					<th class="th-main">Marca</th>
+					<th	class="th-main">Unidad</th>
+					<th class="th-main">Pack</th>
+					<th class="th-main">Cantidad</th>
+				</tr>
+				
+				<tr>
+					<th class="th-result">Opción 2 - Tienda Inglesa</th>
+				</tr>
+					<tr>
+						<th class="th-main">Producto</th>
+						<th class="th-main">Marca</th>
+						<th	class="th-main">Unidad</th>
+						<th class="th-main">Pack</th>
+						<th class="th-main">Cantidad</th>
+					</tr>
+			</tbody>
+		</table>
+		<br>
+		<button type="button" class="btn btn-default btn-lg pull-right" position="right" onClick="startOver()">
+			<span class="glyphicon glyphicon-repeat"></span> Volver a intentarlo
+		</button>
+	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
