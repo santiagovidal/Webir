@@ -19,6 +19,8 @@ def datosPorProducto():
     prod = request.args.get('prod', 0)
     return json.dumps(bdAPI.getDatosPorProducto('tinglesa', prod))
  
+ 
+
 
 if __name__ == "__main__":
     app.debug = True
