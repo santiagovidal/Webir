@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, Response, jsonify, render_template, request
 import sys
 sys.path.append('../UI')
 import bdAPI
@@ -15,12 +14,10 @@ def index():
 #{  marca: nomMarca,
 #   unidad: magnitud + metrica,   
 #   packpor: x + packpor`}
-@app.route("/datosPorProducto/<producto>", methods=['GET'])
-def datosPorProducto(producto):
-    return json.dumps(bdAPI.getDatosPorProducto("tinglesa", producto))
- 
-    
-
+@app.route("/datosPorProducto", methods=['GET'])
+def datosPorProducto():
+    prod = request.args.get('prod', 0)
+    return json.dumps(bdAPI.getDatosPorProducto('tinglesa', prod))
  
 
 if __name__ == "__main__":
