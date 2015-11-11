@@ -17,8 +17,9 @@ def index():
 @app.route("/datosPorProducto", methods=['GET'])
 def datosPorProducto():
     prod = request.args.get('prod', 0)
-    return json.dumps(bdAPI.getDatosPorProducto('tinglesa', prod))
- 
+    if prod != 0 :
+        return json.dumps(bdAPI.getDatosPorProducto('tinglesa', prod))  
+
  
 
 
