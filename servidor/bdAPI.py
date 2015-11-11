@@ -24,6 +24,8 @@ def setSuper(filename):
 		})
 
 def getDatosPorProducto(super,string):	
+
+    print string
     datos = {}
     datos['query'] = {}
     datos['query']['match'] = {}

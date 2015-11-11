@@ -1,14 +1,27 @@
 var id = 2;
-var dataProd;
+var dataProd = [];
 
 getProduct = function(){
 	// POR AHORA ESTA AGARRANDO SOLO LA INFO QUE SE ESCRIBE
 	// ACA FALTARIA HACERSE LA LLAMADA A LA LOGICA PARA TRAER
 	// LAS MARCAS Y UNIDAD QUE COINCIDEN CON EL PRODUCTO INGRESADO
-	
-	var idProduct = $("#input"+(id-1)).val();
-	console.log(idProduct);
+    $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
+        prod: $('#input' + (id-1)).val(),
+      }, function(data) {
+            dataProd = data;
+            
+            for(var i = 0; i < dataProd.length; i++){
+                dataProd[i] = JSON.parse(data[i]);
+                var el = document.createElement("option");
+                el.textContent = dataProd[i].marca;
+                // el.value = opt;
+                $("#selectMarca" + (id -1)).append(el);
+            }
+          
+      });
+	// alert (dataProd.length);
 	$("#selectMarca"+(id-1)).attr("disabled",false);
+    
 };
 
 getMarket = function(){
@@ -145,18 +158,19 @@ addFields = function(){
 };
 
 
-$(function() {
-    var getDatos = function(e) {
-      $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
-        a: $('input' + (id-1)).val(),
-      }, function(data) {
-          dataProd = data;
-          alert (dataProd);
-      });
-      return false;
-    };
+// $(function() {
+    // var getDatos = function(e) {
+      // $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
+        // prod: $('#input' + (id-1)).val(),
+      // }, function(data) {
+          // dataProd = data;
+          
+      // });
+      // return false;
+    // };
 
-    $('#prueba').bind('click', getDatos);
+    // $('#input' + (id-1)).bind('focusout', getDatos);
+
 
     
-  });
+  // });
