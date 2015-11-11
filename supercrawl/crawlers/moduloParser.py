@@ -160,7 +160,9 @@ archivoParseados = open(filename,"w")
 archivoParseados.write("[")
 p = parser()
 
+i = 0
 for producto in productos:
+	i += 1
 	print("Parseando: " + producto["titulo"] + "\n")
 	nombre, marca, magnitud, metrica, unidadWeb, pack = p.extraerCampos(producto["titulo"])
 	precio = p.parsearPrecio(producto["precio"])
@@ -173,7 +175,8 @@ for producto in productos:
 	prodparseado["packpor"] = pack
 	prodparseado["precio"] = precio
 	json.dump(prodparseado,archivoParseados)
-	archivoParseados.write(",\n")
+	if i < len(productos):
+		archivoParseados.write(",\n")
 
 archivoParseados.write("]")
 

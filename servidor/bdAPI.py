@@ -1,55 +1,85 @@
 import json
-import elasticsearch
 import requests
 
-es = elasticsearch.Elasticsearch()
+def setSuper(nombreSuper):
+    if nombreSuper == "devoto":
+        filename = "../supercrawl/crawlers/productosDevotoParseados.json"
+    else:
+        filename = "../supercrawl/crawlers/productosTInglesaParseados.json"
+    f = open(filename,"r")
 
-def setSuper(filename):
-	f = open(filename,"r")
+    datos = json.loads(f.read())
+    # print datos
+    for dato in datos:
+        print(dato)
+        respuesta = requests.post('http://localhost:9200/' + nombreSuper + '/productos', data=json.dumps(dato))
 
-	i = 0
-	# for linea in f.readlines():
-		# print(linea)
-	datos = json.loads(f.read())
-	# print datos
-	for dato in datos:
-		print(dato)
-		es.index(index='tinglesa', doc_type='productos', body={
-			'metrica': dato['metrica'],
-			'precio': dato['precio'],
-			'marca': dato['marca'],
-			'magnitud': dato['magnitud'],
-			'packpor': dato['packpor'],
-			'nombre': dato['nombre']
-		})
+def getDatosPorProducto(nombreSuper,nombreProducto, unidadWeb=None, marca=None, packpor=None):
+    # Retorna 
+    # [
+    #     "{
+    #         \"metrica\": \"ml\", 
+    #         \"precio\": 263, 
+    #         \"marca\": \"stella artois\", 
+    #         \"packpor\": 3, 
+    #         \"unidadWeb\": \"0.975lt\", 
+    #         \"nombre\": \"cerveza pack\", 
+    #         \"magnitud\": 975
+    #     }"
+    # ]
 
-def getDatosPorProducto(super,string):	
+    listaQuery = []
+
+    campo = {}
+    campo['match'] = {}
+    campo['match']['nombre'] = {}
+    campo['match']['nombre']['query'] = nombreProducto
+    campo['match']['nombre']['operator'] = 'and'
+    listaQuery.append(campo)
+
+    if marca:
+        campo = {}
+        campo['match_phrase'] = {}
+        campo['match_phrase']['marca'] = marca
+        listaQuery.append(campo)
+
+    if unidadWeb:
+        campo = {}
+        campo['match'] = {}
+        campo['match']['unidadWeb'] = unidadWeb
+        listaQuery.append(campo)
+
+    if packpor:
+        campo = {}
+        campo['match'] = {}
+        campo['match']['packpor'] = packpor
+        listaQuery.append(campo)
+
     datos = {}
+    datos['from'] = 0
+    datos['size'] = 10000
     datos['query'] = {}
-    datos['query']['match'] = {}
-    datos['query']['match']['nombre'] = {}
-    datos['query']['match']['nombre']['query'] = string
-    datos['query']['match']['nombre']['operator'] = 'and'
-	
-    respuesta = requests.get('http://localhost:9200/' + super + '/productos/_search', data=json.dumps(datos))
-    
-	
+    datos['query']['bool'] = {}
+    datos['query']['bool']['must'] = listaQuery
+
+    respuesta = requests.get('http://localhost:9200/' + nombreSuper + '/productos/_search', data=json.dumps(datos))
+        
     datos_respuesta = json.loads(respuesta.content)
-    resultados = datos_respuesta['hits']['hits']
-	
+    
+    resultados = []
+    if datos_respuesta['hits']:
+        resultados = datos_respuesta['hits']['hits']
+    
     datos_resultado = []
     
-	
+    
     for resultado in resultados:
         datos_resultado.append(json.dumps(resultado['_source']))
-		
+        
     return (datos_resultado)
-		
-
-# print getDatosPorProducto('tinglesa', 'cereales')
 
 
-
-
+# setSuper("tinglesa")
+# setSuper("devoto")
 
 
