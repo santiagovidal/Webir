@@ -31,22 +31,16 @@
 					<th class="th-main">Cantidad</th>
 				</tr>
 				<tr>
-					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct()"></input></td>
+					<td><input id="input1" type="text" size="100" class="product" name="product" placeholder="Ingrese un producto" onchange="getProduct(1)"></input></td>
 					<td class="td-center">
-						<select class="form-control" id="selectMarca1" disabled="true" onClick="setMarca()">
-							<option>Marca 1</option>
-							<option>Marca 2</option>
-							<option>Marca 3</option>
+						<select required class="form-control" id="selectMarca1" disabled="true" onClick="setMarca(1)">
 						</select>
 					</td>
 					<td class="td-center">
 					<table>
 						<tr>
 							<td>
-								<select class="form-control" id="selectUnidad1" disabled="true" onClick="setUnidad()">
-									<option>Unidad 1</option>
-									<option>Unidad 2</option>
-									<option>Unidad 3</option>
+								<select required class="form-control" id="selectUnidad1" disabled="true" onClick="setUnidad(1)">
 								</select>
 							</td>
 							<td>
@@ -60,9 +54,7 @@
 						<table>
 							<tr>
 								<td>
-									<select class="form-control" id="selectPack1" disabled="true" onClick="setPack()">
-										<option>x6</option>
-										<option>x12</option>
+									<select required class="form-control" id="selectPack1" disabled="true" onClick="setPack(1)">
 									</select>
 								</td>
 								<td>
@@ -78,8 +70,7 @@
 				</tr>
 			</tbody>
 		</table>
-        <button id="prueba" type="button" class="btn btn-default btn-lg">
-		<button id="addButton" type="button" class="btn btn-default btn-lg" disabled="true" onClick="addFields()">
+		<button id="addButton" type="button" class="btn btn-default btn-lg" disabled="true" onClick="addFields(1)">
 		  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar producto
 		</button>
 		<button type="button" class="btn btn-default btn-lg" onClick="getMarket()">

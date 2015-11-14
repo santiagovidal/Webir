@@ -10,15 +10,19 @@ app = Flask(__name__, template_folder="../UI", static_folder="../UI/static")
 def index():
     return render_template('index.html',)
 
-###########formato json###########
-#{  marca: nomMarca,
-#   unidad: magnitud + metrica,   
-#   packpor: x + packpor`}
+
 @app.route("/datosPorProducto", methods=['GET'])
 def datosPorProducto():
-    prod = request.args.get('prod', 0)
-    if prod != 0 :
-        return json.dumps(bdAPI.getDatosPorProducto('tinglesa', prod))  
+    prod = request.args.get('prod', None)
+    marca = request.args.get('marca', None)
+    if (marca == "cualquiera"):
+        marca = None
+    unidadWeb = request.args.get('unidad', None)
+    packpor = request.args.get('packpor', None)
+    if prod != None :
+        datos = bdAPI.getDatosPorProducto('tinglesa', prod, unidadWeb, marca, packpor)
+        datos += bdAPI.getDatosPorProducto('devoto', prod, unidadWeb, marca, packpor)
+        return json.dumps(datos)
 
  
 
