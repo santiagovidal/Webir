@@ -42,7 +42,12 @@ getProduct = function(i){
                 };
             }
             for (var j=0; j < marcas.length; j++){
-                $('#selectMarca' + i).append('<option>'+ marcas[j] +'</option>');
+				var marca = marcas[j];
+				marca = marca.toLowerCase().replace( /\b\w/g, function (word) {
+					return word.toUpperCase();
+				});
+				console.log(marca);
+                $('#selectMarca' + i).append('<option>'+ marca +'</option>');
             }
             $("#selectMarca"+i).attr("disabled",false);
           
