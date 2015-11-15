@@ -9,8 +9,15 @@ app = Flask(__name__, template_folder="../UI", static_folder="../UI/static")
 @app.route("/")
 def index():
     return render_template('index.html',)
+	
+@app.route("/index.html")
+def main():
+    return render_template('index.html',)
 
-
+@app.route("/resultado.html")	
+def resultado():
+	return render_template('resultado.html',)
+	
 @app.route("/datosPorProducto", methods=['GET'])
 def datosPorProducto():
     prod = request.args.get('prod', None)
