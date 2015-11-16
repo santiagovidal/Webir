@@ -38,3 +38,15 @@ h1 {
 .th-result {
 	background-color: #f9f9f9;
 }
+
+.resultProduct {
+	width:50%;
+	text-align: center;
+	background-color: paleturquoise;
+}
+
+.resultProductSelected {
+	width:50%;
+	text-align: center;
+	background-color: turquoise;
+}

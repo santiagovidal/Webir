@@ -242,3 +242,15 @@ addFields = function(i){
 
     
   // });
+// var selectProduct = function(i){
+$(function () {
+	$(".resultProduct").click(function(){
+		var id = "#" + $(this).closest('tr').attr("id"); //.match(/\d+/)[0];
+		$(id).find("td > table").each(function(){
+			console.log(this);
+			if ($(this).attr("class") == "resultProductSelected")
+				$(this).attr("class","resultProduct")
+		})
+		$(this).attr("class","resultProductSelected")
+	});
+});
