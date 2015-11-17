@@ -19,7 +19,7 @@
   <body">
 	<h1>WEBIR - PROTOTIPO</h1>
 	<div class="main-table">
-		<table class="table">
+		<table class="table" id="tableDevoto">
 			<tbody>
 				<tr>
 					<th class="th-result">Opción 1 - Devoto</th>
@@ -32,57 +32,61 @@
 				</tr>
 				<tr id="resultProduct1">
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="5" id="prueba">
 							<tr><td>Cereales Ser</td></tr>
 							<tr><td>150gr x5 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $14</td></tr>
 						</table>
 					</td>
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="5">
 							<tr><td>Cereales Nestle</td></tr>
 							<tr><td>150gr x5 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $17</td></tr>
 						</table>
 					</td>
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="5">
 							<tr><td>Cereales Quaker</td></tr>
 							<tr><td>150gr x5 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $19</td></tr>
 						</table>
 					</td>
-					<td align="center">$ 100</td>
+					<td align="center">$ 0</td>
 				</tr>
 				<tr id="resultProduct2">
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="2">
 							<tr><td>Leche Conaprole</td></tr>
 							<tr><td>1L x2 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $20</td></tr>
 						</table>
 					</td>
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="2">
 							<tr><td>Leche Parmalat</td></tr>
 							<tr><td>1L x2 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $23</td></tr>
 						</table>
 					</td>
 					<td>
-						<table align="center" class="resultProduct">
+						<table align="center" class="resultProduct" value="2">
 							<tr><td>Leche Pili</td></tr>
 							<tr><td>1L x2 unidades</td></tr>
 							<tr><td id="price">Precio unitario: $19</td></tr>
 						</table>
 					</td>
-					<td align="center">$ 100</td>
+					<td align="center">$ 0</td>
 				</tr>
 				<tr>
 					<td colspan="3" align="right"><strong>Total:</strong></td>
-					<td class="th-main">$ 200</td>
+					<td class="th-main">$ 0</td>
 				</tr>
-				
+			</tbody>
+		</table>
+		
+		<table class="table" id="tableTinglesa">
+			<tbody>
 				<tr>
 					<th class="th-result">Opción 2 - Tienda Inglesa</th>
 				</tr>
@@ -96,10 +100,10 @@
 					<td colspan="3" align="right" font-style="bold"><strong>Total:</strong></td>
 					<td class="th-main">$ 400</td>
 				</tr>
-				
-				
 			</tbody>
 		</table>
+		
+		<br>
 		<br>
 		<button type="button" class="btn btn-default btn-lg pull-right" position="right" onClick="startOver()">
 			<span class="glyphicon glyphicon-repeat"></span> Volver a intentarlo

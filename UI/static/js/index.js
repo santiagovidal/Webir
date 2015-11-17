@@ -245,12 +245,29 @@ addFields = function(i){
 // var selectProduct = function(i){
 $(function () {
 	$(".resultProduct").click(function(){
-		var id = "#" + $(this).closest('tr').attr("id"); //.match(/\d+/)[0];
+		//cambio el seleccionado por la clase comun
+		var id = "#" + $(this).closest('tr').attr("id");
 		$(id).find("td > table").each(function(){
-			console.log(this);
-			if ($(this).attr("class") == "resultProductSelected")
+			if ($(this).attr("class") == "resultProductSelected"){
 				$(this).attr("class","resultProduct")
+			}
 		})
-		$(this).attr("class","resultProductSelected")
+		
+		//cambio el seleccionado por la clase especial
+		$(this).attr("class","resultProductSelected");
+		
+		//obtengo cantidad y precio unitario
+		var quantity = $(this).attr("value");
+		var price = $(this).find("tr:last td").text().match(/\d+/g)[0];
+		
+		//modifico subtotal
+		var subtotal = price*quantity;
+		var subtotalAnterior = $(id).find("td:last").text().match(/\d+/g)[0];
+		$(id).find("td:last").text("$ " + subtotal);
+		
+		//modifico total
+		var totalActual = $("#tableDevoto tr:last td").text().match(/\d+/g)[0];
+		totalActual = parseInt(totalActual) - parseInt(subtotalAnterior) + subtotal;
+		$("#tableDevoto tr:last td:last").text("$ " + totalActual);
 	});
 });
