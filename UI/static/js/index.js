@@ -266,8 +266,13 @@ $(function () {
 		$(id).find("td:last").text("$ " + subtotal);
 		
 		//modifico total
-		var totalActual = $("#tableDevoto tr:last td").text().match(/\d+/g)[0];
+		var supermercado;
+		if (id.indexOf("devoto") > -1)
+			supermercado = "Devoto";
+		else
+			supermercado = "Tinglesa";
+		var totalActual = $("#table" + supermercado + " tr:last td").text().match(/\d+/g)[0];
 		totalActual = parseInt(totalActual) - parseInt(subtotalAnterior) + subtotal;
-		$("#tableDevoto tr:last td:last").text("$ " + totalActual);
+		$("#table" + supermercado + " tr:last td:last").text("$ " + totalActual);
 	});
 });
