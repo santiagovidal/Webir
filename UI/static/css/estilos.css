@@ -43,6 +43,7 @@ h1 {
 	width:50%;
 	text-align: center;
 	background-color: paleturquoise;
+	cursor: pointer;
 }
 
 .resultProductSelected {
