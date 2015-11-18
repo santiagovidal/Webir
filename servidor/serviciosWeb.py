@@ -1,7 +1,8 @@
 from flask import Flask, Response, jsonify, render_template, request
 import sys
 sys.path.append('../UI')
-import bdAPI
+import bdAPI 
+import algoritmo
 import json
 
 app = Flask(__name__, template_folder="../UI", static_folder="../UI/static")
@@ -24,6 +25,7 @@ def datosPorProducto():
     marca = request.args.get('marca', None)
     marca = None if (marca == "Cualquiera") else marca
     unidadWeb = request.args.get('unidad', None)
+    unidadWeb = None if (unidadWeb == "Cualquiera") else unidadWeb
     packpor = request.args.get('packpor', None)
     if prod != None :
         datos = bdAPI.getDatosPorProducto('tinglesa', prod, unidadWeb, marca, packpor)
@@ -32,9 +34,18 @@ def datosPorProducto():
 
 @app.route("/getMarket", methods=['POST'])
 def getMarket():
-    content = request.get_data()
-    print content
-    return Response(json.dumps(content),  mimetype='application/json')
+    content = json.loads(request.get_data())
+    market = content["market"]
+    for producto in market:
+        unidadWeb = None if (producto["unidadWeb"]  == "Cualquiera") else producto["unidadWeb"]
+        unidadWeb = unidadWeb if producto["flexible"] else None
+        packpor = producto["packpor"] if producto["desarmable"] else None
+        marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
+        datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"])
+    # datos += bdAPI.getDatosPorProducto('devoto', producto["nombre"], unidadWeb, producto["marca"], packpor)
+        
+    return Response(json.dumps(mejores),  mimetype='application/json')
     # return json.dumps(content)
  
 

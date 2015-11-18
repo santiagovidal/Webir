@@ -74,7 +74,7 @@ def getDatosPorProducto(nombreSuper,nombreProducto, unidadWeb=None, marca=None, 
     
     
     for resultado in resultados:
-        datos_resultado.append(json.dumps(resultado['_source']))
+        datos_resultado.append(resultado['_source'])
         
     return (datos_resultado)
 

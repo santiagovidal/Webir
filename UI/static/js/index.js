@@ -20,9 +20,9 @@ getProduct = function(i){
 	// LAS MARCAS Y UNIDAD QUE COINCIDEN CON EL PRODUCTO INGRESADO
     
     $('#selectMarca'+ i).empty();
-    marcas = ["cualquiera"];
+    marcas = ["Cualquiera"];
     $('#selectUnidad'+ i).empty();
-    unidades = [];
+    unidades = ["cualquiera"];
     $('#selectPack' + i).empty();
     packs = [];
     $("#selectUnidad"+i).attr("disabled",true);
@@ -36,7 +36,7 @@ getProduct = function(i){
       }, function(data) {
             for(var j = 0; j < data.length; j++){
                 
-                var json = JSON.parse(data[j]);
+                var json = data[j];
                 if (marcas.indexOf(json.marca) == -1 && json.marca.length != 0){
                      marcas.push (json.marca);
                 };
@@ -76,7 +76,7 @@ getMarket = function(){
             success: function(response) {
                 // window.location.href = "resultado.html";
                 alert(response)
-                },
+            },
             error: function(error) {
                 console.log(error);
             }
@@ -91,7 +91,7 @@ startOver = function(){
 // $("#selectMarca1").click(function(){
 setMarca = function(i){
     $('#selectUnidad'+ (i)).empty();
-    unidades = [];
+    unidades = ["Cualquiera"];
     $('#selectPack' + (i)).empty();
     packs = [];
     $("#selectPack"+(i)).attr("disabled",true);
@@ -103,8 +103,8 @@ setMarca = function(i){
         marca: $('#selectMarca' + (i)).val(),
       }, function(data) {
             for(var j = 0; j < data.length; j++){
-                var json = JSON.parse(data[j]);
-                if (unidades.indexOf(json.unidadWeb) == -1 && json.unidadWeb.length != 0 && json.marca.length != 0){
+                var json = data[j];
+                if (unidades.indexOf(json.unidadWeb) == -1 && json.unidadWeb.length != 0){
                      unidades.push (json.unidadWeb);
                 };
             }
@@ -130,8 +130,8 @@ setUnidad = function(i){
         unidad: $('#selectUnidad' + i).val(),
       }, function(data) {
             for(var j = 0; j < data.length; j++){
-                var json = JSON.parse(data[j]);
-                if (packs.indexOf('x' + json.packpor) == -1 && json.packpor.length != 0 && json.unidadWeb.length != 0 && json.marca.length != 0){
+                var json = data[j];
+                if (packs.indexOf('x' + json.packpor) == -1 && json.packpor.length != 0){
                      packs.push ('x' + json.packpor);
                 };
             }
