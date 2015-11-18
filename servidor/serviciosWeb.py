@@ -22,8 +22,7 @@ def resultado():
 def datosPorProducto():
     prod = request.args.get('prod', None)
     marca = request.args.get('marca', None)
-    if (marca == "cualquiera"):
-        marca = None
+    marca = None if (marca == "Cualquiera") else marca
     unidadWeb = request.args.get('unidad', None)
     packpor = request.args.get('packpor', None)
     if prod != None :
@@ -31,19 +30,11 @@ def datosPorProducto():
         datos += bdAPI.getDatosPorProducto('devoto', prod, unidadWeb, marca, packpor)
         return json.dumps(datos)
 
-@app.route("/getMarket", methods=['GET'])
+@app.route("/getMarket", methods=['POST'])
 def getMarket():
-    prod = request.args.get('prod', None)
-    marca = request.args.get('marca', None)
-    marca = None if (marca == "cualquiera") else marca
-    unidadWeb = request.args.get('unidad', None)
-    unidadWeb = None if (unidadWeb == "None") else unidadWeb 
-    packpor = request.args.get('packpor', None)
-    packpor =None if (packpor == "None") else packpor
-    if prod != None :
-        datos = bdAPI.getDatosPorProducto('tinglesa', prod, unidadWeb, marca, packpor)
-        datos += bdAPI.getDatosPorProducto('devoto', prod, unidadWeb, marca, packpor)
-        # ACA SE INVOCA A LA FUNCION QUE CALCULA LA MEJOR TRIPLA PARA ESOS DATOS.
+    content = request.get_json(silent=True)
+    print content
+    return json.dumps(content)
  
 
 

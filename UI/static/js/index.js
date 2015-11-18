@@ -1,4 +1,4 @@
-// var id = 2;
+var cantCampos = 1;
 var marcas = [];
 var unidades = [];
 var packs = [];
@@ -46,7 +46,6 @@ getProduct = function(i){
 				marca = marca.toLowerCase().replace( /\b\w/g, function (word) {
 					return word.toUpperCase();
 				});
-				console.log(marca);
                 $('#selectMarca' + i).append('<option>'+ marca +'</option>');
             }
             $("#selectMarca"+i).attr("disabled",false);
@@ -55,7 +54,34 @@ getProduct = function(i){
 };
 
 getMarket = function(){
-	window.location.href = "resultado.html";
+    var market = [];
+    for (var i=1 ; i<=cantCampos; i++){
+        var json = new Object();
+        json.nombre = $('#input' + i).val();
+        json.marca = $('#selectMarca' + i).val();
+        json.unidadWeb = $('#selectUnidad' + i).val();
+        json.packpor = $('#selectPack' + i).val().substring(1,$('#selectPack' + i).val().length);
+        json.flexible = ($('#flexible' + i).prop('checked'));
+        json.desarmable = ($('#desarmable' + i).prop('checked'));
+        json.cantidad = $('#inputCantidad' + i).val()
+        market.push(json);
+    }
+    var datos = new Object();
+    datos.market = market
+    $.ajax({
+            url: '/getMarket',
+            data: datos,
+            type: 'POST',
+            contentType: 'application/json',
+            success: function(response) {
+                // window.location.href = "resultado.html";
+                // alert(response)
+                },
+            error: function(error) {
+                console.log(error);
+            }
+    })
+    
 };
 
 startOver = function(){
@@ -216,7 +242,7 @@ addFields = function(i){
 	$('#inputCantidad'+(i+1)).attr("class","cantidad");
 	$('#inputCantidad'+(i+1)).attr("disabled",true);
 	
-	// id = id + 1;
+	cantCampos = cantCampos + 1;
     marcas = [];
     packs = [];
     unidades = [];
@@ -226,23 +252,6 @@ addFields = function(i){
 };
 
 
-// $(function() {
-    // var getDatos = function(e) {
-      // $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
-        // prod: $('#input' + (id-1)).val(),
-      // }, function(data) {
-          // dataProd = data;
-          
-      // });
-      // return false;
-    // };
-
-    // $('#input' + (id-1)).bind('focusout', getDatos);
-
-
-    
-  // });
-// var selectProduct = function(i){
 $(function () {
 	$(".resultProduct").click(function(){
 		//cambio el seleccionado por la clase comun
