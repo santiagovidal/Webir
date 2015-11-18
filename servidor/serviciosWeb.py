@@ -32,9 +32,10 @@ def datosPorProducto():
 
 @app.route("/getMarket", methods=['POST'])
 def getMarket():
-    content = request.get_json(silent=True)
+    content = request.get_data()
     print content
-    return json.dumps(content)
+    return Response(json.dumps(content),  mimetype='application/json')
+    # return json.dumps(content)
  
 
 

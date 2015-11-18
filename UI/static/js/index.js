@@ -70,12 +70,12 @@ getMarket = function(){
     datos.market = market
     $.ajax({
             url: '/getMarket',
-            data: datos,
+            data: JSON.stringify(datos),
             type: 'POST',
             contentType: 'application/json',
             success: function(response) {
                 // window.location.href = "resultado.html";
-                // alert(response)
+                alert(response)
                 },
             error: function(error) {
                 console.log(error);
