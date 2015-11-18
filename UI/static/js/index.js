@@ -1,8 +1,7 @@
-var cantCampos = 1;
+// var id = 2;
 var marcas = [];
 var unidades = [];
 var packs = [];
-var market =[];
 
 
 unique = function(xs) {
@@ -217,7 +216,7 @@ addFields = function(i){
 	$('#inputCantidad'+(i+1)).attr("class","cantidad");
 	$('#inputCantidad'+(i+1)).attr("disabled",true);
 	
-	cantCampos = cantCampos + 1;
+	// id = id + 1;
     marcas = [];
     packs = [];
     unidades = [];
@@ -226,22 +225,54 @@ addFields = function(i){
     
 };
 
-getMarket = function(){
-    for (var i = 1; i<= cantCampos; i++){
-        var u = ($('#flexible' + i).prop('checked')) ? $('#selectUnidad' + i).val() : 'None';
-        var p = ($('#desarmable' + i).prop('checked')) ? $('#selectPack' + i).val().substring(1,$('#selectPack' + i).val().length) :'None' ;
-        
-        $.getJSON($SCRIPT_ROOT + '/getMarket', {
-            prod: $('#input' + i).val(),
-            marca: $('#selectMarca' + i).val(),
-            unidad: u,
-            packpor: p,
-          }, function(data) {
-                market.push (data);
-              
-            }); 
-      
-    }
-    
 
-};
+// $(function() {
+    // var getDatos = function(e) {
+      // $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
+        // prod: $('#input' + (id-1)).val(),
+      // }, function(data) {
+          // dataProd = data;
+          
+      // });
+      // return false;
+    // };
+
+    // $('#input' + (id-1)).bind('focusout', getDatos);
+
+
+    
+  // });
+// var selectProduct = function(i){
+$(function () {
+	$(".resultProduct").click(function(){
+		//cambio el seleccionado por la clase comun
+		var id = "#" + $(this).closest('tr').attr("id");
+		$(id).find("td > table").each(function(){
+			if ($(this).attr("class") == "resultProductSelected"){
+				$(this).attr("class","resultProduct")
+			}
+		})
+		
+		//cambio el seleccionado por la clase especial
+		$(this).attr("class","resultProductSelected");
+		
+		//obtengo cantidad y precio unitario
+		var quantity = $(this).attr("value");
+		var price = $(this).find("tr:last td").text().match(/\d+/g)[0];
+		
+		//modifico subtotal
+		var subtotal = price*quantity;
+		var subtotalAnterior = $(id).find("td:last").text().match(/\d+/g)[0];
+		$(id).find("td:last").text("$ " + subtotal);
+		
+		//modifico total
+		var supermercado;
+		if (id.indexOf("devoto") > -1)
+			supermercado = "Devoto";
+		else
+			supermercado = "Tinglesa";
+		var totalActual = $("#table" + supermercado + " tr:last td").text().match(/\d+/g)[0];
+		totalActual = parseInt(totalActual) - parseInt(subtotalAnterior) + subtotal;
+		$("#table" + supermercado + " tr:last td:last").text("$ " + totalActual);
+	});
+});
