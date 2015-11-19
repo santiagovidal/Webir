@@ -5850,7 +5850,7 @@
 {"metrica": "", "precio": 45, "marca": "knorr", "packpor": 1, "unidadWeb": "", "nombre": "base tipo criollo", "magnitud": 1},
 {"metrica": "gr", "precio": 45, "marca": "maggi", "packpor": 1, "unidadWeb": "0.080kg", "nombre": "base para pollo crispy -sb", "magnitud": 80},
 {"metrica": "gr", "precio": 42, "marca": "la manchega", "packpor": 1, "unidadWeb": "25gr", "nombre": "canela en rama sobre", "magnitud": 25},
-{"metrica": "ml", "precio": 89, "marca": "monte cudine", "packpor": 1, "unidadWeb": "0lt", "nombre": "canela mida frasco", "magnitud": 0},
+{"metrica": "", "precio": 89, "marca": "monte cudine", "packpor": 1, "unidadWeb": "", "nombre": "canela mida frasco", "magnitud": 1},
 {"metrica": "gr", "precio": 45, "marca": "la manchega", "packpor": 1, "unidadWeb": "25gr", "nombre": "canela molida sobre", "magnitud": 25},
 {"metrica": "gr", "precio": 179, "marca": "mc cormick", "packpor": 1, "unidadWeb": "67gr", "nombre": "canela molida", "magnitud": 67},
 {"metrica": "gr", "precio": 55, "marca": "mc cormick culinary", "packpor": 1, "unidadWeb": "15gr", "nombre": "canela molida sobre", "magnitud": 15},

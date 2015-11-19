@@ -13,7 +13,7 @@ class Busqueda:
 	def obtenerMejores(self,
 		datos,
 		quiero_cantidad,
-		quiero_metrica = None,
+		quiero_magnitud = None,
 		quiero_packpor = None
 	):
 		# TO-DO: Todavía falta armar el *.json de retorno - por el momento solo imprime por consola
@@ -33,19 +33,44 @@ class Busqueda:
 			]
 		---------------------------------------------------------'''
 
+		if quiero_magnitud and quiero_packpor: print("QUIERO PACK Y MAGNITUD EXACTO")
+		elif quiero_magnitud: print("SOLO QUIERO MAGNITUD")
+		elif quiero_packpor: print("SOLO PACK")
+		else: print("NO QUIERO NADA") 
+
 		# Incluyo la cantidad a cada dato de la BD
-		datos = [dict(dato.items() + [(u'cantidad',quiero_cantidad)]) for dato in datos]
+		datos = [
+			dict(
+			 	dato.items() +\
+			 	[(
+					u'cantidad',
+					quiero_cantidad if not (quiero_magnitud or quiero_packpor) else (
+						quiero_packpor * quiero_cantidad * dato["precio"] / dato["packpor"] if quiero_packpor and not quiero_magnitud and quiero_packpor % dato["packpor"] == 0 else(
+							quiero_magnitud * quiero_cantidad * dato["precio"] / dato["magnitud"] if not quiero_packpor and quiero_magnitud and quiero_magnitud % dato["magnitud"] == 0 else(
+								quiero_magnitud * quiero_packpor * quiero_cantidad * dato["precio"] / (dato["packpor"]*dato["magnitud"]) if quiero_magnitud % dato["magnitud"] == 0 and quiero_packpor % dato["packpor"] == 0 else(
+									-1
+								)
+							)
+						)  
+					) 
+				)]
+			) for dato in datos]
+
+		#quiero_packpor * quiero_magnitud * (dato["cantidad"]*dato["precio"]) / (dato["packpor"]*dato["magnitud"])  
 
 		# Si prefiero los datos precisos
-		if not (quiero_metrica or quiero_packpor):
+		if not (quiero_magnitud or quiero_packpor):
 			key = lambda dato: dato["precio"]
-		# else:
-		# 	key = lambda dato: [
-		# 		dato
-		# 		dato["cantidad"]*dato["precio"]/dato["packpor"],
+		# elif quiero_magnitud and not quiero_packpor:
+		# 	key = lambda dato: dato["cantidad"]*dato["precio"]*(packpor/dato["packpor"]) if packpor % dato["packpor"] == 0 else 1e10
+		# elif not quiero_magnitud and quiero_packpor:
+		# 	key = lambda dato: dato["cantidad"]*packpor*(dato["precio"]/dato["packpor"]) if packpor % dato["packpor"] == 0 else 1e10
+		else:
+			key = lambda dato: dato["cantidad"]*dato["precio"]
 
-		# 	]
-		
+			
+				# \
+				# if quiero_packpor % dato["packpor"] == 0 and quiero_magnitud % dato["magnitud"] == 0 else 1e10
 		return sorted(datos, key=key)[:3]
 
 		# # TO-DO: Borrar esta línea a continuación - Solo para test
