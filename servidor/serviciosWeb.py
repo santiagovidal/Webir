@@ -36,17 +36,27 @@ def datosPorProducto():
 def getMarket():
     content = json.loads(request.get_data())
     market = content["market"]
+    resultado = {}
+    resultado['tinglesa'] = []
+    resultado['devoto'] = []
+
     for producto in market:
         unidadWeb = None if (producto["unidadWeb"]  == "Cualquiera") else producto["unidadWeb"]
-        unidadWeb = unidadWeb if producto["flexible"] else None
-        packpor = producto["packpor"] if producto["desarmable"] else None
+        unidadWeb = None if producto["flexible"] else unidadWeb
+        packpor = None if producto["desarmable"] else producto["packpor"]
         marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
+
+        # Tienda Inglesa
         datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)
         mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"])
-    # datos += bdAPI.getDatosPorProducto('devoto', producto["nombre"], unidadWeb, producto["marca"], packpor)
-        
-    return Response(json.dumps(mejores),  mimetype='application/json')
-    # return json.dumps(content)
+        resultado['tinglesa'].append(mejores)
+
+        # Devoto
+        datos = bdAPI.getDatosPorProducto('devoto', producto["nombre"], unidadWeb, marca, packpor)
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"])
+        resultado['devoto'].append(mejores)
+      
+    return json.dumps(resultado)
  
 
 

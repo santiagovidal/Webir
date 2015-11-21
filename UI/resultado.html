@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="static/css/estilos.css" type="text/css"/>
-	<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/estilos.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
     <script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="static/js/index.js"></script>
-	<script type="text/javascript">
+    <script type="text/javascript" src="static/js/resultado.js"></script>
+    <script type="text/javascript">
         var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
     <title>TU MEJOR COMPRA!</title>
@@ -16,148 +16,52 @@
     <!-- Bootstrap -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body">
-	<h1>WEBIR - PROTOTIPO</h1>
-	<div class="main-table">
-		<table class="table" id="tableDevoto">
-			<tbody>
-				<tr>
-					<th class="th-result">Opción 1 - Devoto</th>
-				</tr>
-				<tr>
-					<th class="th-main">Opción 1</th>
-					<th class="th-main">Opción 2</th>
-					<th	class="th-main">Opción 3</th>
-					<th	class="th-main">Subtotal</th>
-				</tr>
-				<tr id="devotoResultProduct1">
-					<td>
-						<table align="center" class="resultProduct" value="5">
-							<tr><td>Cereales Ser</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $14</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="5">
-							<tr><td>Cereales Nestle</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $17</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="5">
-							<tr><td>Cereales Quaker</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $19</td></tr>
-						</table>
-					</td>
-					<td align="center">$ 0</td>
-				</tr>
-				<tr id="devotoResultProduct2">
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Conaprole</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $20</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Parmalat</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $23</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Pili</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $19</td></tr>
-						</table>
-					</td>
-					<td align="center">$ 0</td>
-				</tr>
-				<tr>
-					<td colspan="3" align="right"><strong>Total:</strong></td>
-					<td class="th-main">$ 0</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<table class="table" id="tableTinglesa">
-			<tbody>
-				<tr>
-					<th class="th-result">Opción 2 - Tienda Inglesa</th>
-				</tr>
-				<tr>
-					<th class="th-main">Opción 1</th>
-					<th class="th-main">Opción 2</th>
-					<th	class="th-main">Opción 3</th>
-					<th	class="th-main">Subtotal</th>
-				</tr>
-				<tr id="tinglesaResultProduct1">
-					<td>
-						<table align="center" class="resultProduct" value="5" id="prueba">
-							<tr><td>Cereales Ser</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $14</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="5">
-							<tr><td>Cereales Nestle</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $17</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="5">
-							<tr><td>Cereales Quaker</td></tr>
-							<tr><td>150gr x5 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $19</td></tr>
-						</table>
-					</td>
-					<td align="center">$ 0</td>
-				</tr>
-				<tr id="tinglesaResultProduct2">
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Conaprole</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $20</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Parmalat</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $23</td></tr>
-						</table>
-					</td>
-					<td>
-						<table align="center" class="resultProduct" value="2">
-							<tr><td>Leche Pili</td></tr>
-							<tr><td>1L x2 unidades</td></tr>
-							<tr><td id="price">Precio unitario: $19</td></tr>
-						</table>
-					</td>
-					<td align="center">$ 0</td>
-				</tr>
-				<tr>
-					<td colspan="3" align="right"><strong>Total:</strong></td>
-					<td class="th-main">$ 0</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<br>
-		<br>
-		<button type="button" class="btn btn-default btn-lg pull-right" position="right" onClick="startOver()">
-			<span class="glyphicon glyphicon-repeat"></span> Volver a intentarlo
-		</button>
-	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <body>
+    <h1>WEBIR - PROTOTIPO</h1>
+    <div class="main-table">
+        <table class="table" id="tableDevoto">
+            <tbody>
+                <tr>
+                    <th class="th-result">Devoto</th>
+                </tr>
+                <tr class="filaDevoto">
+                    <th class="th-main">Opción 1</th>
+                    <th class="th-main">Opción 2</th>
+                    <th class="th-main">Opción 3</th>
+                    <th class="th-main">Subtotal</th>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right"><strong>Total:</strong></td>
+                    <td class="th-main">$ 0</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="table" id="tableTinglesa">
+            <tbody>
+                <tr>
+                    <th class="th-result">Tienda Inglesa</th>
+                </tr>
+                <tr class="filaTInglesa">
+                    <th class="th-main">Opción 1</th>
+                    <th class="th-main">Opción 2</th>
+                    <th class="th-main">Opción 3</th>
+                    <th class="th-main">Subtotal</th>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right"><strong>Total:</strong></td>
+                    <td class="th-main">$ 0</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br>
+        <br>
+        <button type="button" class="btn btn-default btn-lg pull-right" position="right" onClick="startOver()">
+            <span class="glyphicon glyphicon-repeat"></span> Volver a intentarlo
+        </button>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="static/js/bootstrap.min.js"></script>

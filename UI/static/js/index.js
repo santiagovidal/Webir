@@ -74,8 +74,8 @@ getMarket = function(){
             type: 'POST',
             contentType: 'application/json',
             success: function(response) {
-                // window.location.href = "resultado.html";
-                alert(response)
+                sessionStorage.setItem("carrito",response);
+                window.location.href = "resultado.html";
             },
             error: function(error) {
                 console.log(error);
@@ -250,38 +250,3 @@ addFields = function(i){
     $('#addButton').attr("onClick","addFields("+(i+1)+")");
     
 };
-
-
-$(function () {
-	$(".resultProduct").click(function(){
-		//cambio el seleccionado por la clase comun
-		var id = "#" + $(this).closest('tr').attr("id");
-		$(id).find("td > table").each(function(){
-			if ($(this).attr("class") == "resultProductSelected"){
-				$(this).attr("class","resultProduct")
-			}
-		})
-		
-		//cambio el seleccionado por la clase especial
-		$(this).attr("class","resultProductSelected");
-		
-		//obtengo cantidad y precio unitario
-		var quantity = $(this).attr("value");
-		var price = $(this).find("tr:last td").text().match(/\d+/g)[0];
-		
-		//modifico subtotal
-		var subtotal = price*quantity;
-		var subtotalAnterior = $(id).find("td:last").text().match(/\d+/g)[0];
-		$(id).find("td:last").text("$ " + subtotal);
-		
-		//modifico total
-		var supermercado;
-		if (id.indexOf("devoto") > -1)
-			supermercado = "Devoto";
-		else
-			supermercado = "Tinglesa";
-		var totalActual = $("#table" + supermercado + " tr:last td").text().match(/\d+/g)[0];
-		totalActual = parseInt(totalActual) - parseInt(subtotalAnterior) + subtotal;
-		$("#table" + supermercado + " tr:last td:last").text("$ " + totalActual);
-	});
-});
