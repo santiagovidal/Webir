@@ -101,3 +101,8 @@ $(function () {
         $("#table" + supermercado + " tr:last td:last").text("$ " + totalActual);
     });
 });
+
+
+startOver = function(){
+	window.location.href = "index.html";
+};

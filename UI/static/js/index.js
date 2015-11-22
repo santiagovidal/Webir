@@ -54,38 +54,39 @@ getProduct = function(i){
 };
 
 getMarket = function(){
-    var market = [];
-    for (var i=1 ; i<=cantCampos; i++){
-        var json = new Object();
-        json.nombre = $('#input' + i).val();
-        json.marca = $('#selectMarca' + i).val();
-        json.unidadWeb = $('#selectUnidad' + i).val();
-        json.packpor = $('#selectPack' + i).val().substring(1,$('#selectPack' + i).val().length);
-        json.flexible = ($('#flexible' + i).prop('checked'));
-        json.desarmable = ($('#desarmable' + i).prop('checked'));
-        json.cantidad = $('#inputCantidad' + i).val()
-        market.push(json);
+	console.log("cant campos = " +cantCampos);
+	console.log("$('#input' + i).val() ===> " + $('#input1').val());
+	if ((cantCampos == 1) && (!$('#input1').val()))
+		alert("Debe seleccionar al menos un producto");
+	else {
+		var market = [];
+		for (var i=1 ; i<=cantCampos; i++){
+			var json = new Object();
+			json.nombre = $('#input' + i).val();
+			json.marca = $('#selectMarca' + i).val();
+			json.unidadWeb = $('#selectUnidad' + i).val();
+			json.packpor = $('#selectPack' + i).val().substring(1,$('#selectPack' + i).val().length);
+			json.flexible = ($('#flexible' + i).prop('checked'));
+			json.desarmable = ($('#desarmable' + i).prop('checked'));
+			json.cantidad = $('#inputCantidad' + i).val()
+			market.push(json);
+		}
+		var datos = new Object();
+		datos.market = market
+		$.ajax({
+				url: '/getMarket',
+				data: JSON.stringify(datos),
+				type: 'POST',
+				contentType: 'application/json',
+				success: function(response) {
+					sessionStorage.setItem("carrito",response);
+					window.location.href = "resultado.html";
+				},
+				error: function(error) {
+					console.log(error);
+				}
+		})
     }
-    var datos = new Object();
-    datos.market = market
-    $.ajax({
-            url: '/getMarket',
-            data: JSON.stringify(datos),
-            type: 'POST',
-            contentType: 'application/json',
-            success: function(response) {
-                sessionStorage.setItem("carrito",response);
-                window.location.href = "resultado.html";
-            },
-            error: function(error) {
-                console.log(error);
-            }
-    })
-    
-};
-
-startOver = function(){
-	window.location.href = "index.html";
 };
 
 // $("#selectMarca1").click(function(){
