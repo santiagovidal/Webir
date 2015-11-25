@@ -22,6 +22,7 @@ getProduct = function(i){
     $('#selectMarca'+ i).empty();
     marcas = ["Cualquiera"];
     $('#selectUnidad'+ i).empty();
+    $('#selectUnidad'+ i).append('<option>Cualquiera</option>')
     $('#selectPack' + i).empty();
     $("#selectUnidad"+i).attr("disabled",true);
     $("#flexible"+ i).attr("disabled",true);
@@ -141,6 +142,12 @@ setUnidad = function(i){
                      packs.push ('x' + json.packpor);
                 };
             }
+            function sortNumber(a,b) {
+            	a = a.replace("x","")
+            	b = b.replace("x","")
+			    return parseInt(a) - parseInt(b);
+			}
+            packs = packs.sort(sortNumber)
             for (var j=0; j < packs.length; j++){
                 $('#selectPack' + (i)).append('<option>'+ packs[j] +'</option>');
             }
@@ -191,7 +198,7 @@ addFields = function(i){
 
 	//agrega los campos a mostrar en el select Marca
 	//esto capaz se puede ir si van a cargarse a demanda segun el producto
-	$('#formProductos td:last select').append('<option>cualquiera</option>');
+	$('#formProductos td:last select').append('<option>Cualquiera</option>');
 	
 	//agrega el select unidad
 	$('#formProductos tr:last').append('<td class="td-center"></td>');
@@ -205,6 +212,8 @@ addFields = function(i){
 	$('#selectUnidad'+(i+1)).attr('class','form-control');
 	$('#selectUnidad'+(i+1)).attr('disabled',true);
 	$('#selectUnidad'+(i+1)).attr('onClick','setUnidad('+ (i+1)+')');
+	$('#selectUnidad'+(i+1)).append('<option>Cualquiera</option>')
+
 	
 	var inputFlexible = document.createElement('input');
 	inputFlexible.id = 'flexible'+ (i+1);
