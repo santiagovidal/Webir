@@ -9,6 +9,38 @@ class parser (object):
 		f2 = open("listaMarcasConErrores.txt","r")
 		self.marcasConErrores = f2.read().lower().split('\n')
 
+	def parsearJSON(self, filename):
+		archivoNoParseados = open(filename,"r")
+		productos = json.loads(archivoNoParseados.read())
+		archivoNoParseados.close()
+
+		filename = "productosTInglesaParseados.json"
+		archivoParseados = open(filename,"w")
+		archivoParseados.write("[")
+		p = parser()
+
+		i = 0
+		for producto in productos:
+			i += 1
+			print("Parseando: " + producto["titulo"] + "\n")
+			nombre, marca, magnitud, metrica, unidadWeb, pack = p.extraerCampos(producto["titulo"])
+			precio = p.parsearPrecio(producto["precio"])
+			prodparseado = {}
+			prodparseado["nombre"] = nombre
+			prodparseado["marca"] = marca
+			prodparseado["metrica"] = metrica
+			prodparseado["unidadWeb"] = unidadWeb
+			prodparseado["magnitud"] = magnitud
+			prodparseado["packpor"] = pack
+			prodparseado["precio"] = precio
+			json.dump(prodparseado,archivoParseados)
+			if i < len(productos):
+				archivoParseados.write(",\n")
+
+		archivoParseados.write("]")
+
+
+
 	def extraerCampos(self,string):
 		temp1, marca = self.extraerMarca(string)
 		temp2, magnitud, metrica, unidadWeb = self.extraerCantidad(temp1)
@@ -148,35 +180,4 @@ class parser (object):
 
 		# Obtiene los numeros y ignora cualquier otro caracter
 		return int(re.sub("[^0-9]", "", precio))
-
-
-filename = "productosTInglesaSinParsear.json"
-archivoNoParseados = open(filename,"r")
-productos = json.loads(archivoNoParseados.read())
-archivoNoParseados.close()
-
-filename = "productosTInglesaParseados.json"
-archivoParseados = open(filename,"w")
-archivoParseados.write("[")
-p = parser()
-
-i = 0
-for producto in productos:
-	i += 1
-	print("Parseando: " + producto["titulo"] + "\n")
-	nombre, marca, magnitud, metrica, unidadWeb, pack = p.extraerCampos(producto["titulo"])
-	precio = p.parsearPrecio(producto["precio"])
-	prodparseado = {}
-	prodparseado["nombre"] = nombre
-	prodparseado["marca"] = marca
-	prodparseado["metrica"] = metrica
-	prodparseado["unidadWeb"] = unidadWeb
-	prodparseado["magnitud"] = magnitud
-	prodparseado["packpor"] = pack
-	prodparseado["precio"] = precio
-	json.dump(prodparseado,archivoParseados)
-	if i < len(productos):
-		archivoParseados.write(",\n")
-
-archivoParseados.write("]")
 
