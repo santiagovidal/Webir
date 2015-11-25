@@ -53,9 +53,6 @@ def getMarket():
         quiero_packpor = None if producto["packExacto"] else int(producto["packpor"]) 
         
         marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
-
-        print producto["cantidad"]
-        print "alalalalalalalal"
         
         # Tienda Inglesa
         datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)      
