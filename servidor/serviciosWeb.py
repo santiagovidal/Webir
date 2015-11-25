@@ -53,16 +53,18 @@ def getMarket():
         quiero_packpor = None if producto["packExacto"] else int(producto["packpor"]) 
         
         marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
-        
+
+        print producto["cantidad"]
+        print "alalalalalalalal"
         
         # Tienda Inglesa
         datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)      
-        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"], quiero_magnitud=quiero_magnitud, quiero_packpor=quiero_packpor)
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, int(producto["cantidad"]), quiero_magnitud=quiero_magnitud, quiero_packpor=quiero_packpor)
         resultado['tinglesa'].append(mejores)
 
         # Devoto
         datos = bdAPI.getDatosPorProducto('devoto', producto["nombre"], unidadWeb, marca, packpor)
-        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"], quiero_packpor=packpor, quiero_magnitud=quiero_magnitud)
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, int(producto["cantidad"]), quiero_packpor=quiero_packpor, quiero_magnitud=quiero_magnitud)
         resultado['devoto'].append(mejores)
       
     return json.dumps(resultado)
