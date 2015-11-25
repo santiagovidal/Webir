@@ -54,9 +54,7 @@ getProduct = function(i){
 };
 
 getMarket = function(){
-	console.log("cant campos = " +cantCampos);
-	console.log("$('#input' + i).val() ===> " + $('#input1').val());
-	if ((cantCampos == 1) && (!$('#input1').val()))
+    if ((cantCampos == 1) && (!$('#input1').val()))
 		alert("Debe seleccionar al menos un producto");
 	else {
 		var market = [];

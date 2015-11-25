@@ -1,7 +1,8 @@
 from flask import Flask, Response, jsonify, render_template, request
 import sys
-sys.path.append('../supercrawl/crawlers')
-import moduloParser 
+import imp
+parser = imp.load_source('parser', '../supercrawl/crawlers/moduloParser.py')
+p = parser.parser("../supercrawl/crawlers/") 
 import bdAPI 
 import algoritmo
 sys.path.append('../UI')
@@ -45,15 +46,17 @@ def getMarket():
     for producto in market:
         unidadWeb = None if (producto["unidadWeb"]  == "Cualquiera") else producto["unidadWeb"]
         unidadWeb = unidadWeb if producto["magnitudExacta"] else None
+        quiero_magnitud = None if (producto["unidadWeb"]  == "Cualquiera") else p.normalizarCantidad(producto["unidadWeb"])[0]                
+        quiero_magnitud = None if producto["magnitudExacta"] else quiero_magnitud 
+        
         packpor = int(producto["packpor"]) if producto["packExacto"] else None
+        quiero_packpor = None if producto["packExacto"] else int(producto["packpor"]) 
+        
         marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
-        #quiero_magnitud = moduloParser.parser().normalizarCantidad(unidadWeb)[0] if unidadWeb else None
+        
         
         # Tienda Inglesa
         datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)      
-        quiero_magnitudquiero_magnitud =  None if unidadWeb else int([dato for dato in datos if dato["unidadWeb"] == unidadWeb][0]["magnitud"])
-        quiero_packpor = None if producto["packExacto"] else int(producto["packpor"]) 
-        print str(packpor), str(quiero_magnitud)
         mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"], quiero_magnitud=quiero_magnitud, quiero_packpor=quiero_packpor)
         resultado['tinglesa'].append(mejores)
 
