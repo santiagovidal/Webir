@@ -2,29 +2,27 @@ import re
 import json
 
 class parser (object):
-	def __init__(self):
-		f1 = open("listaMarcas.txt","r")
+	def __init__(self, rutaCarpeta=""):
+		f1 = open(rutaCarpeta + "listaMarcas.txt","r")
 		self.marcas = f1.read().split('\n')
 
-		f2 = open("listaMarcasConErrores.txt","r")
+		f2 = open(rutaCarpeta + "listaMarcasConErrores.txt","r")
 		self.marcasConErrores = f2.read().lower().split('\n')
 
-	def parsearJSON(self, filename):
+	def parsearJSON(self, filename, filenameNuevo):
 		archivoNoParseados = open(filename,"r")
 		productos = json.loads(archivoNoParseados.read())
 		archivoNoParseados.close()
 
-		filename = "productosTInglesaParseados.json"
-		archivoParseados = open(filename,"w")
+		archivoParseados = open(filenameNuevo,"w")
 		archivoParseados.write("[")
-		p = parser()
 
 		i = 0
 		for producto in productos:
 			i += 1
 			print("Parseando: " + producto["titulo"] + "\n")
-			nombre, marca, magnitud, metrica, unidadWeb, pack = p.extraerCampos(producto["titulo"])
-			precio = p.parsearPrecio(producto["precio"])
+			nombre, marca, magnitud, metrica, unidadWeb, pack = self.extraerCampos(producto["titulo"])
+			precio = self.parsearPrecio(producto["precio"])
 			prodparseado = {}
 			prodparseado["nombre"] = nombre
 			prodparseado["marca"] = marca

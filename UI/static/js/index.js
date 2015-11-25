@@ -22,9 +22,7 @@ getProduct = function(i){
     $('#selectMarca'+ i).empty();
     marcas = ["Cualquiera"];
     $('#selectUnidad'+ i).empty();
-    unidades = ["cualquiera"];
     $('#selectPack' + i).empty();
-    packs = [];
     $("#selectUnidad"+i).attr("disabled",true);
     $("#flexible"+ i).attr("disabled",true);
     $("#selectPack"+i).attr("disabled",true);
@@ -41,6 +39,7 @@ getProduct = function(i){
                      marcas.push (json.marca);
                 };
             }
+            marcas = marcas.sort();
             for (var j=0; j < marcas.length; j++){
 				var marca = marcas[j];
 				marca = marca.toLowerCase().replace( /\b\w/g, function (word) {
@@ -94,7 +93,6 @@ setMarca = function(i){
     $('#selectUnidad'+ (i)).empty();
     unidades = ["Cualquiera"];
     $('#selectPack' + (i)).empty();
-    packs = [];
     $("#selectPack"+(i)).attr("disabled",true);
     $("#desarmable"+(i)).attr("disabled",true);
     $("#inputCantidad"+(i)).attr("disabled",true);
@@ -109,6 +107,13 @@ setMarca = function(i){
                      unidades.push (json.unidadWeb);
                 };
             }
+
+            function sortNumber(a,b) {
+            	a = a.replace(".","0.")
+            	b = b.replace(".","0.")
+			    return parseInt(a) - parseInt(b);
+			}
+            unidades = unidades.sort(sortNumber);
             for (var j=0; j < unidades.length; j++){
                 $('#selectUnidad' + i).append('<option>'+ unidades[j] +'</option>');
             }
