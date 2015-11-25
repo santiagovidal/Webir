@@ -20,7 +20,6 @@ getProduct = function(i){
 	// LAS MARCAS Y UNIDAD QUE COINCIDEN CON EL PRODUCTO INGRESADO
     
     $('#selectMarca'+ i).empty();
-    marcas = ["Cualquiera"];
     $('#selectUnidad'+ i).empty();
     $('#selectUnidad'+ i).append('<option>Cualquiera</option>')
     $('#selectPack' + i).empty();
@@ -41,6 +40,7 @@ getProduct = function(i){
                 };
             }
             marcas = marcas.sort();
+            marcas.unshift("Cualquiera")
             for (var j=0; j < marcas.length; j++){
 				var marca = marcas[j];
 				marca = marca.toLowerCase().replace( /\b\w/g, function (word) {
