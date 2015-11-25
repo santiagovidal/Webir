@@ -42,12 +42,12 @@ h1 {
 .resultProduct {
 	width:50%;
 	text-align: center;
-	background-color: paleturquoise;
+	background-color: #e6e6e6;
 	cursor: pointer;
 }
 
 .resultProductSelected {
 	width:50%;
 	text-align: center;
-	background-color: turquoise;
+	background-color: #bfbfbf;
 }

@@ -1,8 +1,10 @@
 from flask import Flask, Response, jsonify, render_template, request
 import sys
-sys.path.append('../UI')
+sys.path.append('../supercrawl/crawlers')
+import moduloParser 
 import bdAPI 
 import algoritmo
+sys.path.append('../UI')
 import json
 
 app = Flask(__name__, template_folder="../UI", static_folder="../UI/static")
@@ -42,18 +44,22 @@ def getMarket():
 
     for producto in market:
         unidadWeb = None if (producto["unidadWeb"]  == "Cualquiera") else producto["unidadWeb"]
-        unidadWeb = None if producto["flexible"] else unidadWeb
-        packpor = None if producto["desarmable"] else producto["packpor"]
+        unidadWeb = unidadWeb if producto["magnitudExacta"] else None
+        packpor = int(producto["packpor"]) if producto["packExacto"] else None
         marca = None if (producto["marca"] == "Cualquiera") else producto["marca"]
-
+        #quiero_magnitud = moduloParser.parser().normalizarCantidad(unidadWeb)[0] if unidadWeb else None
+        
         # Tienda Inglesa
-        datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)
-        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"])
+        datos = bdAPI.getDatosPorProducto('tinglesa', producto["nombre"], unidadWeb, marca, packpor)      
+        quiero_magnitudquiero_magnitud =  None if unidadWeb else int([dato for dato in datos if dato["unidadWeb"] == unidadWeb][0]["magnitud"])
+        quiero_packpor = None if producto["packExacto"] else int(producto["packpor"]) 
+        print str(packpor), str(quiero_magnitud)
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"], quiero_magnitud=quiero_magnitud, quiero_packpor=quiero_packpor)
         resultado['tinglesa'].append(mejores)
 
         # Devoto
         datos = bdAPI.getDatosPorProducto('devoto', producto["nombre"], unidadWeb, marca, packpor)
-        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"])
+        mejores = algoritmo.Busqueda().obtenerMejores(datos, producto["cantidad"], quiero_packpor=packpor, quiero_magnitud=quiero_magnitud)
         resultado['devoto'].append(mejores)
       
     return json.dumps(resultado)

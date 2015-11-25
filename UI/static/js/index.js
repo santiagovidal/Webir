@@ -25,9 +25,9 @@ getProduct = function(i){
     $('#selectUnidad'+ i).append('<option>Cualquiera</option>')
     $('#selectPack' + i).empty();
     $("#selectUnidad"+i).attr("disabled",true);
-    $("#flexible"+ i).attr("disabled",true);
+    $("#magnitudExacta"+ i).attr("disabled",true);
     $("#selectPack"+i).attr("disabled",true);
-    $("#desarmable"+i).attr("disabled",true);
+    $("#packExacto"+i).attr("disabled",true);
     $("#inputCantidad"+i).attr("disabled",true);
     $("#addButton").attr("disabled",true);
     $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
@@ -66,8 +66,8 @@ getMarket = function(){
 			json.marca = $('#selectMarca' + i).val();
 			json.unidadWeb = $('#selectUnidad' + i).val();
 			json.packpor = $('#selectPack' + i).val().substring(1,$('#selectPack' + i).val().length);
-			json.flexible = ($('#flexible' + i).prop('checked'));
-			json.desarmable = ($('#desarmable' + i).prop('checked'));
+			json.magnitudExacta = ($('#magnitudExacta' + i).prop('checked'));
+			json.packExacto = ($('#packExacto' + i).prop('checked'));
 			json.cantidad = $('#inputCantidad' + i).val()
 			market.push(json);
 		}
@@ -95,7 +95,7 @@ setMarca = function(i){
     unidades = ["Cualquiera"];
     $('#selectPack' + (i)).empty();
     $("#selectPack"+(i)).attr("disabled",true);
-    $("#desarmable"+(i)).attr("disabled",true);
+    $("#packExacto"+(i)).attr("disabled",true);
     $("#inputCantidad"+(i)).attr("disabled",true);
     $("#addButton").attr("disabled",true);
     $.getJSON($SCRIPT_ROOT + '/datosPorProducto', {
@@ -119,7 +119,7 @@ setMarca = function(i){
                 $('#selectUnidad' + i).append('<option>'+ unidades[j] +'</option>');
             }
             $("#selectUnidad"+(i)).attr("disabled",false);
-            $("#flexible"+(i)).attr("disabled",false);
+            $("#magnitudExacta"+(i)).attr("disabled",false);
           
       });    
 	
@@ -152,7 +152,7 @@ setUnidad = function(i){
                 $('#selectPack' + (i)).append('<option>'+ packs[j] +'</option>');
             }
             $("#selectPack"+i).attr("disabled",false);
-            $("#desarmable"+i).attr("disabled",false);
+            $("#packExacto"+i).attr("disabled",false);
           
       });  
 	
@@ -215,13 +215,13 @@ addFields = function(i){
 	$('#selectUnidad'+(i+1)).append('<option>Cualquiera</option>')
 
 	
-	var inputFlexible = document.createElement('input');
-	inputFlexible.id = 'flexible'+ (i+1);
-	inputFlexible.type = 'checkbox';
+	var inputmagnitudExacta = document.createElement('input');
+	inputmagnitudExacta.id = 'magnitudExacta'+ (i+1);
+	inputmagnitudExacta.type = 'checkbox';
 	
 	$('#formProductos tr:last').append('<td></td>');
-	$('#formProductos td:last').append(inputFlexible);
-	$('#desarmable'+(i+1)).attr('disabled',true);
+	$('#formProductos td:last').append(inputmagnitudExacta);
+	$('#packExacto'+(i+1)).attr('disabled',true);
 	
 	//agrega el select pack
 	var selectPack = document.createElement("select");
@@ -235,13 +235,13 @@ addFields = function(i){
 	$('#selectPack'+(i+1)).attr('disabled',true);
 	$('#selectPack'+(i+1)).attr('onClick','setPack('+ (i+1) +')');
 	
-	var inputDesarmable = document.createElement('input');
-	inputDesarmable.id = 'desarmable'+ (i+1);
-	inputDesarmable.type = 'checkbox';
+	var inputpackExacto = document.createElement('input');
+	inputpackExacto.id = 'packExacto'+ (i+1);
+	inputpackExacto.type = 'checkbox';
 	
 	$('#formProductos tr:last').append('<td></td>');
-	$('#formProductos td:last').append(inputDesarmable);
-	$('#desarmable'+(i+1)).attr('disabled',true);	
+	$('#formProductos td:last').append(inputpackExacto);
+	$('#packExacto'+(i+1)).attr('disabled',true);	
 	
 	//agrega el input cantidad
 	var inputCantidad = document.createElement("input");

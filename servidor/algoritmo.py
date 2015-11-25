@@ -15,6 +15,7 @@ class Busqueda:
 		quiero_magnitud = None,
 		quiero_packpor = None
 	):
+		print quiero_cantidad, quiero_magnitud, quiero_packpor
 		'''----------------------------------------------------- 
 			Asumiendo que json_productos tiene la siguiente forma
 			[

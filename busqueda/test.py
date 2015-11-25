@@ -22,6 +22,10 @@ while opcion != 0:
 	print "Ingrese una opcion"
 	opcion = int(input("> "))
 	if opcion == 0: continue
+	nombre = raw_input("Nombre: ")
+	datos  = [dato for dato in datos if nombre in dato["nombre"]]
+	marca  = raw_input("Marca: ")
+	datos  = [dato for dato in datos if marca in dato["marca"]]
 	cantidad = int(input("Cantidad: "))
 	if opcion == 1:
 		quiero_magnitud = int(input("Magnitud: "))
