@@ -4,15 +4,15 @@
 \contentsline {section}{\numberline {3}Descripci\IeC {\'o}n de la soluci\IeC {\'o}n}{4}
 \contentsline {subsection}{\numberline {3.1}Dominio \& modelo conceptual}{4}
 \contentsline {subsection}{\numberline {3.2}Arquitectura \& dise\IeC {\~n}o de m\IeC {\'o}dulos}{5}
-\contentsline {subsection}{\numberline {3.3}Modelo de datos}{7}
-\contentsline {subsection}{\numberline {3.4}Interfaz con el usuario}{8}
-\contentsline {subsection}{\numberline {3.5}Recuperaci\IeC {\'o}n de informaci\IeC {\'o}n}{10}
-\contentsline {subsubsection}{\numberline {3.5.1}Crawler}{10}
-\contentsline {subsubsection}{\numberline {3.5.2}Parsing}{12}
-\contentsline {subsubsection}{\numberline {3.5.3}Base de Datos}{12}
-\contentsline {subsection}{\numberline {3.6}Estrategia de ranking}{13}
-\contentsline {section}{\numberline {4}Problemas encontrados y trabajo futuro}{14}
-\contentsline {subsection}{\numberline {4.1}Crawler}{14}
-\contentsline {subsection}{\numberline {4.2}Mejorar corpus de marcas}{14}
-\contentsline {subsection}{\numberline {4.3}Mayor procesamiento para detectar sin\IeC {\'o}nimos y palabras mal escritas.}{15}
-\contentsline {section}{\numberline {5}Conclusi\IeC {\'o}n}{15}
+\contentsline {subsection}{\numberline {3.3}Modelo de datos}{8}
+\contentsline {subsection}{\numberline {3.4}Interfaz con el usuario}{10}
+\contentsline {subsection}{\numberline {3.5}Recuperaci\IeC {\'o}n de informaci\IeC {\'o}n}{13}
+\contentsline {subsubsection}{\numberline {3.5.1}Crawler}{13}
+\contentsline {subsubsection}{\numberline {3.5.2}Parsing}{14}
+\contentsline {subsubsection}{\numberline {3.5.3}Base de Datos}{15}
+\contentsline {subsection}{\numberline {3.6}Estrategia de ranking}{16}
+\contentsline {section}{\numberline {4}Problemas encontrados y trabajo futuro}{17}
+\contentsline {subsection}{\numberline {4.1}Crawler}{17}
+\contentsline {subsection}{\numberline {4.2}Mejorar corpus de marcas}{17}
+\contentsline {subsection}{\numberline {4.3}Mayor procesamiento para detectar sin\IeC {\'o}nimos y palabras mal escritas.}{17}
+\contentsline {section}{\numberline {5}Conclusi\IeC {\'o}n}{18}

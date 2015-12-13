@@ -41,6 +41,7 @@
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -147,13 +148,13 @@ El primer aspecto a la hora de desarrollar cualquier tipo de sistema es tener co
 
 Dicho esto, la propuesta aquí planteada consiste básicamente en encontrar artículos de consumo cotidiano en diversas cadenas de supermercado que ofrezcan servicio online, de manera de minimizar los gastos del cliente según las necesidades que éste plantee. Algunas consideraciones a tener en cuenta es que existen artículos de diversas marcas, clases, distribuidas en diferentes proporciones o unidades comercializables (en packs, cajas con determinada cantidad de artículos, etc); y todas ellas pueden satisfacer equitativamente las necesidades del cliente, a menos que éste especifique lo contrario, restringiendo el espacio de búsqueda.
 
-El esquema conceptual asociado al dominio de este problema se puede apreciar a continuación.
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{dominio}
-  \end{center}
-  \caption{Dominio}
-\end{wrapfigure}
+El esquema conceptual asociado al dominio de este problema se puede apreciar en la Figura 1.
+
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{dominio}
+\centering
+\caption{Dominio del Problema}
+\end{figure}
 
 Básicamente, un supermercado tiene un conjunto de artículos que pueden ser comprados por diversos clientes. Además, dichos artículos pueden ser de dos tipos: productos unitarios o packs de productos, asociados a una única marca que los distribuye.
 
@@ -167,21 +168,20 @@ Una limitación al dominio del problema refiere a las cadenas de supermercados q
 Un segundo aspecto importante a la hora de desarrollar un sistema de información es su modularización y diseño arquitectónico, claves para obtener una solución funcionalmente correcta, clara y mantenible. Si bien se trata de dos conceptos diferentes, guardan una relación muy estrecha, ya que un buen diseño de la arquitectura se sustenta por la buena modularización del sistema.
 
 A efectos del problema, es necesario realizar un análisis previo de las fuentes para conocer la forma en que exhiben los artículos, y por consiguiente los datos relevantes que allí subyacen, para obtener una primera aproximación a los módulos que formarán parte de nuestro sistema.
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{coca-cola}
-  \end{center}
-  \caption{Formato de los datos}
-\end{wrapfigure}
 
-En la imagen anterior se puede observar la manera en que muestran exactamente el mismo producto ambos supermercados. En ambos casos se pueden identificar tres campos; uno con una imágen ilustrativa del artículo, otro reservado para detallarlo, y otro campo dedicado a costearlo. Es fácil deducir que si bien ambos detallan el artículo de maneras muy distintas, comparten a grandes rasgos el mismo patrón. De esta forma, las etiquetas identificables en cada producto son:
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{coca-cola}
+\centering
+\caption{Formato de los Datos}
+\end{figure}
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{etiquetas}
-  \end{center}
-  \caption{Etiquetas}
-\end{wrapfigure}
+En la Figura 2 se puede observar la manera en que muestran exactamente el mismo producto ambos supermercados. En ambos casos se pueden identificar tres campos; uno con una imágen ilustrativa del artículo, otro reservado para detallarlo, y otro campo dedicado a costearlo. Es fácil deducir que si bien ambos detallan el artículo de maneras muy distintas, comparten a grandes rasgos el mismo patrón. De esta forma, las etiquetas identificables en cada producto se pueden observar en la Figura 3.
+
+\begin{figure}[H]
+\includegraphics[height=0.07\textwidth]{etiquetas}
+\centering
+\caption{Etiquetas}
+\end{figure}
 
 Cabe destacar que no todas ellas son obligatorias (como el “pack”), y aunque lo sean pueden estar ausentes (como es el caso de la “métrica” en el caso de Devoto). Por otro lado, la “clase” de producto puede encontrarse dispersa en el texto de descripción. También se pueden presentar diferencias en cuanto a la sintaxis; el caso más obvio son las mayúsculas/minúsculas, pero también existen casos poco triviales como es el de “x4” versus “X4u” para indicar el pack o también “L” versus “lt” para indicar la métrica. Estos últimos dos ejemplos tienen un claro impacto en la semántica de los datos (significan lo mismo, pero están escritos de forma distinta). Un último aspecto a tener en cuenta son las magnitudes, que asociadas a determinada métrica determinan la cantidad neta de artículo, pudiendo presentar problemas de inconsistencias entre las fuentes (p.e. 0.75L o 750ml), siendo necesaria su estandarización. 
 
@@ -200,14 +200,14 @@ Dicho esto, y a modo de resumen, el sistema estará compuesto por cuatro módulo
 \end{itemize}
 
 
-La relación entre dichos módulos incorporando la base de datos determina la arquitectura de nuestro sistema, la cual se detalla en la imagen a continuación.
+La relación entre dichos módulos incorporando la base de datos determina la arquitectura de nuestro sistema, la cual se detalla en la Figura 4.
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{arquitectura}
-  \end{center}
-  \caption{Arquitectura}
-\end{wrapfigure}
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{arquitectura}
+\centering
+\caption{Arquitectura de la Solución}
+\end{figure}
+
 
 %------------------------------------------------
 
@@ -215,25 +215,23 @@ La relación entre dichos módulos incorporando la base de datos determina la ar
 
 Un tercer aspecto importante a la hora de diseñar un sistema es describir cómo será el modelo de datos. Al contar con un buen esquema, los datos capturados y almacenados tendrán una estructura que refleja adecuadamente las entidades del mundo real y no se verán expuestos a continuas transformaciones.
 
-En esta oportunidad se optó por modelar las entidades de la realidad descrita de la manera que se muestra a continuación.
+En esta oportunidad se optó por modelar las entidades de la realidad descrita de la manera que se muestra en la Figura 5.
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{modelo_de_datos}
-  \end{center}
-  \caption{Modelo de datos}
-\end{wrapfigure}
+\begin{figure}[H]
+\includegraphics[height=0.20\textwidth]{modelo_de_datos}
+\centering
+\caption{Modelo de Datos}
+\end{figure}
 
 Son varios los detalles del modelo a destacar. El primero es que los atributos asociados al Artículo se corresponden con las etiquetas que deseamos obtener a partir de las descripciones que ofrecen los sitios web, y además un dato redundante “UnidadWeb” que permitirá reducir los costos de calcular dicho atributo a partir de “Magnitud” y “Métrica”. Esto último se debe al hecho de que se optó por mantener la “Magnitud” y la “Métrica” en un formato normalizado, a efectos de poder realizar los cálculos para hallar la compra óptima para el cliente de manera eficiente. Es decir, dada la heterogeneidad de representar las cantidades netas de cada artículo, se mantendrán como estándares el mili-Litro (mL) para el volumen, el Gramo (G) para la masa, o en su defecto NULL para aquellos artículos que se vendan en un unidades (p.e. “docena de huevos” tendrá magnitud 12 y métrica nula). Otro detalle importante es que si bien hemos mencionado que un Artículo puede ser un Producto o un Pack de productos, dichas sub-entidades se colapsaron una única entidad ya que el único atributo que lo distingue del resto es “Pack”, cuyo valor bien podría ser 1 (uno) para aquellos productos que se venden unitariamente, sin presentar mayores inconvenientes y así se ahorran costosas operaciones de “join”. Un último detalle refiere a la “clase de producto”. En esta oportunidad se optó que el atributo “Nombre” fuese conformado por el nombre del producto propiamente dicho y además la clase a la que pertenece, ya que en el sistema no hay un requisito que necesite mantenerlos diferenciados (aunque podría serlo, y ser parte de un trabajo futuro)
 
-No obstante, este esquema estructurado aplica a un modelo relacional, y como hemos mencionado secciones anteriores se utilizará un sistema gestor de base de datos no-relacional para almacenar la información. Pese a esta disyuntiva, el esquema orientado a documentos permite, si bien no es obligatorio, mantener un esquema estructurado. Dicho esquema, no es más que un simple JSON que permite indizar los atributos y realizar consultas en forma eficiente sobre ellos. En un esquema de datos aplicado a la solución real del problema se mantiene una colección de documentos (como los mostrados a continuación) por cada supermercado.
+No obstante, este esquema estructurado aplica a un modelo relacional, y como hemos mencionado secciones anteriores se utilizará un sistema gestor de base de datos no-relacional para almacenar la información. Pese a esta disyuntiva, el esquema orientado a documentos permite, si bien no es obligatorio, mantener un esquema estructurado. Dicho esquema, no es más que un simple JSON que permite indizar los atributos y realizar consultas en forma eficiente sobre ellos. En un esquema de datos aplicado a la solución real del problema se mantiene una colección de documentos (como los mostrados en la Figura 6) por cada supermercado.
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{documento}
-  \end{center}
-  \caption{Esquema de datos DBDO}
-\end{wrapfigure}
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{documento}
+\centering
+\caption{Esquema de Datos DBDO}
+\end{figure}
 
 %------------------------------------------------
 
@@ -244,42 +242,39 @@ En ese sentido se optó por dejar al usuario la libertad de ingresar el nombre d
 
 Como puede verse en la imagen a continuación, el usuario ingresará el nombre de un producto, y para ese producto ingresado se le mostrarán las marcas que tengan alguna coincidencia en el nombre de artículo con la búsqueda ingresada. Una vez seleccionada una marca, se le desplegarán las unidades disponibles para la conjunción de los atributos. A medida que el usuario vaya ingresando las preferencias, se irán desbloqueando del mismo modo los atributos Pack, Cantidad y los checkboxes asociados (si desea que la unidad sea exacta o que el pack pueda ser desarmado).
 
-Una vez completada toda la información para un artículo, se habilitará la opción de agregar uno nuevo, o de realizar el cálculo de \textcolor{red}{cuáles son los tres productos más baratos en cada supermercado.cuál supermercado es el más económico.}
+Una vez completada toda la información para un artículo, se habilitará la opción de agregar uno nuevo, o de realizar el cálculo de cuáles son los tres productos más baratos en cada supermercado.cuál supermercado es el más económico.
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{interfaz_usuario}
-  \end{center}
-  \caption{Página principal}
-\end{wrapfigure}
+En la Figura 7 se muestra la página principal del prototipo con los aspectos detallados anteriormente.
 
-\textcolor{red}{Esta opción de diseño fue tomada para minimizar los posibles errores de escritura que el usuario pueda llegar a ocasionar, como por ejemplo “Hellman’s” o “Hellmans”. Una mejora a futuro sería contar con un diccionario de sinónimos y un procesamiento del lenguaje natural más fino, que permita al sistema tener la autonomía para reconocer este tipo de diferencias como el mismo artículo. Otro error que se mitiga con este tipo de control es que el usuario a priori no tiene por qué conocer la magnitud y métrica del producto que desea adquirir, pudiendo ingresar datos inexistentes, como por ejemplo un Refresco Coca Cola de 10 gr. AAdemás, al habilitar las opciones una vez que se completen todos los campos, se evitan hacer costosos controles sobre todos los mismos campos para ver si hay algún error. Para una segunda versión, se podría dar la posibilidad de modificar o eliminar un artículo ya ingresado.}
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{interfaz_usuario}
+\centering
+\caption{Página Principal}
+\end{figure}
 
-\textcolor{red}{El usuario tendrá la opción de decidir si quiere que sus productos se busquen exactamente como los ingresó, o si permite que alguno de los campos se “desarme” para encontrar otros productos que satisfagan sus necesidades y sean más económicos. 
+Esta opción de diseño fue tomada para minimizar los posibles errores de escritura que el usuario pueda llegar a ocasionar, como por ejemplo “Hellman’s” o “Hellmans”. Una mejora a futuro sería contar con un diccionario de sinónimos y un procesamiento del lenguaje natural más fino, que permita al sistema tener la autonomía para reconocer este tipo de diferencias como el mismo artículo. Otro error que se mitiga con este tipo de control es que el usuario a priori no tiene por qué conocer la magnitud y métrica del producto que desea adquirir, pudiendo ingresar datos inexistentes, como por ejemplo un Refresco Coca Cola de 10 gr. AAdemás, al habilitar las opciones una vez que se completen todos los campos, se evitan hacer costosos controles sobre todos los mismos campos para ver si hay algún error. Para una segunda versión, se podría dar la posibilidad de modificar o eliminar un artículo ya ingresado.
+
+El usuario tendrá la opción de decidir si quiere que sus productos se busquen exactamente como los ingresó, o si permite que alguno de los campos se “desarme” para encontrar otros productos que satisfagan sus necesidades y sean más económicos. 
 Por ejemplo, el usuario desea comprar un pack de 6 botellas de Refresco Coca Cola de 1 litro. Si el usuario desea que su búsqueda sea exacta, el sistema le devolverá solamente los packs de 6 botellas de Refresco Coca Cola de 1 litro; si el usuario permite “desarmar” su producto, el sistema podría retornar, por ejemplo 2 packs de 3 botellas de Refresco Coca Cola de 1 litro, o 3 botellas de Refresco Coca Cola de 2 litros.
-}
-
-En la imagen a continuación, se puede ver un DSS completo sobre el caso de uso, pero a más alto nivel para describir la interacción entre el usuario y los módulos del sistema. Para una mayor usabilidad e interfaz amigable al usuario, se optó por realizar las consultas al servidor mediante AJAX de manera asincrónica. De este modo, el sitio no quedará bloqueado ni el usuario se quedará esperando por la respuesta y podrá seguir navegando sin problemas por el sitio.
-
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{DSS}
-  \end{center}
-  \caption{DSS}
-\end{wrapfigure}
-
-Una vez que el usuario haya finalizado con su lista de compras, podrá obtener los resultados sobre cuál supermercado es el más económico. Como puede verse en la imagen a continuación, para cada supermercado y para cada producto, se dan las tres posibilidades más económicas que coincidan con la búsqueda ingresada.
-
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{pag_resultado}
-  \end{center}
-  \caption{Página de resultado}
-\end{wrapfigure}
 
 
-\textcolor{red}{Esta funcionalidad permite seleccionar entre las diferentes opciones, e ir viendo el gasto total en tiempo real. Así, en caso de que en algún supermercado no hubiera un artículo ingresado por el usuario, se dará la posibilidad de elegir uno similar. Por ejemplo, Coca-Cola 1x5lt pack x6 podría tenerlo Devoto y no Tienda Inglesa, pero que aún así el usuario prefiriera esta última opción aunque tuviera que comprarlas por separado.
-}
+En la Figura 8, se puede ver un DSS completo sobre el caso de uso, pero a más alto nivel para describir la interacción entre el usuario y los módulos del sistema. Para una mayor usabilidad e interfaz amigable al usuario, se optó por realizar las consultas al servidor mediante AJAX de manera asincrónica. De este modo, el sitio no quedará bloqueado ni el usuario se quedará esperando por la respuesta y podrá seguir navegando sin problemas por el sitio.
+
+\begin{figure}[H]
+\includegraphics[height=0.40\textwidth]{DSS}
+\centering
+\caption{DSS}
+\end{figure}
+
+Una vez que el usuario haya finalizado con su lista de compras, podrá obtener los resultados sobre cuál supermercado es el más económico. Como puede verse en la Figura 9, para cada supermercado y para cada producto, se dan las tres posibilidades más económicas que coincidan con la búsqueda ingresada.
+
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{pag_resultado}
+\centering
+\caption{Página de Resultado}
+\end{figure}
+
+Esta funcionalidad permite seleccionar entre las diferentes opciones, e ir viendo el gasto total en tiempo real. Así, en caso de que en algún supermercado no hubiera un artículo ingresado por el usuario, se dará la posibilidad de elegir uno similar. Por ejemplo, Coca-Cola 1x5lt pack x6 podría tenerlo Devoto y no Tienda Inglesa, pero que aún así el usuario prefiriera esta última opción aunque tuviera que comprarlas por separado.
 
 %------------------------------------------------
 
@@ -290,38 +285,39 @@ Una vez que el usuario haya finalizado con su lista de compras, podrá obtener l
 
 El crawler consiste de dos spiders, uno para cada supermercado.
 
-El spider de Devoto tiene como páginas base las páginas de las categorías “Vida saludable”, “Almacén”, “Frescos”, “Congelados” y “Lácteos”. Una vez en ellas, sabe como extraer los links de las subcategorías, como los que indica la imagen.
+El spider de Devoto tiene como páginas base las páginas de las categorías “Vida saludable”, “Almacén”, “Frescos”, “Congelados” y “Lácteos”. Una vez en ellas, sabe como extraer los links de las subcategorías, como los que se indican en la Figura 10.
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{pag_devoto}
-  \end{center}
-  \caption{Categorías Iniciales Devoto}
-\end{wrapfigure}
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{pag_devoto}
+\centering
+\caption{Categorías Iniciales Devoto}
+\end{figure}
 
-Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. Analiza los patrones en el HTML para reconocer el título y precio de un producto. Por ejemplo, a continuación se observa una versión simplificada del código HTML de un producto y su correspondiente imagen:
 
-\begin{lstlisting}
+Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. Analiza los patrones en el HTML para reconocer el título y precio de un producto. Por ejemplo, a continuación se observa una versión simplificada del código HTML de un producto y en la Figura 11 su correspondiente imagen:
+
+
+\begin{lstlisting}[language=HTML]
 <div class="productos-categoria">
 <a class="js-fancybox-product fancybox fancybox.iframe" href={URL_PROD}>
-           <img src={URL_IMAGEN} class="img-catproducto">
+<img src={URL_IMAGEN} class="img-catproducto">
 <h2>AGUA AQUARIUS MANZANA 1.5LT.</h2>
-<h3>$U        50.00</h3>
-<h4>U$S         1.72 </h4>
+<h3>$U 50.00</h3>
+<h4>U$S 1.72 </h4>
 </a>
 </div>
 \end{lstlisting}
 
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{producto_devoto}
-  \end{center}
-  \caption{Producto Devoto}
-\end{wrapfigure}
+\begin{figure}[H]
+\includegraphics[height=0.30\textwidth]{producto_devoto}
+\centering
+\caption{Producto de Devoto}
+\end{figure}
+
 
 Dado que los productos están paginados, el spider debe iterar sobre todas las páginas de la categoría. Esto lo logra tomando la URL de una página, e incrementando en uno el parámetro en el cabezal HTTP que indica la página.
 
-El spider para la página de Tienda Inglesa es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
+El spider para la página de Tienda Inglesa es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: \texttt{http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php}, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
 
 %------------------------------------------------
 \subsubsection{Parsing}
@@ -348,18 +344,18 @@ Dado que ElasticSearch está pensado como un servidor de búsqueda, tiene gran f
 
 El sistema generaría la siguiente consulta en formato JSON:
 $
-	{
-       query: {
-          bool: {
-             must: [
-                { match: { nombre: { query: “Alfajor de chocolate”, operator: “and” } } },
-                { match_phrase: { marca: “Portezuelo” } },
-                { match: { unidad: “100gr” } },
-                { match: { packpor: 12 } }
-             ]
-          }
-       }
-   }
+	{\\
+       query: {\\
+          bool: {\\
+             must: [\\
+                { match: { nombre: { query: “Alfajor de chocolate”, operator: “and” } } },\\
+                { match_phrase: { marca: “Portezuelo” } },\\
+                { match: { unidad: “100gr” } },\\
+                { match: { packpor: 12 } }\\
+             ]\\
+          }\\
+       }\\
+   }\\
 $
 
 
