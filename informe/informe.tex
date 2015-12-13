@@ -401,7 +401,7 @@ Finalmente, una vez hallada la cantidad real necesaria para satisfacer las neces
 
 \subsection{Crawler}
 
-En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer requests dentro del spider de Scrapy y manejar la concurrencia que esto genera obteniendo toda la información necesaria de los datos recuperados de la web. En el anexo se agrega el código con indicaciones de dónde se encuentra este problema.
+En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer que el spider de Scrapy haga requests directamente a los servicios Web que devuelven el contenido. En el anexo se agrega el código con indicaciones de dónde se encuentra este problema.
 
 %------------------------------------------------
 
@@ -424,6 +424,7 @@ En este proyecto nos enfrentamos a algunas de las dificultades más importantes 
 
 Otro aspecto importante a destacar, es la relación entre áreas necesaria para poder realizar un proyecto de estas características. Sin lugar a dudas, el proyecto tiene una carga importante de Procesamiento del Lenguaje Natural, y orientado a esta área es que se encuentran la mayor parte de las mejoras propuestas.
 
+\section{Anexo}
 
 
 \newpage
