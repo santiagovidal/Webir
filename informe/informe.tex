@@ -37,6 +37,8 @@
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
+\usepackage{url}
+
 \linespread{1.2} % Line spacing
 
 %\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
@@ -301,12 +303,12 @@ Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. 
 
 \begin{lstlisting}[language=HTML]
 <div class="productos-categoria">
-<a class="js-fancybox-product fancybox fancybox.iframe" href={URL_PROD}>
-<img src={URL_IMAGEN} class="img-catproducto">
-<h2>AGUA AQUARIUS MANZANA 1.5LT.</h2>
-<h3>$U 50.00</h3>
-<h4>U$S 1.72 </h4>
-</a>
+  <a class="js-fancybox-product fancybox" href={URL_PROD}>
+    <img src={URL_IMAGEN} class="img-catproducto">
+    <h2>AGUA AQUARIUS MANZANA 1.5LT.</h2>
+    <h3>$U 50.00</h3>
+    <h4>U$S 1.72 </h4>
+  </a>
 </div>
 \end{lstlisting}
 
@@ -319,7 +321,7 @@ Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. 
 
 Dado que los productos están paginados, el spider debe iterar sobre todas las páginas de la categoría. Esto lo logra tomando la URL de una página, e incrementando en uno el parámetro en el cabezal HTTP que indica la página.
 
-El spider para la página de Tienda Inglesa \cite{TInglesa} es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: \texttt{http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php}, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
+El spider para la página de Tienda Inglesa \cite{TInglesa} es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: \url{http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php}, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
 
 %------------------------------------------------
 \subsubsection{Parsing}
@@ -351,21 +353,22 @@ Dado que ElasticSearch está pensado como un servidor de búsqueda, tiene gran f
 \end{itemize}
 
 El sistema generaría la siguiente consulta en formato JSON:
-$
-	{\\
-       query: {\\
-          bool: {\\
-             must: [\\
-                { match: { nombre: { query: “Alfajor de chocolate”, operator: “and” } } },\\
-                { match_phrase: { marca: “Portezuelo” } },\\
-                { match: { unidad: “100gr” } },\\
-                { match: { packpor: 12 } }\\
-             ]\\
-          }\\
-       }\\
-   }\\
-$
-
+\\
+\begin{lstlisting}
+{
+ query: {
+  bool: {
+   must: [
+    { match: { nombre: { query: 'Alfajor de chocolate', 
+                         operator: 'and' } } },
+    { match_phrase: { marca: 'Portezuelo' } },
+    { match: { unidad: '100gr' } },
+    { match: { packpor: 12 } }
+   ]
+  }
+ }
+}
+\end{lstlisting}
 
 El campo bool indica las condiciones que debe cumplir el objeto para satisfacer la consulta. Puede contener elementos de tipo \textit{must}, \textit{must\_not} y \textit{should}. Dado que sólo estamos usando un subcampo must, todo objeto que cumpla las condiciones dentro de él será válido.
 

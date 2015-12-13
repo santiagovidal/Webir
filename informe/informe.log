@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.16)  13 DEC 2015 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.16)  13 DEC 2015 19:50
 entering extended mode
 **informe.tex
 (informe.tex
@@ -435,24 +435,29 @@ LaTeX Info: Redefining \] on input line 2666.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count115
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -512,75 +517,75 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write3
  [1] [2]
 
-LaTeX Warning: Citation `e' on page 3 undefined on input line 128.
+LaTeX Warning: Citation `e' on page 3 undefined on input line 130.
 
 [3] <Pictures/dominio.png, id=18, 455.7025pt x 240.9pt>
 File: Pictures/dominio.png Graphic file (type png)
 
 <use Pictures/dominio.png>
-Package pdftex.def Info: Pictures/dominio.png used on input line 156.
+Package pdftex.def Info: Pictures/dominio.png used on input line 158.
 (pdftex.def)             Requested size: 237.35605pt x 125.47737pt.
  [4 <./Pictures/dominio.png>]
 <Pictures/coca-cola.png, id=22, 416.55624pt x 181.17688pt>
 File: Pictures/coca-cola.png Graphic file (type png)
 
 <use Pictures/coca-cola.png>
-Package pdftex.def Info: Pictures/coca-cola.png used on input line 175.
+Package pdftex.def Info: Pictures/coca-cola.png used on input line 177.
 (pdftex.def)             Requested size: 288.49829pt x 125.47737pt.
  [5]
 <Pictures/etiquetas.png, id=26, 411.03563pt x 37.13875pt>
 File: Pictures/etiquetas.png Graphic file (type png)
 
 <use Pictures/etiquetas.png>
-Package pdftex.def Info: Pictures/etiquetas.png used on input line 183.
+Package pdftex.def Info: Pictures/etiquetas.png used on input line 185.
 (pdftex.def)             Requested size: 324.08112pt x 29.2808pt.
  [6 <./Pictures/coca-cola.png> <./Pictures/etiquetas.png>] <Pictures/arquitectu
 ra.png, id=31, 480.29437pt x 229.35687pt>
 File: Pictures/arquitectura.png Graphic file (type png)
 
 <use Pictures/arquitectura.png>
-Package pdftex.def Info: Pictures/arquitectura.png used on input line 208.
+Package pdftex.def Info: Pictures/arquitectura.png used on input line 210.
 (pdftex.def)             Requested size: 262.76292pt x 125.47737pt.
  [7 <./Pictures/arquitectura.png>]
 <Pictures/modelo_de_datos.png, id=35, 431.11063pt x 108.405pt>
 File: Pictures/modelo_de_datos.png Graphic file (type png)
 
 <use Pictures/modelo_de_datos.png>
-Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 223.
+Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 225.
 (pdftex.def)             Requested size: 332.6798pt x 83.64944pt.
  [8 <./Pictures/modelo_de_datos.png>]
 <Pictures/documento.png, id=39, 221.82875pt x 242.40562pt>
 File: Pictures/documento.png Graphic file (type png)
 
 <use Pictures/documento.png>
-Package pdftex.def Info: Pictures/documento.png used on input line 233.
+Package pdftex.def Info: Pictures/documento.png used on input line 235.
 (pdftex.def)             Requested size: 114.82695pt x 125.47737pt.
  [9 <./Pictures/documento.png>]
 <Pictures/interfaz_usuario.png, id=43, 453.19313pt x 262.48062pt>
 File: Pictures/interfaz_usuario.png Graphic file (type png)
 
 <use Pictures/interfaz_usuario.png>
-Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 252.
+Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 254.
 (pdftex.def)             Requested size: 216.64508pt x 125.47737pt.
  [10 <./Pictures/interfaz_usuario.png>]
 <Pictures/DSS.png, id=47, 469.25313pt x 332.74312pt>
 File: Pictures/DSS.png Graphic file (type png)
  <use Pictures/DSS.png>
-Package pdftex.def Info: Pictures/DSS.png used on input line 266.
+Package pdftex.def Info: Pictures/DSS.png used on input line 268.
 (pdftex.def)             Requested size: 235.9363pt x 167.2989pt.
 
 <Pictures/pag_resultado.png, id=48, 454.69875pt x 364.86313pt>
 File: Pictures/pag_resultado.png Graphic file (type png)
 
 <use Pictures/pag_resultado.png>
-Package pdftex.def Info: Pictures/pag_resultado.png used on input line 274.
+Package pdftex.def Info: Pictures/pag_resultado.png used on input line 276.
 (pdftex.def)             Requested size: 156.37169pt x 125.47737pt.
  [11 <./Pictures/DSS.png>]
 <Pictures/pag_devoto.png, id=53, 436.12938pt x 198.7425pt>
 File: Pictures/pag_devoto.png Graphic file (type png)
 
 <use Pictures/pag_devoto.png>
-Package pdftex.def Info: Pictures/pag_devoto.png used on input line 293.
+Package pdftex.def Info: Pictures/pag_devoto.png used on input line 295.
 (pdftex.def)             Requested size: 275.3619pt x 125.47737pt.
  [12 <./Pictures/pag_resultado.png>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
@@ -589,112 +594,63 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 303.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 305.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 303.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 304.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 305.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 306.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 304.
-
-Overfull \hbox (89.34544pt too wide) in paragraph at lines 304--305
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 306.
 
 <Pictures/producto_devoto.png, id=59, 396.48125pt x 207.27437pt>
 File: Pictures/producto_devoto.png Graphic file (type png)
 
 <use Pictures/producto_devoto.png>
-Package pdftex.def Info: Pictures/producto_devoto.png used on input line 314.
+Package pdftex.def Info: Pictures/producto_devoto.png used on input line 316.
 (pdftex.def)             Requested size: 240.01405pt x 125.47737pt.
  [13 <./Pictures/pag_devoto.png> <./Pictures/producto_devoto.png>]
-Overfull \hbox (172.97691pt too wide) in paragraph at lines 322--323
-\OT1/cmr/m/n/12 cio web con la si-guien-te URL: \OT1/cmtt/m/n/12 http://www.tin
-glesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php\OT1/cmr/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--346
+Underfull \hbox (badness 10000) in paragraph at lines 335--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--346
+Underfull \hbox (badness 10000) in paragraph at lines 335--348
 
  []
 
 [14]
-
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 359
-.
-
-
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-9.
-
-
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 359
-.
-
-
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-9.
-
-
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 360
-.
-
-
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 36
-0.
-
-
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 361
-.
-
-
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 36
-1.
-
-
-Overfull \hbox (789.13051pt too wide) in paragraph at lines 353--368
-[]\OT1/cmr/m/n/12 El sis-te-ma ge-ne-rara la si-guien-te con-sul-ta en for-ma
--to JSON: $[][] $
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 353--368
+Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
 
 [15]
-Overfull \hbox (40.38513pt too wide) detected at line 394
+Overfull \hbox (40.38513pt too wide) detected at line 397
 \OML/cmm/m/it/12 cantidad\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q; M; P\OT1/cmr/m/n/
 12 ) = []
  []
 
 [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 []\OT1/cmr/m/it/12 http://www.inqbation.com/es/extraiga-informacion-de-cualquie
 r-web-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 []\OT1/cmr/m/it/12 https://catalogodatos.gub.uy/dataset/habilitacion-registro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 \OT1/cmr/m/it/12 alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, ulti
 -mo ac-ce-so,
  []
@@ -708,13 +664,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5760 strings out of 493673
- 75451 string characters out of 3141520
- 269809 words of memory out of 3000000
- 9027 multiletter control sequences out of 15000+200000
+ 5849 strings out of 493673
+ 76522 string characters out of 3141520
+ 272964 words of memory out of 3000000
+ 9112 multiletter control sequences out of 15000+200000
  10940 words of font info for 39 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,7n,51p,2034b,1494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,51p,2034b,1538s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -726,7 +682,7 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (20 pages, 846377 bytes).
+Output written on informe.pdf (20 pages, 843397 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

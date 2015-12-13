@@ -14,6 +14,6 @@
 \contentsline {section}{\numberline {4}Problemas encontrados y trabajo futuro}{17}
 \contentsline {subsection}{\numberline {4.1}Crawler}{17}
 \contentsline {subsection}{\numberline {4.2}Mejorar corpus de marcas}{17}
-\contentsline {subsection}{\numberline {4.3}Mayor procesamiento para detectar sin\IeC {\'o}nimos y palabras mal escritas.}{17}
+\contentsline {subsection}{\numberline {4.3}Mayor procesamiento para detectar sin\IeC {\'o}nimos y palabras mal escritas.}{18}
 \contentsline {section}{\numberline {5}Conclusi\IeC {\'o}n}{18}
 \contentsline {section}{\numberline {6}Anexo}{18}
