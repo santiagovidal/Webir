@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.16)  13 DEC 2015 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.16)  13 DEC 2015 19:17
 entering extended mode
 **informe.tex
 (informe.tex
@@ -622,69 +622,79 @@ Overfull \hbox (172.97691pt too wide) in paragraph at lines 322--323
 glesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php\OT1/cmr/m/n/12 ,
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--346
+
+ []
+
 [14]
 
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 353
+LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 359
 .
 
 
 LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-3.
+9.
 
 
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 353
+LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 359
 .
 
 
 LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-3.
+9.
 
 
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 354
+LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 360
 .
 
 
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-4.
+LaTeX Warning: Command \textquotedblright invalid in math mode on input line 36
+0.
 
 
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 355
+LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 361
 .
 
 
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 35
-5.
+LaTeX Warning: Command \textquotedblright invalid in math mode on input line 36
+1.
 
 
-Overfull \hbox (789.13051pt too wide) in paragraph at lines 347--362
+Overfull \hbox (789.13051pt too wide) in paragraph at lines 353--368
 []\OT1/cmr/m/n/12 El sis-te-ma ge-ne-rara la si-guien-te con-sul-ta en for-ma
 -to JSON: $[][] $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--362
+Underfull \hbox (badness 10000) in paragraph at lines 353--368
 
  []
 
 [15]
-Overfull \hbox (40.38513pt too wide) detected at line 388
+Overfull \hbox (40.38513pt too wide) detected at line 394
 \OML/cmm/m/it/12 cantidad\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q; M; P\OT1/cmr/m/n/
 12 ) = []
  []
 
 [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 []\OT1/cmr/m/it/12 http://www.inqbation.com/es/extraiga-informacion-de-cualquie
 r-web-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 []\OT1/cmr/m/it/12 https://catalogodatos.gub.uy/dataset/habilitacion-registro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 \OT1/cmr/m/it/12 alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, ulti
 -mo ac-ce-so,
  []
@@ -704,7 +714,7 @@ Here is how much of TeX's memory you used:
  9027 multiletter control sequences out of 15000+200000
  10940 words of font info for 39 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,7n,51p,1721b,1494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,51p,2034b,1494s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -716,7 +726,7 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (20 pages, 846007 bytes).
+Output written on informe.pdf (20 pages, 846377 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
