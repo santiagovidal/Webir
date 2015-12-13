@@ -33,6 +33,8 @@
 
 \usepackage{listings}
 
+\usepackage{amsmath}
+
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 \linespread{1.2} % Line spacing
@@ -123,10 +125,10 @@ Este apartado tiene el cometido de detallar aquellas herramientas utilizadas par
 \begin{itemize}
 	\item Se trabajó bajo el sistema operativo Windows 10, en su arquitectura x64.
 	\item Se eligió Python 2.7 como entorno de desarrollo debido a su versatilidad para manipular datos, facilidad para procesar textos y simpleza a la hora de levantar un servidor local. Además cabe destacar la amplia gama de APIs distribuidas gratuitamente para este lenguaje que facilitan las tareas del implementador.
-	\item Scrapy \cite[http://scrapy.org/] es un framework dedicado para Python que permite realizar web-crawling o web-scraping de una manera muy simple y en pocas líneas de código. Permite extraer datos en sitios web de forma sencilla y automática, simplemente indicándole un dominio de búsqueda.
+	\item Scrapy \cite[Scrapy] es un framework dedicado para Python que permite realizar web-crawling o web-scraping de una manera muy simple y en pocas líneas de código. Permite extraer datos en sitios web de forma sencilla y automática, simplemente indicándole un dominio de búsqueda.
 	Un proyecto de Scrapy consta a grandes rasgos, de un conjunto de ítems, que será en donde se almacenará la información recolectada, y un spider, que será el encargado del flujo de la aplicación y de recorrer la web de la forma deseada.
-Los spider \cite{http://www.inqbation.com/es/extraiga-informacion-de-cualquier-web-facilmente-con-scrapy/} usan los ítems para pasar los datos, scrapy puede tener varios spiders, que son los que hacen los requests, estos quedan agendados y son enviados al  servidor, para finalmente devolver la respuesta al spider. 
-	\item ElasticSearch \cite{https://www.elastic.co/products/elasticsearch} es una herramienta que permite indexar y analizar grandes volúmenes de datos muy fácilmente, brindando además la capacidad de realizar consultas eficientemente. En esta oportunidad se utilizó su versión 1.7.3. Provee un sistema manejador de base de datos no-relacional orientado a documentos, y como tal, no asegura la integridad referencial de los datos debido a su propiedad schema-less, delegando dicho trabajo al programador. Sin embargo, esto no representa una desventaja para el sistema, puesto que se sacrifica la consistencia en pos de flexibilidad de los datos y una mejora en la recuperación de los mismos. 
+Los spider \cite{Scrapy2} usan los ítems para pasar los datos, scrapy puede tener varios spiders, que son los que hacen los requests, estos quedan agendados y son enviados al  servidor, para finalmente devolver la respuesta al spider. 
+	\item ElasticSearch \cite{ElasticSearch} es una herramienta que permite indexar y analizar grandes volúmenes de datos muy fácilmente, brindando además la capacidad de realizar consultas eficientemente. En esta oportunidad se utilizó su versión 1.7.3. Provee un sistema manejador de base de datos no-relacional orientado a documentos, y como tal, no asegura la integridad referencial de los datos debido a su propiedad schema-less, delegando dicho trabajo al programador. Sin embargo, esto no representa una desventaja para el sistema, puesto que se sacrifica la consistencia en pos de flexibilidad de los datos y una mejora en la recuperación de los mismos. 
 Para este trabajo encontramos dos grandes ventajas de esta herramienta frente a otras: la compatibilidad con otras herramientas utilizadas del tipo de datos almacenado y la expresividad de sus consultas. 
 ElasticSearch guarda documentos en un formato JSON, que es compatible con el tipo de datos utilizado por Scrapy y además constituye un buen formato para el envío de datos en la web. Al elegir esta herramienta, evitamos la conversión entre tipos de datos y de esta forma se mitigan posibles errores.
 \end{itemize}
@@ -160,7 +162,7 @@ Básicamente, un supermercado tiene un conjunto de artículos que pueden ser com
 
 La única restricción no estructural al modelo concierne a la relación “compuesto”. Según el diagrama, no sólo se trata de una agregación indicando que un pack está compuesto por una serie de productos, sino que además dichos productos pueden ser todos de diferente clase (p.e. canastas navideñas, paquetes de snacks, etc), pero es más frecuente encontrar packs de productos de una misma clase (p.e. cajas de alfajores x12, refresco Coca-Cola de 2.5L x6, etc). Los primeros, además de ser poco recurrentes son más difíciles de identificar dadas las condiciones de búsqueda (crawling), por lo que estarán fuera del alcance del proyecto, y por tal motivo serán una restricción al modelo.
 
-Una limitación al dominio del problema refiere a las cadenas de supermercados que ofrecen servicio de compra online. En Uruguay, al corriente año 2015, sólamente dos empresas ofrecen este servicio: Devoto \cite{(www.devoto.com.uy)} y Tienda Inglesa \cite{(www.tinglesa.com.uy)}. En lo que resta del proyecto, al hablar de “supermercado” nos estaremos refiriendo únicamente a estos dos.
+Una limitación al dominio del problema refiere a las cadenas de supermercados que ofrecen servicio de compra online. En Uruguay, al corriente año 2015, sólamente dos empresas ofrecen este servicio: Devoto \cite{Devoto} y Tienda Inglesa \cite{TInglesa}. En lo que resta del proyecto, al hablar de “supermercado” nos estaremos refiriendo únicamente a estos dos.
 
 %------------------------------------------------
 
@@ -285,7 +287,7 @@ Esta funcionalidad permite seleccionar entre las diferentes opciones, e ir viend
 
 El crawler consiste de dos spiders, uno para cada supermercado.
 
-El spider de Devoto tiene como páginas base las páginas de las categorías “Vida saludable”, “Almacén”, “Frescos”, “Congelados” y “Lácteos”. Una vez en ellas, sabe como extraer los links de las subcategorías, como los que se indican en la Figura 10.
+El spider de Devoto \cite{Devoto} tiene como páginas base las páginas de las categorías “Vida saludable”, “Almacén”, “Frescos”, “Congelados” y “Lácteos”. Una vez en ellas, sabe como extraer los links de las subcategorías, como los que se indican en la Figura 10.
 
 \begin{figure}[H]
 \includegraphics[height=0.30\textwidth]{pag_devoto}
@@ -317,12 +319,12 @@ Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. 
 
 Dado que los productos están paginados, el spider debe iterar sobre todas las páginas de la categoría. Esto lo logra tomando la URL de una página, e incrementando en uno el parámetro en el cabezal HTTP que indica la página.
 
-El spider para la página de Tienda Inglesa es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: \texttt{http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php}, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
+El spider para la página de Tienda Inglesa \cite{TInglesa} es muy similar, pero tiene una variante. Los listados de productos no tienen páginas, sino que los mismos se agrandan al scrollear hacia abajo. Dado que no se puede simular un scrolleo con Scrapy, se tuvo que encarar el problema de forma distinta. Tienda Inglesa expone un servicio web con la siguiente URL: \texttt{http://www.tinglesa.com.uy/ajax/listado/listadosPaginadoSegunScroll.php}, que es consumido por la interfaz web para agregar productos al listado a medida que se scrollea. Este servicio web retorna un HTML, que es analizado por código Javascript, que luego genera el HTML final que ve el usuario. Por lo tanto, en vez de realizar scraping sobre el HTML que ve el usuario, la solución que se implementó consume ese servicio web y parsea el HTML retornado para obtener los productos.
 
 %------------------------------------------------
 \subsubsection{Parsing}
 
-El parsing de la información consiste de dos procesos. El primero es, dado el título de un producto en una de las páginas web, por ejemplo, ‘Alfajor Portezuelo 100 gr’, extraer la marca del mismo. Para que esto sea posible se necesita un corpus de marcas registradas. El mismo se encontró en el Catálogo de Datos Abiertos del gobierno (https://catalogodatos.gub.uy/dataset/habilitacion-registro-alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b). A este corpus se le fueron agregando más marcas a medida que se analizaron los datos recabados de las páginas, alrededor de 287, sumando un total de 4343 marcas en el corpus. También se creó un “mini” corpus de marcas mal escritas con su correspondiente corrección, para detectar marcas mal escritas en el título de los productos.
+El parsing de la información consiste de dos procesos. El primero es, dado el título de un producto en una de las páginas web, por ejemplo, ‘Alfajor Portezuelo 100 gr’, extraer la marca del mismo. Para que esto sea posible se necesita un corpus de marcas registradas. El mismo se encontró en el Catálogo de Datos Abiertos del gobierno \cite{DatosAbiertos}. A este corpus se le fueron agregando más marcas a medida que se analizaron los datos recabados de las páginas, alrededor de 287, sumando un total de 4343 marcas en el corpus. También se creó un “mini” corpus de marcas mal escritas con su correspondiente corrección, para detectar marcas mal escritas en el título de los productos.
 
 El segundo proceso en el parsing consiste en extraer la unidad en la que se vende el producto. Por ejemplo, para el producto ‘Refresco Coca - Cola 1 Lt x6u’, el parser debe reconocer que el producto ‘Refresco Coca - Cola’ se está vendiendo con una unidad de un litro, y en packs de 6 unidades. Para lograr esto, se observaron los “patrones” que las páginas utilizan para escribir estos datos. Luego de que el parser reconoce estos patrones, se aplica un proceso de normalización, para almacenar los productos con las mismas unidades (gr o ml) y por ende facilitar la posterior comparación.
 
@@ -371,12 +373,19 @@ El último requisito para cumplir con la especificación del sistema es definir 
 Para cumplir con dicho objetivo, se optó por deducir una relación numérica entre los componentes que determinan un determinado artículo. Más precisamente, la relación antes dicha debe vincular por un lado la magnitud, las unidades por pack y la Cantidad requerida por el cliente, y por otro la magnitud y unidades por pack provistas por los supermercados, todas ellas en función de la exactitud de la magnitud o la posibilidad de desarmar un pack (a opción del cliente). 
 
 En otras palabras, la intención es buscar la cantidad real de determinado artículo en función de los parámetros antes dichos, resultando de esta forma la siguiente ecuación:
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{ecuacion}
-  \end{center}
-  \caption{Ecuación}
-\end{wrapfigure}
+
+\[
+cantidad(Q,M,P) =
+\begin{cases} 
+\frac{Q\times M\times P}{M_T \times P_T} & exacto \wedge \neg desarmable \wedge Q\times M\times P\ mod\ M_T \times P_T = 0 \\ 
+\frac{Q\times P}{P_T} &  \neg exacto \wedge \neg desarmable \wedge Q\times P\ mod\ P_T = 0 \\
+\frac{Q\times M}{M_T} & exacto \wedge desarmable \wedge Q\times M\ mod\ M_T = 0 \\
+Q & \neg exacto \wedge desarmable \\
+\infty & en otro caso
+
+
+\end{cases}
+\] 
 
 donde los parámetros $Q$, $M$ y $P$ definen la cantidad, magnitud y unidades por pack indicados por el usuario respectivamente, mientras $M_T$ y $P_T$ representan la magnitud y unidades por pack disponible en la tienda para ese artículo.
 
@@ -392,7 +401,7 @@ Finalmente, una vez hallada la cantidad real necesaria para satisfacer las neces
 
 \subsection{Crawler}
 
-\textcolor{red}{En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer requests dentro del spider de Scrapy y manejar la concurrencia que esto genera obteniendo toda la información necesaria de los datos recuperados de la web. En el anexo se agrega el código con indicaciones de dónde se encuentra este problema.}
+En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer requests dentro del spider de Scrapy y manejar la concurrencia que esto genera obteniendo toda la información necesaria de los datos recuperados de la web. En el anexo se agrega el código con indicaciones de dónde se encuentra este problema.
 
 %------------------------------------------------
 
@@ -411,23 +420,25 @@ Gran parte del valor de la aplicación es la capacidad de comparar los precios d
 
 \section{Conclusión}
 
-\textcolor{red}{En este proyecto nos enfrentamos a algunas de las dificultades más importantes que tiene la recuperación de la información en la web, los errores humanos. Por más distante que sea la interacción de quién crea la página web con la interfaz que llega al usuario final, de una forma u otra es una persona la que termina ingresando datos, o eligiendo el formato en que se muestran. Esto lleva a que los datos no siempre sean correctos ni del todo homogéneas, y por lo tanto se dificulte el procesamiento automático de los mismos.
-Otro aspecto importante a destacar, es la relación entre áreas necesaria para poder realizar un proyecto de estas características. Sin lugar a dudas, el proyecto tiene una carga importante de Procesamiento del Lenguaje Natural, y orientado a esta área es que se encuentran la mayor parte de las mejoras propuestas.}
+En este proyecto nos enfrentamos a algunas de las dificultades más importantes que tiene la recuperación de la información en la web, los errores humanos. Por más distante que sea la interacción de quién crea la página web con la interfaz que llega al usuario final, de una forma u otra es una persona la que termina ingresando datos, o eligiendo el formato en que se muestran. Esto lleva a que los datos no siempre sean correctos ni del todo homogéneas, y por lo tanto se dificulte el procesamiento automático de los mismos.
+
+Otro aspecto importante a destacar, es la relación entre áreas necesaria para poder realizar un proyecto de estas características. Sin lugar a dudas, el proyecto tiene una carga importante de Procesamiento del Lenguaje Natural, y orientado a esta área es que se encuentran la mayor parte de las mejoras propuestas.
 
 
 
+\newpage
 %----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
+%	BIBLIOGRAFÍA
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+\begin{thebibliography}{1}
+\bibitem{Scrapy} \textit{http://scrapy.org/, último acceso, Noviembre 2015}
+\bibitem{Scrapy2} \textit{http://www.inqbation.com/es/extraiga-informacion-de-cualquier-web-facilmente-con-scrapy/, último acceso, Noviembre 2015}
+\bibitem{ElasticSearch} \textit{https://www.elastic.co/products/elasticsearch, último acceso, Noviembre 2015}
+\bibitem {Devoto} \textit{http://devoto.com.uy/, último acceso, Diciembre 2015}
+\bibitem {TInglesa} \textit{http://tinglesa.com.uy/, último acceso, Diciembre 2015}
+\bibitem {DatosAbiertos} \textit{https://catalogodatos.gub.uy/dataset/habilitacion-registro-alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, último acceso, Octubre 2015}
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
- 
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
