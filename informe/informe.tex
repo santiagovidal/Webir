@@ -33,6 +33,43 @@
 
 \usepackage{listings}
 
+\lstset{
+    basicstyle=\color{black}\ttfamily,
+    language=HTML,
+    keywordstyle=\color{blue}\rmfamily\bfseries,
+    commentstyle=\color{grey}\sffamily,
+}
+
+\definecolor{punct}{RGB}{0, 102, 255}
+\definecolor{delim}{RGB}{20,105,176}
+\definecolor{numb}{RGB}{255, 102, 0}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {gr}{{{\color{numb}{gr}}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
 \usepackage{amsmath}
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
@@ -68,6 +105,8 @@
 \textsc{\large Facultad de Ingeniería - UdelaR}\\[0.2cm] % Minor heading such as course title
 
 \par\vbox{}\null\vfill\nopagebreak
+
+
 
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
@@ -106,9 +145,9 @@ Libertad Tansini
 %----------------------------------------------------------------------------------------
 
 \section{Introducción} 
-La red en los últimos transformó el medio en el que se llevan a cabo las relaciones de intercambio, convirtiéndose en un canal alternativo para los productores y consumidores, facilitando la satisfacción de ambas partes en el juego de la oferta y la demanda.
+La red en los últimos años transformó el medio en el que se llevan a cabo las relaciones de intercambio, convirtiéndose en un canal alternativo para los productores y consumidores, facilitando la satisfacción de ambas partes en el juego de la oferta y la demanda.
 
-Grandes empresas aprovechan la conveniencia y comodidad que supone hacer pedidos desde el hogar, atrayendo a aquellos consumidores que demandan más tiempo libre y que ven la compra como otra monótona tarea doméstica. Sin embargo, en Uruguay, la ausencia de un plan de negocio para emprender proyectos en Internet, la resistencia al cambio o la percepción de que los consumidores no han adquirido la madurez necesaria en el uso de tecnologías son factores frenan el desarrollo de este tipo de sistemas. 
+Grandes empresas aprovechan la conveniencia y comodidad que supone hacer pedidos desde el hogar, atrayendo a aquellos consumidores que demandan más tiempo libre y que ven la compra como otra monótona tarea doméstica. Sin embargo, en Uruguay, la ausencia de un plan de negocio para emprender proyectos en Internet, la resistencia al cambio o la percepción de que los consumidores no han adquirido la madurez necesaria en el uso de tecnologías son factores que frenan el desarrollo de este tipo de sistemas. 
 
 No obstante, es posible que en un futuro no sólo existan clientes que opten por realizar compras de forma online a diversas empresas distribuidoras, sino también clientes con una mayor predisposición a sitios donde simplemente pueda indicar cuáles son sus necesidades, sin importar cuál es la fuente, y le dé la posibilidad de seleccionar aquella que le convenga más. 
 
@@ -127,7 +166,7 @@ Este apartado tiene el cometido de detallar aquellas herramientas utilizadas par
 \begin{itemize}
 	\item Se trabajó bajo el sistema operativo Windows 10, en su arquitectura x64.
 	\item Se eligió Python 2.7 como entorno de desarrollo debido a su versatilidad para manipular datos, facilidad para procesar textos y simpleza a la hora de levantar un servidor local. Además cabe destacar la amplia gama de APIs distribuidas gratuitamente para este lenguaje que facilitan las tareas del implementador.
-	\item Scrapy \cite[Scrapy] es un framework dedicado para Python que permite realizar web-crawling o web-scraping de una manera muy simple y en pocas líneas de código. Permite extraer datos en sitios web de forma sencilla y automática, simplemente indicándole un dominio de búsqueda.
+	\item Scrapy \cite{Scrapy} es un framework dedicado para Python que permite realizar web-crawling o web-scraping de una manera muy simple y en pocas líneas de código. Permite extraer datos en sitios web de forma sencilla y automática, simplemente indicándole un dominio de búsqueda.
 	Un proyecto de Scrapy consta a grandes rasgos, de un conjunto de ítems, que será en donde se almacenará la información recolectada, y un spider, que será el encargado del flujo de la aplicación y de recorrer la web de la forma deseada.
 Los spider \cite{Scrapy2} usan los ítems para pasar los datos, Scrapy puede tener varios spiders, que son los que hacen los requests, estos quedan agendados y son enviados al  servidor, para finalmente devolver la respuesta al spider. 
 	\item ElasticSearch \cite{ElasticSearch} es una herramienta que permite indexar y analizar grandes volúmenes de datos muy fácilmente, brindando además la capacidad de realizar consultas eficientemente. En esta oportunidad se utilizó su versión 1.7.3. Provee un sistema manejador de base de datos no-relacional orientado a documentos, y como tal, no asegura la integridad referencial de los datos debido a su propiedad schema-less, delegando dicho trabajo al programador. Sin embargo, esto no representa una desventaja para el sistema, puesto que se sacrifica la consistencia en pos de flexibilidad de los datos y una mejora en la recuperación de los mismos. 
@@ -154,8 +193,8 @@ Dicho esto, la propuesta aquí planteada consiste básicamente en encontrar art�
 
 El esquema conceptual asociado al dominio de este problema se puede apreciar en la Figura 1.
 
-\begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{dominio}
+\begin{figure}
+\includegraphics[scale=1]{dominio}
 \centering
 \caption{Dominio del Problema}
 \end{figure}
@@ -174,7 +213,7 @@ Un segundo aspecto importante a la hora de desarrollar un sistema de informació
 A efectos del problema, es necesario realizar un análisis previo de las fuentes para conocer la forma en que exhiben los artículos, y por consiguiente los datos relevantes que allí subyacen, para obtener una primera aproximación a los módulos que formarán parte de nuestro sistema.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{coca-cola}
+\includegraphics[scale=1]{coca-cola}
 \centering
 \caption{Formato de los Datos}
 \end{figure}
@@ -182,7 +221,7 @@ A efectos del problema, es necesario realizar un análisis previo de las fuentes
 En la Figura 2 se puede observar la manera en que muestran exactamente el mismo producto ambos supermercados. En ambos casos se pueden identificar tres campos; uno con una imágen ilustrativa del artículo, otro reservado para detallarlo, y otro campo dedicado a costearlo. Es fácil deducir que si bien ambos detallan el artículo de maneras muy distintas, comparten a grandes rasgos el mismo patrón. De esta forma, las etiquetas identificables en cada producto se pueden observar en la Figura 3.
 
 \begin{figure}[H]
-\includegraphics[height=0.07\textwidth]{etiquetas}
+\includegraphics[scale=1]{etiquetas}
 \centering
 \caption{Etiquetas}
 \end{figure}
@@ -207,7 +246,7 @@ Dicho esto, y a modo de resumen, el sistema estará compuesto por cuatro módulo
 La relación entre dichos módulos incorporando la base de datos determina la arquitectura de nuestro sistema, la cual se detalla en la Figura 4.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{arquitectura}
+\includegraphics[scale=.9]{arquitectura}
 \centering
 \caption{Arquitectura de la Solución}
 \end{figure}
@@ -222,7 +261,7 @@ Un tercer aspecto importante a la hora de diseñar un sistema es describir cómo
 En esta oportunidad se optó por modelar las entidades de la realidad descrita de la manera que se muestra en la Figura 5.
 
 \begin{figure}[H]
-\includegraphics[height=0.20\textwidth]{modelo_de_datos}
+\includegraphics[scale=1]{modelo_de_datos}
 \centering
 \caption{Modelo de Datos}
 \end{figure}
@@ -232,7 +271,7 @@ Son varios los detalles del modelo a destacar. El primero es que los atributos a
 No obstante, este esquema estructurado aplica a un modelo relacional, y como hemos mencionado secciones anteriores se utilizará un sistema gestor de base de datos no-relacional para almacenar la información. Pese a esta disyuntiva, el esquema orientado a documentos permite, si bien no es obligatorio, mantener un esquema estructurado. Dicho esquema, no es más que un simple JSON que permite indizar los atributos y realizar consultas en forma eficiente sobre ellos. En un esquema de datos aplicado a la solución real del problema se mantiene una colección de documentos (como los mostrados en la Figura 6) por cada supermercado.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{documento}
+\includegraphics[scale=1]{documento}
 \centering
 \caption{Esquema de Datos DBDO}
 \end{figure}
@@ -251,7 +290,7 @@ Una vez completada toda la información para un artículo, se habilitará la opc
 En la Figura 7 se muestra la página principal del prototipo con los aspectos detallados anteriormente.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{interfaz_usuario}
+\includegraphics[scale=.90]{interfaz_usuario}
 \centering
 \caption{Página Principal}
 \end{figure}
@@ -265,15 +304,15 @@ Por ejemplo, el usuario desea comprar un pack de 6 botellas de Refresco Coca Col
 En la Figura 8, se puede ver un DSS completo sobre el caso de uso, pero a más alto nivel para describir la interacción entre el usuario y los módulos del sistema. Para una mayor usabilidad e interfaz amigable al usuario, se optó por realizar las consultas al servidor mediante AJAX de manera asincrónica. De este modo, el sitio no quedará bloqueado ni el usuario se quedará esperando por la respuesta y podrá seguir navegando sin problemas por el sitio.
 
 \begin{figure}[H]
-\includegraphics[height=0.40\textwidth]{DSS}
+\includegraphics[scale=.9]{DSS}
 \centering
-\caption{DSS}
+\caption{Interacción}
 \end{figure}
 
 Una vez que el usuario haya finalizado con su lista de compras, podrá obtener los resultados sobre cuál supermercado es el más económico. Como puede verse en la Figura 9, para cada supermercado y para cada producto, se dan las tres posibilidades más económicas que coincidan con la búsqueda ingresada.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{pag_resultado}
+\includegraphics[scale=.9]{pag_resultado}
 \centering
 \caption{Página de Resultado}
 \end{figure}
@@ -292,7 +331,7 @@ El crawler consiste de dos spiders, uno para cada supermercado.
 El spider de Devoto \cite{Devoto} tiene como páginas base las páginas de las categorías “Vida saludable”, “Almacén”, “Frescos”, “Congelados” y “Lácteos”. Una vez en ellas, sabe como extraer los links de las subcategorías, como los que se indican en la Figura 10.
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{pag_devoto}
+\includegraphics[scale=.9]{pag_devoto}
 \centering
 \caption{Categorías Iniciales Devoto}
 \end{figure}
@@ -313,7 +352,7 @@ Una vez llega a una subcategoría “hoja”, comienza a extraer los productos. 
 \end{lstlisting}
 
 \begin{figure}[H]
-\includegraphics[height=0.30\textwidth]{producto_devoto}
+\includegraphics[scale=1]{producto_devoto}
 \centering
 \caption{Producto de Devoto}
 \end{figure}
@@ -345,7 +384,7 @@ A partir del parseo de datos, se obtiene un archivo que contiene un conjunto de 
 \textbf{Consulta de datos}
 \\
 Dado que ElasticSearch está pensado como un servidor de búsqueda, tiene gran flexibilidad para realizar consultas y búsquedas. Analicemos el caso en que el usuario estuviera buscando un producto con las siguientes propiedades:
-\begin{itemize}
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
 	\item nombre: Alfajor de chocolate
 	\item marca: Portezuelo
 	\item unidad: 100gr
@@ -353,21 +392,27 @@ Dado que ElasticSearch está pensado como un servidor de búsqueda, tiene gran f
 \end{itemize}
 
 El sistema generaría la siguiente consulta en formato JSON:
-\\
-\begin{lstlisting}
-{
- query: {
-  bool: {
-   must: [
-    { match: { nombre: { query: 'Alfajor de chocolate', 
-                         operator: 'and' } } },
-    { match_phrase: { marca: 'Portezuelo' } },
-    { match: { unidad: '100gr' } },
-    { match: { packpor: 12 } }
-   ]
+\begin{lstlisting}[language=json,firstnumber=1]
+  {
+    query: {
+      bool: {
+        must: [{ 
+           match:{ 
+             nombre:{ 
+               query   : 'Alfajor de chocolate', 
+               operator: 'and' 
+             } 
+           } 
+        },{ 
+          match_phrase: { marca: 'Portezuelo' } 
+        },{ 
+          match: { unidad: '100gr' } 
+        },{ 
+          match: { packpor: 12 } 
+        }]
+      }
+    }
   }
- }
-}
 \end{lstlisting}
 
 El campo bool indica las condiciones que debe cumplir el objeto para satisfacer la consulta. Puede contener elementos de tipo \textit{must}, \textit{must\_not} y \textit{should}. Dado que sólo estamos usando un subcampo must, todo objeto que cumpla las condiciones dentro de él será válido.
@@ -381,22 +426,18 @@ El último requisito para cumplir con la especificación del sistema es definir 
 
 Para cumplir con dicho objetivo, se optó por deducir una relación numérica entre los componentes que determinan un determinado artículo. Más precisamente, la relación antes dicha debe vincular por un lado la magnitud, las unidades por pack y la Cantidad requerida por el cliente, y por otro la magnitud y unidades por pack provistas por los supermercados, todas ellas en función de la exactitud de la magnitud o la posibilidad de desarmar un pack (a opción del cliente). 
 
-En otras palabras, la intención es buscar la cantidad real de determinado artículo en función de los parámetros antes dichos, resultando de esta forma la siguiente ecuación:
-
+En otras palabras, la intención es buscar la cantidad real de determinado artículo en función de los parámetros antes dichos, resultando la ecuación:
 \[
 cantidad(Q,M,P) =
 \begin{cases} 
-\frac{Q\times M\times P}{M_T \times P_T} & exacto \wedge \neg desarmable \wedge Q\times M\times P\ mod\ M_T \times P_T = 0 \\ 
-\frac{Q\times P}{P_T} &  \neg exacto \wedge \neg desarmable \wedge Q\times P\ mod\ P_T = 0 \\
-\frac{Q\times M}{M_T} & exacto \wedge desarmable \wedge Q\times M\ mod\ M_T = 0 \\
-Q & \neg exacto \wedge desarmable \\
-\infty & en otro caso
-
-
+\frac{Q \times M\times P}{M_T \times P_T} & e \wedge \neg d \wedge (Q \times M \times P)\ mod\ (M_T \times P_T) = 0 \\ 
+\frac{Q\times P}{P_T} &  \neg e \wedge \neg d \wedge (Q\times P)\ mod\ P_T = 0 \\
+\frac{Q\times M}{M_T} & e \wedge d \wedge (Q\times M)\ mod\ M_T = 0 \\
+Q & \neg e \wedge d \\
+\infty & otro
 \end{cases}
 \] 
-
-donde los parámetros $Q$, $M$ y $P$ definen la cantidad, magnitud y unidades por pack indicados por el usuario respectivamente, mientras $M_T$ y $P_T$ representan la magnitud y unidades por pack disponible en la tienda para ese artículo.
+\\siendo $e$ y $d$ dos flags que indican si se quiere magnitud exacta o pack desarmable respectivamente, los parámetros $Q$, $M$ y $P$ definen la cantidad, magnitud y unidades por pack indicados por el usuario, y $M_T$ y $P_T$ representan la magnitud y unidades por pack disponible en la tienda para ese artículo.
 
 Finalmente, una vez hallada la cantidad real necesaria para satisfacer las necesidades del cliente, se multiplican por el precio impuesto por la cadena de supermercados y se ordenan en forma creciente. Dicha solución se restringe a los primeros tres artículos, de forma de satisfacer los requisitos detallados en la sección referente a la interfaz de usuario.
 
@@ -410,30 +451,39 @@ Finalmente, una vez hallada la cantidad real necesaria para satisfacer las neces
 
 \subsection{Crawler}
 
-En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer que el spider de Scrapy haga requests directamente a los servicios Web que devuelven el contenido. En el anexo se agrega el código con indicaciones de dónde se encuentra este problema.
+En la actualidad muchas páginas cargan contenido de forma dinámica mediante AJAX. Este fue uno de los principales problemas que tuvimos que resolver a la hora de obtener los datos de la web. Para resolver este problema fue necesario hacer que el spider de Scrapy haga requests directamente a los servicios Web que devuelven el contenido. 
 
 %------------------------------------------------
 
 \subsection{Mejorar corpus de marcas}
-Los supermercados pueden incorporar nuevos productos, con marcas que no están en el corpus, o pueden ya existir productos cuyas marcas no están en el mismo o están mal escritas y por ende la aplicación no las reconoce. Es un claro camino de mejora el de agrandar el corpus de marcas, así como agrandar el corpus de marcas mal escritas.
+Los supermercados pueden incorporar nuevos productos, con marcas que no están en el corpus, o pueden ya existir productos cuyas marcas no están en el mismo o están mal escritas y por ende la aplicación no las reconoce (ver Figura 12). Es un claro camino de mejora el de agrandar el corpus de marcas, así como agrandar el corpus de marcas mal escritas.
+
+\begin{figure}[H]
+\includegraphics[scale=.8]{problema-marca}
+\centering
+\caption{Marcas inconsistentes}
+\end{figure}
 
 %------------------------------------------------
 
 \subsection{Mayor procesamiento para detectar sinónimos y palabras mal escritas.}
-Gran parte del valor de la aplicación es la capacidad de comparar los precios de dos productos equivalentes. Para lograr esto, el sistema debe poder reconocer cuando dos productos son iguales. Se observó que esta tarea es de gran dificultad dadas las diferencias en la manera de escribir los títulos de los productos. Algunas de estas diferencias pueden ser: el uso de sinónimos (bebida y refresco, por ejemplo), faltas de ortografía, caracteres inesperados y palabras vacías. Puede significar una gran mejoría para la aplicación la habilidad de reconocer estas diferencias y normalizarlas, para distinguir con más precisión cuando se está tratando del mismo producto. Esto se podría lograr con alguna herramienta de procesamiento de lenguaje natural, como Freeling.
+Gran parte del valor de la aplicación es la capacidad de comparar los precios de dos productos equivalentes. Para lograr esto, el sistema debe poder reconocer cuando dos productos son iguales. Se observó que esta tarea es de gran dificultad dadas las diferencias en la manera de escribir las descripciones de los productos (p.e. ver Figura 13). Algunas de estas diferencias pueden ser: el uso de sinónimos (bebida y refresco, por ejemplo), faltas de ortografía, caracteres inesperados y palabras vacías. Puede significar una gran mejoría para la aplicación la habilidad de reconocer estas diferencias y normalizarlas, para distinguir con más precisión cuando se está tratando del mismo producto. Esto se podría lograr con alguna herramienta de procesamiento de lenguaje natural, como Freeling.
 
+\begin{figure}[H]
+\includegraphics[scale=1]{problema-etiqueta}
+\centering
+\caption{Marcas inconsistentes}
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSIONES
 %----------------------------------------------------------------------------------------
 
-\section{Conclusión}
+\section{Conclusiones}
 
 En este proyecto nos enfrentamos a algunas de las dificultades más importantes que tiene la recuperación de la información en la web, los errores humanos. Por más distante que sea la interacción de quién crea la página web con la interfaz que llega al usuario final, de una forma u otra es una persona la que termina ingresando datos, o eligiendo el formato en que se muestran. Esto lleva a que los datos no siempre sean correctos ni del todo homogéneas, y por lo tanto se dificulte el procesamiento automático de los mismos.
 
 Otro aspecto importante a destacar, es la relación entre áreas necesaria para poder realizar un proyecto de estas características. Sin lugar a dudas, el proyecto tiene una carga importante de Procesamiento del Lenguaje Natural, y orientado a esta área es que se encuentran la mayor parte de las mejoras propuestas.
-
-\section{Anexo}
 
 
 \newpage
@@ -442,13 +492,12 @@ Otro aspecto importante a destacar, es la relación entre áreas necesaria para 
 %----------------------------------------------------------------------------------------
 
 \begin{thebibliography}{1}
-\bibitem{Scrapy} \textit{http://scrapy.org/, último acceso, Noviembre 2015}
-\bibitem{Scrapy2} \textit{http://www.inqbation.com/es/extraiga-informacion-de-cualquier-web-facilmente-con-scrapy/, último acceso, Noviembre 2015}
-\bibitem{ElasticSearch} \textit{https://www.elastic.co/products/elasticsearch, último acceso, Noviembre 2015}
-\bibitem {Devoto} \textit{http://devoto.com.uy/, último acceso, Diciembre 2015}
-\bibitem {TInglesa} \textit{http://tinglesa.com.uy/, último acceso, Diciembre 2015}
-\bibitem {DatosAbiertos} \textit{https://catalogodatos.gub.uy/dataset/habilitacion-registro-alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, último acceso, Octubre 2015}
-
+\bibitem{Scrapy} \textit{Scrapy, sito oficial. Link: http://scrapy.org/, Último acceso: Noviembre 2015}
+\bibitem{Scrapy2} \textit{Extraiga información de cualquier web fácilmente con Scrapy, Ingbation (Marzo,2014). Link: http://www.inqbation.com/es/extraiga-informacion-de-cualquier-web-facilmente-con-scrapy/, Último acceso: Noviembre 2015}
+\bibitem{ElasticSearch} \textit{ElasicSearch, sitio oficial. Link: https://www.elastic.co/products/elasticsearch, Último acceso:  Noviembre 2015}
+\bibitem {Devoto} \textit{Devoto (uy), sitio oficial. Link: http://devoto.com.uy/, Último acceso: Diciembre 2015}
+\bibitem {TInglesa} \textit{Tienda Inglesa (uy), sitio oficial. Link: http://tinglesa.com.uy/, Último acceso: Diciembre 2015}
+\bibitem {DatosAbiertos} \textit{Productos registrados, Catálogos de datos abiertos (uy) (Enero, 2014). Link: https://catalogodatos.gub.uy/dataset/habilitacion-registro-alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, Último acceso: Octubre 2015}
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------

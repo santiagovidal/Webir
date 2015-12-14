@@ -1,13 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.16)  13 DEC 2015 19:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.23)  14 DEC 2015 19:41
 entering extended mode
 **informe.tex
-(informe.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+(C:\GitHub\Webir\informe\informe.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -22,19 +31,19 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -184,7 +193,7 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -215,7 +224,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -239,7 +248,7 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2015/08/03 3.9m The Babel package
+Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
@@ -247,26 +256,27 @@ Package: babel 2015/08/03 3.9m The Babel package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
-Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2015/08/03 3.9m Babel common definitions
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+\es@datefmt=\count88
 \es@quottoks=\toks16
-\es@quotdepth=\count88
-Package babel Info: Making " an active character on input line 516.
-Package babel Info: Making . an active character on input line 617.
-Package babel Info: Making < an active character on input line 662.
-Package babel Info: Making > an active character on input line 662.
+\es@quotdepth=\count89
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
@@ -280,9 +290,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count89
-\Gm@cntv=\count90
-\c@Gm@tempcnt=\count91
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
 \Gm@bindingoffset=\dimen104
 \Gm@wd@mp=\dimen105
 \Gm@odd@mp=\dimen106
@@ -295,10 +305,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -306,7 +316,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -317,14 +327,14 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count92
+\Gread@gobject=\count93
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count93
+\c@float@type=\count94
 \float@exts=\toks19
 \float@box=\box26
 \@float@everytoks=\toks20
@@ -333,40 +343,40 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen114
 \WF@size=\dimen115
-\c@WF@wrappedlines=\count94
+\c@WF@wrappedlines=\count95
 \WF@box=\box28
 \WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package color Info: Driver file: pdftex.def on input line 130.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
-File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count95
+\lst@mode=\count96
 \lst@gtempboxa=\box29
 \lst@token=\toks22
-\lst@length=\count96
+\lst@length=\count97
 \lst@currlwidth=\dimen116
-\lst@column=\count97
-\lst@pos=\count98
+\lst@column=\count98
+\lst@pos=\count99
 \lst@lostspace=\dimen117
 \lst@width=\dimen118
-\lst@newlines=\count99
-\lst@lineno=\count100
+\lst@newlines=\count100
+\lst@lineno=\count101
 \lst@maxwidth=\dimen119
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count101
-\lst@skipnumbers=\count102
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
 \lst@framebox=\box30
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
@@ -374,6 +384,12 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
@@ -394,13 +410,13 @@ Package: amsbsy 1999/11/29 v1.2d
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count103
+\inf@bad=\count104
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count104
-\leftroot@=\count105
+\uproot@=\count105
+\leftroot@=\count106
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count106
-\DOTSCASE@=\count107
+\classnum@=\count107
+\DOTSCASE@=\count108
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -409,15 +425,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen122
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count108
-\c@MaxMatrixCols=\count109
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
 \dotsspace@=\muskip10
-\c@parentequation=\count110
-\dspbrk@lvl=\count111
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
 \tag@help=\toks24
-\row@=\count112
-\column@=\count113
-\maxfields@=\count114
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
 \andhelp@=\toks25
 \eqnshift@=\dimen123
 \alignsep@=\dimen124
@@ -434,29 +450,25 @@ LaTeX Info: Redefining \] on input line 2666.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count115
+\c@lips@count=\count116
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (informe.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
+(C:\GitHub\Webir\informe\informe.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -494,183 +506,196 @@ LaTeX Info: Redefining \% on input line 49.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count117
 \scratchdimen=\dimen129
 \scratchbox=\box33
-\nofMPsegments=\count117
-\nofMParguments=\count118
+\nofMPsegments=\count118
+\nofMParguments=\count119
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count119
+\MPscratchCnt=\count120
 \MPscratchDim=\dimen130
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks29
 )
-\c@lstlisting=\count122
+\c@lstlisting=\count123
  [1
 
-{C:/Users/Santiago/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(informe.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(C:\GitHub\Webir\informe\informe.toc)
 \tf@toc=\write3
- [1] [2]
-
-LaTeX Warning: Citation `e' on page 3 undefined on input line 130.
-
-[3] <Pictures/dominio.png, id=18, 455.7025pt x 240.9pt>
+ [1] [2] [3]
+<Pictures/dominio.png, id=18, 455.7025pt x 240.9pt>
 File: Pictures/dominio.png Graphic file (type png)
+ <use Pictures/dominio.png>
+Package pdftex.def Info: Pictures/dominio.png used on input line 197.
+(pdftex.def)             Requested size: 455.70137pt x 240.8994pt.
 
-<use Pictures/dominio.png>
-Package pdftex.def Info: Pictures/dominio.png used on input line 158.
-(pdftex.def)             Requested size: 237.35605pt x 125.47737pt.
- [4 <./Pictures/dominio.png>]
-<Pictures/coca-cola.png, id=22, 416.55624pt x 181.17688pt>
+Overfull \hbox (37.4477pt too wide) in paragraph at lines 197--199
+ [][] 
+ []
+
+[4] <Pictures/coca-cola.png, id=22, 416.55624pt x 181.17688pt>
 File: Pictures/coca-cola.png Graphic file (type png)
 
 <use Pictures/coca-cola.png>
-Package pdftex.def Info: Pictures/coca-cola.png used on input line 177.
-(pdftex.def)             Requested size: 288.49829pt x 125.47737pt.
- [5]
-<Pictures/etiquetas.png, id=26, 411.03563pt x 37.13875pt>
+Package pdftex.def Info: Pictures/coca-cola.png used on input line 216.
+(pdftex.def)             Requested size: 416.55522pt x 181.17642pt.
+ [5 <C:/GitHub/Webir/informe/Pictures/dominio.png>] <Pictures/etiquetas.png, id
+=26, 411.03563pt x 37.13875pt>
 File: Pictures/etiquetas.png Graphic file (type png)
 
 <use Pictures/etiquetas.png>
-Package pdftex.def Info: Pictures/etiquetas.png used on input line 185.
-(pdftex.def)             Requested size: 324.08112pt x 29.2808pt.
- [6 <./Pictures/coca-cola.png> <./Pictures/etiquetas.png>] <Pictures/arquitectu
-ra.png, id=31, 480.29437pt x 229.35687pt>
+Package pdftex.def Info: Pictures/etiquetas.png used on input line 224.
+(pdftex.def)             Requested size: 411.03462pt x 37.13866pt.
+ [6 <C:/GitHub/Webir/informe/Pictures/coca-cola.png> <C:/GitHub/Webir/informe/P
+ictures/etiquetas.png>]
+<Pictures/arquitectura.png, id=31, 480.29437pt x 229.35687pt>
 File: Pictures/arquitectura.png Graphic file (type png)
 
 <use Pictures/arquitectura.png>
-Package pdftex.def Info: Pictures/arquitectura.png used on input line 210.
-(pdftex.def)             Requested size: 262.76292pt x 125.47737pt.
- [7 <./Pictures/arquitectura.png>]
-<Pictures/modelo_de_datos.png, id=35, 431.11063pt x 108.405pt>
+Package pdftex.def Info: Pictures/arquitectura.png used on input line 249.
+(pdftex.def)             Requested size: 432.26093pt x 206.41927pt.
+
+Overfull \hbox (14.00725pt too wide) in paragraph at lines 249--251
+ [][] 
+ []
+
+[7] <Pictures/modelo_de_datos.png, id=35, 431.11063pt x 108.405pt>
 File: Pictures/modelo_de_datos.png Graphic file (type png)
 
 <use Pictures/modelo_de_datos.png>
-Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 225.
-(pdftex.def)             Requested size: 332.6798pt x 83.64944pt.
- [8 <./Pictures/modelo_de_datos.png>]
+Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 264.
+(pdftex.def)             Requested size: 431.10956pt x 108.40472pt.
+
+Overfull \hbox (12.85588pt too wide) in paragraph at lines 264--266
+ [][] 
+ []
+
+[8 <C:/GitHub/Webir/informe/Pictures/arquitectura.png> <C:/GitHub/Webir/informe
+/Pictures/modelo_de_datos.png>]
 <Pictures/documento.png, id=39, 221.82875pt x 242.40562pt>
 File: Pictures/documento.png Graphic file (type png)
 
 <use Pictures/documento.png>
-Package pdftex.def Info: Pictures/documento.png used on input line 235.
-(pdftex.def)             Requested size: 114.82695pt x 125.47737pt.
- [9 <./Pictures/documento.png>]
-<Pictures/interfaz_usuario.png, id=43, 453.19313pt x 262.48062pt>
+Package pdftex.def Info: Pictures/documento.png used on input line 274.
+(pdftex.def)             Requested size: 221.82819pt x 242.40501pt.
+ [9] [10 <C:/GitHub/Webir/informe/Pictures/documento.png>] <Pictures/interfaz_u
+suario.png, id=46, 453.19313pt x 262.48062pt>
 File: Pictures/interfaz_usuario.png Graphic file (type png)
 
 <use Pictures/interfaz_usuario.png>
-Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 254.
-(pdftex.def)             Requested size: 216.64508pt x 125.47737pt.
- [10 <./Pictures/interfaz_usuario.png>]
-<Pictures/DSS.png, id=47, 469.25313pt x 332.74312pt>
+Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 293.
+(pdftex.def)             Requested size: 407.87004pt x 236.23038pt.
+ [11 <C:/GitHub/Webir/informe/Pictures/interfaz_usuario.png>] <Pictures/DSS.png
+, id=50, 469.25313pt x 332.74312pt>
 File: Pictures/DSS.png Graphic file (type png)
- <use Pictures/DSS.png>
-Package pdftex.def Info: Pictures/DSS.png used on input line 268.
-(pdftex.def)             Requested size: 235.9363pt x 167.2989pt.
 
-<Pictures/pag_resultado.png, id=48, 454.69875pt x 364.86313pt>
+<use Pictures/DSS.png>
+Package pdftex.def Info: Pictures/DSS.png used on input line 307.
+(pdftex.def)             Requested size: 422.3239pt x 299.46603pt.
+
+Overfull \hbox (4.07022pt too wide) in paragraph at lines 307--309
+ [][] 
+ []
+
+[12 <C:/GitHub/Webir/informe/Pictures/DSS.png>]
+<Pictures/pag_resultado.png, id=55, 454.69875pt x 364.86313pt>
 File: Pictures/pag_resultado.png Graphic file (type png)
 
 <use Pictures/pag_resultado.png>
-Package pdftex.def Info: Pictures/pag_resultado.png used on input line 276.
-(pdftex.def)             Requested size: 156.37169pt x 125.47737pt.
- [11 <./Pictures/DSS.png>]
-<Pictures/pag_devoto.png, id=53, 436.12938pt x 198.7425pt>
+Package pdftex.def Info: Pictures/pag_resultado.png used on input line 315.
+(pdftex.def)             Requested size: 409.22508pt x 328.37376pt.
+ [13 <C:/GitHub/Webir/informe/Pictures/pag_resultado.png>] <Pictures/pag_devoto
+.png, id=61, 436.12938pt x 198.7425pt>
 File: Pictures/pag_devoto.png Graphic file (type png)
 
 <use Pictures/pag_devoto.png>
-Package pdftex.def Info: Pictures/pag_devoto.png used on input line 295.
-(pdftex.def)             Requested size: 275.3619pt x 125.47737pt.
- [12 <./Pictures/pag_resultado.png>]
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 305.
+Package pdftex.def Info: Pictures/pag_devoto.png used on input line 334.
+(pdftex.def)             Requested size: 392.51282pt x 178.86658pt.
 
+Overfull \hbox (11.53008pt too wide) in paragraph at lines 345--346
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 305.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 306.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 306.
-
-<Pictures/producto_devoto.png, id=59, 396.48125pt x 207.27437pt>
+<Pictures/producto_devoto.png, id=62, 396.48125pt x 207.27437pt>
 File: Pictures/producto_devoto.png Graphic file (type png)
 
 <use Pictures/producto_devoto.png>
-Package pdftex.def Info: Pictures/producto_devoto.png used on input line 316.
-(pdftex.def)             Requested size: 240.01405pt x 125.47737pt.
- [13 <./Pictures/pag_devoto.png> <./Pictures/producto_devoto.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 335--348
+Package pdftex.def Info: Pictures/producto_devoto.png used on input line 355.
+(pdftex.def)             Requested size: 396.48027pt x 207.27385pt.
+ [14 <C:/GitHub/Webir/informe/Pictures/pag_devoto.png>] [15 <C:/GitHub/Webir/in
+forme/Pictures/producto_devoto.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 374--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--348
+Underfull \hbox (badness 10000) in paragraph at lines 374--387
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 355--357
+[16]
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 396
+.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 396.
 
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 396.
+
+[17] [18] <Pictures/problema-marca.png, id=86, 511.9125pt x 216.81pt>
+File: Pictures/problema-marca.png Graphic file (type png)
+
+<use Pictures/problema-marca.png>
+Package pdftex.def Info: Pictures/problema-marca.png used on input line 462.
+(pdftex.def)             Requested size: 409.53056pt x 173.44823pt.
+ [19 <C:/GitHub/Webir/informe/Pictures/problema-marca.png>]
+<Pictures/problema-etiqueta.png, id=90, 418.56375pt x 159.59625pt>
+File: Pictures/problema-etiqueta.png Graphic file (type png)
+
+<use Pictures/problema-etiqueta.png>
+Package pdftex.def Info: Pictures/problema-etiqueta.png used on input line 473.
+
+(pdftex.def)             Requested size: 418.56271pt x 159.59584pt.
+ [20 <C:/GitHub/Webir/informe/Pictures/problema-etiqueta.png>] [21]
+Underfull \hbox (badness 2707) in paragraph at lines 496--497
+\OT1/cmr/m/it/12 (Mar-zo,2014). Link: http://www.inqbation.com/es/extraiga-info
+rmacion-de-
  []
 
-[15]
-Overfull \hbox (40.38513pt too wide) detected at line 397
-\OML/cmm/m/it/12 cantidad\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q; M; P\OT1/cmr/m/n/
-12 ) = []
- []
 
-[16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
-[]\OT1/cmr/m/it/12 http://www.inqbation.com/es/extraiga-informacion-de-cualquie
-r-web-
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+[]\OT1/cmr/m/it/12 Productos re-gis-tra-dos, Catalo-gos de da-tos abier-tos (u
+y) (Enero,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-[]\OT1/cmr/m/it/12 https://catalogodatos.gub.uy/dataset/habilitacion-registro-
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+\OT1/cmr/m/it/12 2014). Link: https://catalogodatos.gub.uy/dataset/habilitacion
+-registro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-\OT1/cmr/m/it/12 alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, ulti
--mo ac-ce-so,
+Underfull \hbox (badness 6445) in paragraph at lines 500--501
+\OT1/cmr/m/it/12 alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, []Ult
+i-mo ac-ce-so:
  []
 
-[19] (informe.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-)
+[22] (C:\GitHub\Webir\informe\informe.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5849 strings out of 493673
- 76522 string characters out of 3141520
- 272964 words of memory out of 3000000
- 9112 multiletter control sequences out of 15000+200000
+ 5668 strings out of 493921
+ 73928 string characters out of 3144872
+ 249538 words of memory out of 3000000
+ 8880 multiletter control sequences out of 15000+200000
  10940 words of font info for 39 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 27i,7n,51p,2034b,1538s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 841 hyphenation exceptions out of 8191
+ 27i,7n,49p,2034b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -682,9 +707,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (20 pages, 843397 bytes).
+Output written on informe.pdf (23 pages, 1037896 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
