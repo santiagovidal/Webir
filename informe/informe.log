@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.23)  14 DEC 2015 19:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.23)  14 DEC 2015 19:44
 entering extended mode
 **informe.tex
 (C:\GitHub\Webir\informe\informe.tex
@@ -529,11 +529,7 @@ LaTeX Font Info:    ... okay on input line 86.
 File: Pictures/dominio.png Graphic file (type png)
  <use Pictures/dominio.png>
 Package pdftex.def Info: Pictures/dominio.png used on input line 197.
-(pdftex.def)             Requested size: 455.70137pt x 240.8994pt.
-
-Overfull \hbox (37.4477pt too wide) in paragraph at lines 197--199
- [][] 
- []
+(pdftex.def)             Requested size: 410.12845pt x 216.80798pt.
 
 [4] <Pictures/coca-cola.png, id=22, 416.55624pt x 181.17688pt>
 File: Pictures/coca-cola.png Graphic file (type png)
@@ -579,7 +575,7 @@ File: Pictures/documento.png Graphic file (type png)
 
 <use Pictures/documento.png>
 Package pdftex.def Info: Pictures/documento.png used on input line 274.
-(pdftex.def)             Requested size: 221.82819pt x 242.40501pt.
+(pdftex.def)             Requested size: 177.46321pt x 193.92474pt.
  [9] [10 <C:/GitHub/Webir/informe/Pictures/documento.png>] <Pictures/interfaz_u
 suario.png, id=46, 453.19313pt x 262.48062pt>
 File: Pictures/interfaz_usuario.png Graphic file (type png)
@@ -599,15 +595,15 @@ Overfull \hbox (4.07022pt too wide) in paragraph at lines 307--309
  [][] 
  []
 
-[12 <C:/GitHub/Webir/informe/Pictures/DSS.png>]
-<Pictures/pag_resultado.png, id=55, 454.69875pt x 364.86313pt>
+<Pictures/pag_resultado.png, id=51, 454.69875pt x 364.86313pt>
 File: Pictures/pag_resultado.png Graphic file (type png)
 
 <use Pictures/pag_resultado.png>
 Package pdftex.def Info: Pictures/pag_resultado.png used on input line 315.
 (pdftex.def)             Requested size: 409.22508pt x 328.37376pt.
- [13 <C:/GitHub/Webir/informe/Pictures/pag_resultado.png>] <Pictures/pag_devoto
-.png, id=61, 436.12938pt x 198.7425pt>
+ [12 <C:/GitHub/Webir/informe/Pictures/DSS.png>] [13 <C:/GitHub/Webir/informe/P
+ictures/pag_resultado.png>]
+<Pictures/pag_devoto.png, id=61, 436.12938pt x 198.7425pt>
 File: Pictures/pag_devoto.png Graphic file (type png)
 
 <use Pictures/pag_devoto.png>
@@ -707,7 +703,7 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (23 pages, 1037896 bytes).
+Output written on informe.pdf (23 pages, 1037953 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
