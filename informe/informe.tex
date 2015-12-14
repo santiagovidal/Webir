@@ -72,8 +72,8 @@
 
 \usepackage{amsmath}
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
+\usepackage{lipsum}
+\usepackage[usestackEOL]{stackengine}
 \usepackage{url}
 
 \linespread{1.2} % Line spacing
@@ -95,9 +95,6 @@
 
 \center % Center everything on the page
 
-
-
-
 \HRule \\[0.4cm]
 { \huge \bfseries Lista de compras on-line}\\[0.4cm] % Title of your document
 \HRule \\[1.5cm]
@@ -106,29 +103,15 @@
 
 \par\vbox{}\null\vfill\nopagebreak
 
-
-
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Grupo 06:}\\
-Enzo Fabbiani \\
-Damián Salvia \\
-Camila Sanz \\
-Santiago Vidal
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Profesora:} \\
-Libertad Tansini
-\end{flushright}
-\end{minipage}\\[4cm]
-
-%{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
-
-%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
-
+{\raggedright\vfill\itshape\Longstack[l]{%
+  Docente\\ 
+  Libertad Tansini\\ \\
+  Grupo 06 \\
+  Enzo Fabbiani  - 4.883.487-9\\
+  Damián Salvia  - 4.452.120-0\\
+  Camila Sanz    - 4.793.319-9\\
+  Santiago Vidal - 4.651.496-6
+}\par}
 
 \end{titlepage}
 

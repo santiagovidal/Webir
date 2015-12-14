@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.23)  14 DEC 2015 19:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.23)  14 DEC 2015 20:05
 entering extended mode
 **informe.tex
 (C:\GitHub\Webir\informe\informe.tex
@@ -452,6 +452,43 @@ LaTeX Info: Redefining \] on input line 2666.
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count116
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stackengine\stackengine.sty"
+Package: stackengine 2014/01/06 v3.24\ Stacking text and objects in convenient 
+ways
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count117
+)
+\etb@tempcnta=\count118
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count119
+\calc@Bcount=\count120
+\calc@Adimen=\dimen129
+\calc@Bdimen=\dimen130
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count121
+\calc@Cskip=\skip48
+)
+\c@@stackindex=\count122
+\@boxshift=\skip49
+\stack@tmplength=\skip50
+\temp@stkl=\skip51
+\@stackedboxwidth=\skip52
+\@addedbox=\box33
+\@anchorbox=\box34
+\stackedbox=\box35
+\@centerbox=\box36
+\c@ROWcellindex@=\count123
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -506,19 +543,19 @@ LaTeX Font Info:    ... okay on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen129
-\scratchbox=\box33
-\nofMPsegments=\count118
-\nofMParguments=\count119
+\scratchcounter=\count124
+\scratchdimen=\dimen131
+\scratchbox=\box37
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen130
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen132
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks29
 )
-\c@lstlisting=\count123
+\c@lstlisting=\count130
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -528,21 +565,21 @@ LaTeX Font Info:    ... okay on input line 86.
 <Pictures/dominio.png, id=18, 455.7025pt x 240.9pt>
 File: Pictures/dominio.png Graphic file (type png)
  <use Pictures/dominio.png>
-Package pdftex.def Info: Pictures/dominio.png used on input line 197.
+Package pdftex.def Info: Pictures/dominio.png used on input line 180.
 (pdftex.def)             Requested size: 410.12845pt x 216.80798pt.
 
 [4] <Pictures/coca-cola.png, id=22, 416.55624pt x 181.17688pt>
 File: Pictures/coca-cola.png Graphic file (type png)
 
 <use Pictures/coca-cola.png>
-Package pdftex.def Info: Pictures/coca-cola.png used on input line 216.
+Package pdftex.def Info: Pictures/coca-cola.png used on input line 199.
 (pdftex.def)             Requested size: 416.55522pt x 181.17642pt.
  [5 <C:/GitHub/Webir/informe/Pictures/dominio.png>] <Pictures/etiquetas.png, id
 =26, 411.03563pt x 37.13875pt>
 File: Pictures/etiquetas.png Graphic file (type png)
 
 <use Pictures/etiquetas.png>
-Package pdftex.def Info: Pictures/etiquetas.png used on input line 224.
+Package pdftex.def Info: Pictures/etiquetas.png used on input line 207.
 (pdftex.def)             Requested size: 411.03462pt x 37.13866pt.
  [6 <C:/GitHub/Webir/informe/Pictures/coca-cola.png> <C:/GitHub/Webir/informe/P
 ictures/etiquetas.png>]
@@ -550,10 +587,10 @@ ictures/etiquetas.png>]
 File: Pictures/arquitectura.png Graphic file (type png)
 
 <use Pictures/arquitectura.png>
-Package pdftex.def Info: Pictures/arquitectura.png used on input line 249.
+Package pdftex.def Info: Pictures/arquitectura.png used on input line 232.
 (pdftex.def)             Requested size: 432.26093pt x 206.41927pt.
 
-Overfull \hbox (14.00725pt too wide) in paragraph at lines 249--251
+Overfull \hbox (14.00725pt too wide) in paragraph at lines 232--234
  [][] 
  []
 
@@ -561,10 +598,10 @@ Overfull \hbox (14.00725pt too wide) in paragraph at lines 249--251
 File: Pictures/modelo_de_datos.png Graphic file (type png)
 
 <use Pictures/modelo_de_datos.png>
-Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 264.
+Package pdftex.def Info: Pictures/modelo_de_datos.png used on input line 247.
 (pdftex.def)             Requested size: 431.10956pt x 108.40472pt.
 
-Overfull \hbox (12.85588pt too wide) in paragraph at lines 264--266
+Overfull \hbox (12.85588pt too wide) in paragraph at lines 247--249
  [][] 
  []
 
@@ -574,24 +611,24 @@ Overfull \hbox (12.85588pt too wide) in paragraph at lines 264--266
 File: Pictures/documento.png Graphic file (type png)
 
 <use Pictures/documento.png>
-Package pdftex.def Info: Pictures/documento.png used on input line 274.
+Package pdftex.def Info: Pictures/documento.png used on input line 257.
 (pdftex.def)             Requested size: 177.46321pt x 193.92474pt.
  [9] [10 <C:/GitHub/Webir/informe/Pictures/documento.png>] <Pictures/interfaz_u
 suario.png, id=46, 453.19313pt x 262.48062pt>
 File: Pictures/interfaz_usuario.png Graphic file (type png)
 
 <use Pictures/interfaz_usuario.png>
-Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 293.
+Package pdftex.def Info: Pictures/interfaz_usuario.png used on input line 276.
 (pdftex.def)             Requested size: 407.87004pt x 236.23038pt.
  [11 <C:/GitHub/Webir/informe/Pictures/interfaz_usuario.png>] <Pictures/DSS.png
 , id=50, 469.25313pt x 332.74312pt>
 File: Pictures/DSS.png Graphic file (type png)
 
 <use Pictures/DSS.png>
-Package pdftex.def Info: Pictures/DSS.png used on input line 307.
+Package pdftex.def Info: Pictures/DSS.png used on input line 290.
 (pdftex.def)             Requested size: 422.3239pt x 299.46603pt.
 
-Overfull \hbox (4.07022pt too wide) in paragraph at lines 307--309
+Overfull \hbox (4.07022pt too wide) in paragraph at lines 290--292
  [][] 
  []
 
@@ -599,7 +636,7 @@ Overfull \hbox (4.07022pt too wide) in paragraph at lines 307--309
 File: Pictures/pag_resultado.png Graphic file (type png)
 
 <use Pictures/pag_resultado.png>
-Package pdftex.def Info: Pictures/pag_resultado.png used on input line 315.
+Package pdftex.def Info: Pictures/pag_resultado.png used on input line 298.
 (pdftex.def)             Requested size: 409.22508pt x 328.37376pt.
  [12 <C:/GitHub/Webir/informe/Pictures/DSS.png>] [13 <C:/GitHub/Webir/informe/P
 ictures/pag_resultado.png>]
@@ -607,10 +644,10 @@ ictures/pag_resultado.png>]
 File: Pictures/pag_devoto.png Graphic file (type png)
 
 <use Pictures/pag_devoto.png>
-Package pdftex.def Info: Pictures/pag_devoto.png used on input line 334.
+Package pdftex.def Info: Pictures/pag_devoto.png used on input line 317.
 (pdftex.def)             Requested size: 392.51282pt x 178.86658pt.
 
-Overfull \hbox (11.53008pt too wide) in paragraph at lines 345--346
+Overfull \hbox (11.53008pt too wide) in paragraph at lines 328--329
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -618,63 +655,63 @@ Overfull \hbox (11.53008pt too wide) in paragraph at lines 345--346
 File: Pictures/producto_devoto.png Graphic file (type png)
 
 <use Pictures/producto_devoto.png>
-Package pdftex.def Info: Pictures/producto_devoto.png used on input line 355.
+Package pdftex.def Info: Pictures/producto_devoto.png used on input line 338.
 (pdftex.def)             Requested size: 396.48027pt x 207.27385pt.
  [14 <C:/GitHub/Webir/informe/Pictures/pag_devoto.png>] [15 <C:/GitHub/Webir/in
 forme/Pictures/producto_devoto.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 374--387
+Underfull \hbox (badness 10000) in paragraph at lines 357--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--387
+Underfull \hbox (badness 10000) in paragraph at lines 357--370
 
  []
 
 [16]
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 396
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 379
 .
-LaTeX Font Info:    No file OMScmtt.fd. on input line 396.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 379.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 396.
+(Font)              for symbol `textbraceleft' on input line 379.
 
 [17] [18] <Pictures/problema-marca.png, id=86, 511.9125pt x 216.81pt>
 File: Pictures/problema-marca.png Graphic file (type png)
 
 <use Pictures/problema-marca.png>
-Package pdftex.def Info: Pictures/problema-marca.png used on input line 462.
+Package pdftex.def Info: Pictures/problema-marca.png used on input line 445.
 (pdftex.def)             Requested size: 409.53056pt x 173.44823pt.
  [19 <C:/GitHub/Webir/informe/Pictures/problema-marca.png>]
 <Pictures/problema-etiqueta.png, id=90, 418.56375pt x 159.59625pt>
 File: Pictures/problema-etiqueta.png Graphic file (type png)
 
 <use Pictures/problema-etiqueta.png>
-Package pdftex.def Info: Pictures/problema-etiqueta.png used on input line 473.
+Package pdftex.def Info: Pictures/problema-etiqueta.png used on input line 456.
 
 (pdftex.def)             Requested size: 418.56271pt x 159.59584pt.
  [20 <C:/GitHub/Webir/informe/Pictures/problema-etiqueta.png>] [21]
-Underfull \hbox (badness 2707) in paragraph at lines 496--497
+Underfull \hbox (badness 2707) in paragraph at lines 479--480
 \OT1/cmr/m/it/12 (Mar-zo,2014). Link: http://www.inqbation.com/es/extraiga-info
 rmacion-de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 []\OT1/cmr/m/it/12 Productos re-gis-tra-dos, Catalo-gos de da-tos abier-tos (u
 y) (Enero,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 \OT1/cmr/m/it/12 2014). Link: https://catalogodatos.gub.uy/dataset/habilitacion
 -registro-
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 500--501
+Underfull \hbox (badness 6445) in paragraph at lines 483--484
 \OT1/cmr/m/it/12 alimentos/resource/9a7ebeca-7990-4db4-aea2-5477a3c14e2b, []Ult
 i-mo ac-ce-so:
  []
@@ -685,13 +722,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5668 strings out of 493921
- 73928 string characters out of 3144872
- 249538 words of memory out of 3000000
- 8880 multiletter control sequences out of 15000+200000
- 10940 words of font info for 39 fonts, out of 3000000 for 9000
+ 6229 strings out of 493921
+ 80893 string characters out of 3144872
+ 260039 words of memory out of 3000000
+ 9425 multiletter control sequences out of 15000+200000
+ 10593 words of font info for 38 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,49p,2034b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,7n,49p,2034b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -703,7 +740,7 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (23 pages, 1037953 bytes).
+Output written on informe.pdf (23 pages, 1038673 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
